@@ -88,6 +88,10 @@ object Counter {
         },
         "-"
       ),
+      button(
+        null,
+        "reset"
+      ),
       span(null, s"Count: $count")
     )
   }

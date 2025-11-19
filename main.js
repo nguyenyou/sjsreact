@@ -915,9 +915,9 @@ function $c_LCounter$() {
     var state = $i_react.useState($uI(props.initialCount));
     var count = $uI(state[0]);
     var setCount = state[1];
-    var $x_6 = $m_Ltags$();
-    var $x_5 = $m_sr_ScalaRunTime$();
-    var $x_4 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
+    var $x_7 = $m_Ltags$();
+    var $x_6 = $m_sr_ScalaRunTime$();
+    var $x_5 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
       var setCount$1$2 = null;
       var count$1$2 = 0;
       setCount$1$2 = setCount;
@@ -931,7 +931,7 @@ function $c_LCounter$() {
       }))(setCount$1$1, count$1$1);
       return this$2;
     })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["+"])));
-    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
+    var $x_4 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
       var setCount$3$2 = null;
       var count$3$2 = 0;
       setCount$3$2 = setCount;
@@ -945,10 +945,11 @@ function $c_LCounter$() {
       }))(setCount$3$1, count$3$1);
       return this$2$1;
     })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["-"])));
+    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["reset"])));
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
     var s = ("Count: " + count);
-    return $x_6.div__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4, $x_3, $x_2.span__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])))])));
+    return $x_7.div__sjs_js_Object__sci_Seq__LReactElement(null, $x_6.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_5, $x_4, $x_3, $x_2.span__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])))])));
   }));
 }
 $c_LCounter$.prototype = new $h_O();
