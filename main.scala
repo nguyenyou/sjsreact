@@ -63,18 +63,18 @@ object HelloWorld {
   def apply(): ReactElement = React.createElement(component, null)
 }
 
-trait CounterProps extends js.Object {
-  val initialCount: Int
-}
-
-object CounterProps {
-  def apply(initialCount: Int): CounterProps =
-    js.Dynamic.literal(initialCount = initialCount).asInstanceOf[CounterProps]
-}
-
 object Counter {
+  trait Props extends js.Object {
+    val initialCount: Int
+  }
+
+  object Props {
+    def apply(initialCount: Int): Props =
+      js.Dynamic.literal(initialCount = initialCount).asInstanceOf[Props]
+  }
+
   val component = functionalComponent("Counter") { props =>
-    val p = props.asInstanceOf[CounterProps]
+    val p = props.asInstanceOf[Props]
     val state = React.useState(p.initialCount)
     val count = state._1
     val setCount = state._2
@@ -100,7 +100,7 @@ object Counter {
   def apply(iCount: Int): ReactElement =
     React.createElement(
       component,
-      CounterProps(initialCount = iCount)
+      Props(initialCount = iCount)
     )
 }
 

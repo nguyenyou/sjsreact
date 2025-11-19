@@ -951,7 +951,7 @@ function $h_LCounter$() {
 }
 $h_LCounter$.prototype = $c_LCounter$.prototype;
 $c_LCounter$.prototype.apply__I__LReactElement = (function(iCount) {
-  return $i_react.createElement(this.LCounter$__f_component, $m_LCounterProps$().apply__I__LCounterProps(iCount));
+  return $i_react.createElement(this.LCounter$__f_component, $m_LCounter$Props$().apply__I__LCounter$Props(iCount));
 });
 var $d_LCounter$ = new $TypeData().initClass($c_LCounter$, "Counter$", ({
   LCounter$: 1
@@ -964,27 +964,27 @@ function $m_LCounter$() {
   return $n_LCounter$;
 }
 /** @constructor */
-function $c_LCounterProps$() {
+function $c_LCounter$Props$() {
 }
-$c_LCounterProps$.prototype = new $h_O();
-$c_LCounterProps$.prototype.constructor = $c_LCounterProps$;
+$c_LCounter$Props$.prototype = new $h_O();
+$c_LCounter$Props$.prototype.constructor = $c_LCounter$Props$;
 /** @constructor */
-function $h_LCounterProps$() {
+function $h_LCounter$Props$() {
 }
-$h_LCounterProps$.prototype = $c_LCounterProps$.prototype;
-$c_LCounterProps$.prototype.apply__I__LCounterProps = (function(initialCount) {
+$h_LCounter$Props$.prototype = $c_LCounter$Props$.prototype;
+$c_LCounter$Props$.prototype.apply__I__LCounter$Props = (function(initialCount) {
   var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("initialCount", initialCount)]));
   return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
 });
-var $d_LCounterProps$ = new $TypeData().initClass($c_LCounterProps$, "CounterProps$", ({
-  LCounterProps$: 1
+var $d_LCounter$Props$ = new $TypeData().initClass($c_LCounter$Props$, "Counter$Props$", ({
+  LCounter$Props$: 1
 }));
-var $n_LCounterProps$;
-function $m_LCounterProps$() {
-  if ((!$n_LCounterProps$)) {
-    $n_LCounterProps$ = new $c_LCounterProps$();
+var $n_LCounter$Props$;
+function $m_LCounter$Props$() {
+  if ((!$n_LCounter$Props$)) {
+    $n_LCounter$Props$ = new $c_LCounter$Props$();
   }
-  return $n_LCounterProps$;
+  return $n_LCounter$Props$;
 }
 /** @constructor */
 function $c_LHelloWorld$() {
