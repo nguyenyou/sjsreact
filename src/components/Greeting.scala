@@ -9,21 +9,22 @@ import myapp.tags.h3
 import myapp.components.ThemeContext
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-object Greeting {
+case class Greeting(name: String) {
+  def apply() =
+    React.createElement(Greeting.component, Box(this))
+}
 
-  case class Props(name: String)
+object Greeting {
+  type Props = Greeting
 
   val component = scalaFunctionComponent[Props]("Greeting") { p =>
     val theme = React.useContext(ThemeContext.Context)
 
     h3(
       js.Dynamic.literal(className = theme),
-      s"Hello, ${p.name}!"
+      s"Hellooooooo, ${p.name}!"
     )
   }
-
-  def apply(name: String): ReactElement =
-    React.createElement(component, Box(Props(name)))
 }
 
 @JSExportTopLevel("Greeting")

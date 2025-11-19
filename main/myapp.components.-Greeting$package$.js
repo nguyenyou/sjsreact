@@ -1,6 +1,6 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
-import * as $j_myapp$002ecomponents$002e$002dGreeting$0024 from "./myapp.components.-Greeting$.js";
+import * as $j_myapp$002ecomponents$002e$002dGreeting from "./myapp.components.-Greeting.js";
 function $sct_Lmyapp_components_Greeting$package$__stinit__() {
   $m_Lmyapp_components_Greeting$package$();
 }
@@ -8,7 +8,7 @@ export { $sct_Lmyapp_components_Greeting$package$__stinit__ as $sct_Lmyapp_compo
 /** @constructor */
 function $c_Lmyapp_components_Greeting$package$() {
   $n_Lmyapp_components_Greeting$package$ = this;
-  $t_Lmyapp_components_Greeting$package$__GreetingComp = $j_myapp$002ecomponents$002e$002dGreeting$0024.$m_Lmyapp_components_Greeting$().Lmyapp_components_Greeting$__f_component;
+  $t_Lmyapp_components_Greeting$package$__GreetingComp = $j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$().Lmyapp_components_Greeting$__f_component;
 }
 export { $c_Lmyapp_components_Greeting$package$ as $c_Lmyapp_components_Greeting$package$ };
 $c_Lmyapp_components_Greeting$package$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();

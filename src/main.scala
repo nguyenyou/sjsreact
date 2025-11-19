@@ -75,14 +75,11 @@ trait ReactRoot extends js.Object {
   def unmount(): Unit = js.native
 }
 
-
-@JSExportTopLevel("createRoot")
 def createRoot(containerId: String): ReactRoot = {
   val container = dom.document.getElementById(containerId)
   ReactDOM.createRoot(container)
 }
 
-@JSExportTopLevel("renderApp")
 def renderApp(root: ReactRoot): Unit = {
   root.render(
     React.createElement(
@@ -91,4 +88,10 @@ def renderApp(root: ReactRoot): Unit = {
       MyApp.component
     )
   )
+}
+
+@main
+def run(): Unit = {
+  val root = createRoot("app")
+  renderApp(root)
 }
