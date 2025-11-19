@@ -202,6 +202,26 @@ object Greeting {
     React.createElement(component, Props(name = name))
 }
 
+object TextInput {
+  val component = functionalComponent("TextInput") { _ =>
+    val (text, setText) = React.useState("")
+
+    div(
+      null,
+      input(
+        js.Dynamic.literal(
+          value = text,
+          onChange = (e: js.Dynamic) => setText(e.target.value.asInstanceOf[String]),
+          placeholder = "Type something..."
+        )
+      ),
+      span(js.Dynamic.literal(style = js.Dynamic.literal(marginLeft = "10px")), s"You typed: $text")
+    )
+  }
+
+  def apply(): ReactElement = React.createElement(component, null)
+}
+
 object MyApp {
   val component = functionalComponent("MyApp") { _ =>
     val (theme, setTheme) = React.useState("dark")
@@ -218,7 +238,8 @@ object MyApp {
           js.Dynamic.literal(onClick = () => handleClick()),
           "Switch themeeeeeeeeeeeeee"
         ),
-        Greeting(name = "Taylor")
+        Greeting(name = "Taylor"),
+        div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
       )
     )
   }
