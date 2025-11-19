@@ -1839,6 +1839,32 @@ function $h_sr_Statics$() {
 }
 export { $h_sr_Statics$ as $h_sr_Statics$ };
 $h_sr_Statics$.prototype = $c_sr_Statics$.prototype;
+$c_sr_Statics$.prototype.mix__I__I__I = (function(hash, data) {
+  var h = this.mixLast__I__I__I(hash, data);
+  var i = h;
+  h = ((i << 13) | ((i >>> 19) | 0));
+  return (((-430675100) + Math.imul(5, h)) | 0);
+});
+$c_sr_Statics$.prototype.mixLast__I__I__I = (function(hash, data) {
+  var k = data;
+  k = Math.imul((-862048943), k);
+  var i = k;
+  k = ((i << 15) | ((i >>> 17) | 0));
+  k = Math.imul(461845907, k);
+  return (hash ^ k);
+});
+$c_sr_Statics$.prototype.finalizeHash__I__I__I = (function(hash, length) {
+  return this.avalanche__I__I((hash ^ length));
+});
+$c_sr_Statics$.prototype.avalanche__I__I = (function(h0) {
+  var h = h0;
+  h = (h ^ ((h >>> 16) | 0));
+  h = Math.imul((-2048144789), h);
+  h = (h ^ ((h >>> 13) | 0));
+  h = Math.imul((-1028477387), h);
+  h = (h ^ ((h >>> 16) | 0));
+  return h;
+});
 $c_sr_Statics$.prototype.longHash__J__I = (function(lv) {
   var lo = lv.RTLong__f_lo;
   var hi = lv.RTLong__f_hi;

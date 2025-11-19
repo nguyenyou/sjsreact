@@ -9,6 +9,7 @@ import myapp.tags.h3
 import myapp.tags.div
 import myapp.components.ThemeContext
 import myapp.components.Greeting
+import myapp.components.Counter
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 object MyApp {
@@ -27,6 +28,7 @@ object MyApp {
       ),
       h3(null, "Updated from Scala!"),
       Greeting(name = "Taylor"),
+      Counter(initialCount = 5)(),
       div(
         js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
         TextInput()
