@@ -1001,8 +1001,8 @@ function $c_Lmain$package$() {
   this.Lmain$package$__f_Counter = null;
   $n_Lmain$package$ = this;
   this.Lmain$package$__f_HelloWorld = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Hello World"])))));
-  this.Lmain$package$__f_Counter = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((_$2) => {
-    var state = $i_react.useState(0);
+  this.Lmain$package$__f_Counter = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((props) => {
+    var state = $i_react.useState($uI(props.initialCount));
     var count = $uI(state[0]);
     var setCount = state[1];
     var $x_6 = $m_Ltags$();
@@ -1054,7 +1054,12 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement($i_react.StrictMode, null, $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null), $i_react.createElement($m_Lmain$package$().Lmain$package$__f_Counter, null)])))));
+  root.render($i_react.createElement($i_react.StrictMode, null, $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null), $i_react.createElement($m_Lmain$package$().Lmain$package$__f_Counter, (() => {
+    var this$1 = ({});
+    this$1.initialCount = 0;
+    this$1.initialCount = 10;
+    return this$1;
+  })())])))));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1

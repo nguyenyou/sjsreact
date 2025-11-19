@@ -60,8 +60,13 @@ val HelloWorld = functionalComponent("HelloWorld") { _ =>
   div(null, "Hello World")
 }
 
-val Counter = functionalComponent("Counter") { _ =>
-  val state = React.useState(0)
+trait CounterProps extends js.Object {
+  val initialCount: Int
+}
+
+val Counter = functionalComponent("Counter") { props =>
+  val p = props.asInstanceOf[CounterProps]
+  val state = React.useState(p.initialCount)
   val count = state._1
   val setCount = state._2
 
@@ -94,7 +99,12 @@ def run(): Unit = {
       div(
         null,
         React.createElement(HelloWorld, null),
-        React.createElement(Counter, null)
+        React.createElement(
+          Counter,
+          new js.Object {
+            val initialCount = 10
+          }
+        )
       )
     )
   )
