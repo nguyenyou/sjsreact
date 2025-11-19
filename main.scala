@@ -241,8 +241,9 @@ object MyApp {
       fragment(
         button(
           js.Dynamic.literal(onClick = () => handleClick()),
-          "Switch eeee"
+          "Switch Theme"
         ),
+        h3(null, "Updated from Scala!"),
         Greeting(name = "Taylor"),
         div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
       )
@@ -268,3 +269,9 @@ def renderApp(root: ReactRoot): Unit = {
     )
   )
 }
+
+@JSExportTopLevel("MyApp")
+val MyAppComp = MyApp.component
+
+@JSExportTopLevel("HelloWorld")
+val HelloWorldComp = HelloWorld.component

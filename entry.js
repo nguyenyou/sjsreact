@@ -4,6 +4,18 @@
 // renderApp(root);
 
 import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import { MyApp, HelloWorld } from "./main.js";
 
 const root = createRoot(document.getElementById("app"));
-root.render(<div>hello</div>);
+root.render(
+  <StrictMode>
+    <div>
+      <h1>React App</h1>
+      <MyApp />
+      <div style={{ marginTop: 20 }}>
+        <HelloWorld />
+      </div>
+    </div>
+  </StrictMode>
+);

@@ -967,6 +967,28 @@ function $m_LGreeting$Props$() {
   }
   return $n_LGreeting$Props$;
 }
+/** @constructor */
+function $c_LHelloWorld$() {
+  this.LHelloWorld$__f_component = null;
+  $n_LHelloWorld$ = this;
+  this.LHelloWorld$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Hello Worldddd"])))));
+}
+$c_LHelloWorld$.prototype = new $h_O();
+$c_LHelloWorld$.prototype.constructor = $c_LHelloWorld$;
+/** @constructor */
+function $h_LHelloWorld$() {
+}
+$h_LHelloWorld$.prototype = $c_LHelloWorld$.prototype;
+var $d_LHelloWorld$ = new $TypeData().initClass($c_LHelloWorld$, "HelloWorld$", ({
+  LHelloWorld$: 1
+}));
+var $n_LHelloWorld$;
+function $m_LHelloWorld$() {
+  if ((!$n_LHelloWorld$)) {
+    $n_LHelloWorld$ = new $c_LHelloWorld$();
+  }
+  return $n_LHelloWorld$;
+}
 function $p_LMyApp$__handleClick$1__F1__T__V($thiz, setTheme$1, theme$1) {
   $n(setTheme$1).apply__O__O(((theme$1 === "dark") ? "light" : "dark"));
 }
@@ -986,27 +1008,28 @@ function $c_LMyApp$() {
     }
     var theme = $as_T($n(\u03b46$).T2__f__1);
     var setTheme = $as_F1($n(\u03b46$).T2__f__2);
-    var $x_11 = $m_LReact$();
-    var $x_10 = $m_Lmain$package$().Lmain$package$__f_ThemeContext.Provider;
+    var $x_12 = $m_LReact$();
+    var $x_11 = $m_Lmain$package$().Lmain$package$__f_ThemeContext.Provider;
     var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("value", theme)]));
-    var $x_9 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+    var $x_10 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+    var $x_9 = $m_sr_ScalaRunTime$();
     var $x_8 = $m_sr_ScalaRunTime$();
-    var $x_7 = $m_sr_ScalaRunTime$();
-    var $x_6 = $m_Ltags$();
-    var $x_5 = $m_sr_ScalaRunTime$();
+    var $x_7 = $m_Ltags$();
+    var $x_6 = $m_sr_ScalaRunTime$();
     var _2 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
       $p_LMyApp$__handleClick$1__F1__T__V(this, setTheme, theme);
     })));
-    var fields$1 = $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
-    var $x_4 = $x_6.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch eeee"])));
+    var fields$1 = $x_6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
+    var $x_5 = $x_7.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch Theme"])));
+    var $x_4 = $m_Ltags$().h3__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Updated from Scala!"])));
     var $x_3 = $m_LGreeting$().apply__T__LReactElement("Taylor");
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
     var fields$2 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("marginTop", "20px")]));
     var _2$1 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2);
     var fields$3 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("style", _2$1)]));
-    var children = $x_7.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4, $x_3, $x_2.div__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$3), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LTextInput$().apply__LReactElement()])))]));
-    return $x_11.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($x_10, $x_9, $x_8.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().Fragment__sjs_js_Any(), null, children)])));
+    var children = $x_8.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_5, $x_4, $x_3, $x_2.div__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$3), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LTextInput$().apply__LReactElement()])))]));
+    return $x_12.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($x_11, $x_10, $x_9.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().Fragment__sjs_js_Any(), null, children)])));
   }));
 }
 $c_LMyApp$.prototype = new $h_O();
@@ -1215,11 +1238,16 @@ function $m_jl_reflect_Array$() {
   }
   return $n_jl_reflect_Array$;
 }
+function $sct_Lmain$package$__stinit__() {
+  $m_Lmain$package$();
+}
 /** @constructor */
 function $c_Lmain$package$() {
   this.Lmain$package$__f_ThemeContext = null;
   $n_Lmain$package$ = this;
   this.Lmain$package$__f_ThemeContext = $m_LReact$().createContext__O__LReactRaw$Context("dark");
+  $t_Lmain$package$__MyAppComp = $m_LMyApp$().LMyApp$__f_component;
+  $t_Lmain$package$__HelloWorldComp = $m_LHelloWorld$().LHelloWorld$__f_component;
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -3778,12 +3806,17 @@ var $d_scm_StringBuilder = new $TypeData().initClass($c_scm_StringBuilder, "scal
 }));
 $L0 = new $c_RTLong(0, 0);
 $d_J.zero = $L0;
+var $t_Lmain$package$__MyAppComp = null;
+var $t_Lmain$package$__HelloWorldComp = null;
+$sct_Lmain$package$__stinit__();
 let $e_renderApp = (function(arg) {
   $m_Lmain$package$().renderApp__LReactRoot__V(arg);
 });
 export { $e_renderApp as renderApp };
+export { $t_Lmain$package$__MyAppComp as MyApp };
 let $e_createRoot = (function(arg) {
   var prep0 = $as_T(arg);
   return $m_Lmain$package$().createRoot__T__LReactRoot(prep0);
 });
 export { $e_createRoot as createRoot };
+export { $t_Lmain$package$__HelloWorldComp as HelloWorld };
