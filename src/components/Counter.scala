@@ -40,6 +40,3 @@ object Counter {
       Box(Props(initialCount = iCount))
     )
 }
-
-@JSExportTopLevel("Counter")
-val CounterComp = Counter.component

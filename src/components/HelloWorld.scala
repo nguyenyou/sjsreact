@@ -12,6 +12,3 @@ object HelloWorld {
     div(null, "Hello Worldddd")
   }
 }
-
-@JSExportTopLevel("HelloWorld")
-val HelloWorldComp = HelloWorld.component

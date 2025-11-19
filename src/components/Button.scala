@@ -29,6 +29,3 @@ object Button {
       children*
     )
 }
-
-@JSExportTopLevel("Button")
-val ButtonComp = Button.component

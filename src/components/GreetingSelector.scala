@@ -43,6 +43,3 @@ object GreetingSelector {
   def apply(value: String, onChange: String => Unit): ReactElement =
     React.createElement(component, Box(Props(value, onChange)))
 }
-
-@JSExportTopLevel("GreetingSelector")
-val GreetingSelectorComp = GreetingSelector.component

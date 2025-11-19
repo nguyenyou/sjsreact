@@ -26,6 +26,3 @@ object Greeting {
     )
   }
 }
-
-@JSExportTopLevel("Greeting")
-val GreetingComp = Greeting.component

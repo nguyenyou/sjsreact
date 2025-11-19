@@ -32,7 +32,3 @@ object TextInput {
 
   def apply(): ReactElement = React.createElement(component, null)
 }
-
-
-@JSExportTopLevel("TextInput")
-val TextInputComp = TextInput.component
