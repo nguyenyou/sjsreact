@@ -942,6 +942,9 @@ var $d_jl_Void = new $TypeData().initClass(0, "java.lang.Void", ({
 }), ((x) => (x === (void 0))));
 /** @constructor */
 function $c_Lmain$package$() {
+  this.Lmain$package$__f_HelloWorld = null;
+  $n_Lmain$package$ = this;
+  this.Lmain$package$__f_HelloWorld = (() => $i_react.createElement("div", null, "Hello World"));
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -952,7 +955,7 @@ $h_Lmain$package$.prototype = $c_Lmain$package$.prototype;
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement("div", null, "Hello Worlddddddd"));
+  root.render((0, $m_Lmain$package$().Lmain$package$__f_HelloWorld)());
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
