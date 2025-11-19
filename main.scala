@@ -77,21 +77,15 @@ object Counter {
     div(
       null,
       button(
-        new js.Object {
-          val onClick: js.Function0[Unit] = () => setCount(count + 1)
-        },
+        js.Dynamic.literal(onClick = () => setCount(count + 1)),
         "+"
       ),
       button(
-        new js.Object {
-          val onClick: js.Function0[Unit] = () => setCount(count - 1)
-        },
+        js.Dynamic.literal(onClick = () => setCount(count - 1)),
         "-"
       ),
       button(
-        new js.Object {
-          val onClick: js.Function0[Unit] = () => setCount(p.initialCount)
-        },
+        js.Dynamic.literal(onClick = () => setCount(p.initialCount)),
         "reset"
       ),
       span(null, s"Count: $count")
@@ -101,9 +95,7 @@ object Counter {
   def apply(iCount: Int): ReactElement =
     React.createElement(
       component,
-      new js.Object {
-        val initialCount = iCount
-      }
+      js.Dynamic.literal(initialCount = iCount)
     )
 }
 
