@@ -8,17 +8,17 @@ function $c_Lmyapp_TextInput$() {
   this.Lmyapp_TextInput$__f_component = null;
   $n_Lmyapp_TextInput$ = this;
   this.Lmyapp_TextInput$__f_component = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("TextInput", ((_$4) => {
-    matchResult2: {
-      var \u03b44$;
-      var x4 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("");
-      if ((x4 !== null)) {
-        var \u03b44$ = x4;
-        break matchResult2;
+    matchResult1: {
+      var \u03b42$;
+      var x1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("");
+      if ((x1 !== null)) {
+        var \u03b42$ = x1;
+        break matchResult1;
       }
-      throw new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_s_MatchError(x4);
+      throw new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_s_MatchError(x1);
     }
-    var text = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b44$).T2__f__1);
-    var setText = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b44$).T2__f__2);
+    var text = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b42$).T2__f__1);
+    var setText = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b42$).T2__f__2);
     var $x_10 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_8 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();

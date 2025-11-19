@@ -6,6 +6,7 @@ import myapp.React
 import myapp.ReactElement
 import myapp.tags.h3
 import myapp.ThemeContext
+import scala.scalajs.js.annotation.JSExportTopLevel
 
 object Greeting {
 
@@ -26,4 +27,10 @@ object Greeting {
       s"Hello, ${p.name}!"
     )
   }
+
+  def apply(name: String): ReactElement =
+    React.createElement(component, Props(name = name))
 }
+
+@JSExportTopLevel("Greeting")
+val GreetingComp = Greeting.component

@@ -2,12 +2,11 @@
 import * as $i_react$002ddom$002fclient from "react-dom/client";
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
 import * as $j_myapp$002e$002dButton$0024 from "./myapp.-Button$.js";
-import * as $j_myapp$002e$002dCounter$0024 from "./myapp.-Counter$.js";
-import * as $j_myapp$002e$002dGreeting$0024 from "./myapp.-Greeting$.js";
 import * as $j_myapp$002e$002dGreeting$002dSelector$0024 from "./myapp.-Greeting-Selector$.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
 import * as $j_myapp$002e$002dText$002dInput$0024 from "./myapp.-Text-Input$.js";
 import * as $j_myapp$002e$002dTheme$002dContext$0024 from "./myapp.-Theme-Context$.js";
+import * as $j_myapp$002ecomponents$002e$002dGreeting$0024 from "./myapp.components.-Greeting$.js";
 import * as $j_myapp$002efunction$002dComponent$0024package$0024 from "./myapp.function-Component$package$.js";
 import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
 function $p_Lmyapp_main$package$__handleClick$1__F1__T__V($thiz, setTheme$1, theme$1) {
@@ -25,17 +24,17 @@ function $c_Lmyapp_main$package$() {
   $n_Lmyapp_main$package$ = this;
   this.Lmyapp_main$package$__f_HelloWorld = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $j_myapp$002etags$0024.$m_Lmyapp_tags$().div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Hello Worldddd"])))));
   this.Lmyapp_main$package$__f_MyApp = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$5) => {
-    matchResult3: {
-      var \u03b46$;
-      var x7 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("dark");
-      if ((x7 !== null)) {
-        var \u03b46$ = x7;
-        break matchResult3;
+    matchResult2: {
+      var \u03b44$;
+      var x4 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("dark");
+      if ((x4 !== null)) {
+        var \u03b44$ = x4;
+        break matchResult2;
       }
-      throw new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_s_MatchError(x7);
+      throw new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_s_MatchError(x4);
     }
-    var theme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b46$).T2__f__1);
-    var setTheme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b46$).T2__f__2);
+    var theme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b44$).T2__f__1);
+    var setTheme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b44$).T2__f__2);
     var $x_9 = $j_myapp$002e$002dTheme$002dContext$0024.$m_Lmyapp_ThemeContext$();
     var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_7 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
@@ -46,7 +45,7 @@ function $c_Lmyapp_main$package$() {
     var fields = $x_6.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onClick", _2)]));
     var $x_5 = $x_7.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Switch Themeeee"])));
     var $x_4 = $j_myapp$002etags$0024.$m_Lmyapp_tags$().h3__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Updated from Scala!"])));
-    var $x_3 = $j_myapp$002e$002dGreeting$0024.$m_Lmyapp_Greeting$().apply__T__Lmyapp_ReactElement("Taylor");
+    var $x_3 = $j_myapp$002ecomponents$002e$002dGreeting$0024.$m_Lmyapp_components_Greeting$().apply__T__Lmyapp_ReactElement("Taylor");
     var $x_2 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var fields$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("marginTop", "20px")]));
@@ -56,9 +55,7 @@ function $c_Lmyapp_main$package$() {
   }));
   $t_Lmyapp_main$package$__MyAppComp = $m_Lmyapp_main$package$().Lmyapp_main$package$__f_MyApp;
   $t_Lmyapp_main$package$__HelloWorldComp = $m_Lmyapp_main$package$().Lmyapp_main$package$__f_HelloWorld;
-  $t_Lmyapp_main$package$__CounterComp = $j_myapp$002e$002dCounter$0024.$m_Lmyapp_Counter$().Lmyapp_Counter$__f_component;
   $t_Lmyapp_main$package$__GreetingSelectorComp = $j_myapp$002e$002dGreeting$002dSelector$0024.$m_Lmyapp_GreetingSelector$().Lmyapp_GreetingSelector$__f_component;
-  $t_Lmyapp_main$package$__GreetingComp = $j_myapp$002e$002dGreeting$0024.$m_Lmyapp_Greeting$().Lmyapp_Greeting$__f_component;
   $t_Lmyapp_main$package$__TextInputComp = $j_myapp$002e$002dText$002dInput$0024.$m_Lmyapp_TextInput$().Lmyapp_TextInput$__f_component;
   $t_Lmyapp_main$package$__ButtonComp = $j_myapp$002e$002dButton$0024.$m_Lmyapp_Button$().Lmyapp_Button$__f_component;
 }
@@ -99,21 +96,11 @@ function $u_Lmyapp_main$package$__HelloWorldComp(x) {
   $t_Lmyapp_main$package$__HelloWorldComp = x;
 }
 export { $t_Lmyapp_main$package$__HelloWorldComp as $t_Lmyapp_main$package$__HelloWorldComp, $u_Lmyapp_main$package$__HelloWorldComp as $u_Lmyapp_main$package$__HelloWorldComp };
-var $t_Lmyapp_main$package$__CounterComp = null;
-function $u_Lmyapp_main$package$__CounterComp(x) {
-  $t_Lmyapp_main$package$__CounterComp = x;
-}
-export { $t_Lmyapp_main$package$__CounterComp as $t_Lmyapp_main$package$__CounterComp, $u_Lmyapp_main$package$__CounterComp as $u_Lmyapp_main$package$__CounterComp };
 var $t_Lmyapp_main$package$__GreetingSelectorComp = null;
 function $u_Lmyapp_main$package$__GreetingSelectorComp(x) {
   $t_Lmyapp_main$package$__GreetingSelectorComp = x;
 }
 export { $t_Lmyapp_main$package$__GreetingSelectorComp as $t_Lmyapp_main$package$__GreetingSelectorComp, $u_Lmyapp_main$package$__GreetingSelectorComp as $u_Lmyapp_main$package$__GreetingSelectorComp };
-var $t_Lmyapp_main$package$__GreetingComp = null;
-function $u_Lmyapp_main$package$__GreetingComp(x) {
-  $t_Lmyapp_main$package$__GreetingComp = x;
-}
-export { $t_Lmyapp_main$package$__GreetingComp as $t_Lmyapp_main$package$__GreetingComp, $u_Lmyapp_main$package$__GreetingComp as $u_Lmyapp_main$package$__GreetingComp };
 var $t_Lmyapp_main$package$__TextInputComp = null;
 function $u_Lmyapp_main$package$__TextInputComp(x) {
   $t_Lmyapp_main$package$__TextInputComp = x;

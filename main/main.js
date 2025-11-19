@@ -1,7 +1,8 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
+import * as $j_myapp$002ecomponents$002e$002dCounter$0024package$0024 from "./myapp.components.-Counter$package$.js";
+import * as $j_myapp$002ecomponents$002e$002dGreeting$0024package$0024 from "./myapp.components.-Greeting$package$.js";
 import * as $j_myapp$002emain$0024package$0024 from "./myapp.main$package$.js";
-export { $t_Lmyapp_main$package$__CounterComp as Counter } from "./myapp.main$package$.js";
 let $e_renderApp = (function(arg) {
   $j_myapp$002emain$0024package$0024.$m_Lmyapp_main$package$().renderApp__Lmyapp_ReactRoot__V(arg);
 });
@@ -16,4 +17,5 @@ export { $t_Lmyapp_main$package$__HelloWorldComp as HelloWorld } from "./myapp.m
 export { $t_Lmyapp_main$package$__ButtonComp as Button } from "./myapp.main$package$.js";
 export { $t_Lmyapp_main$package$__GreetingSelectorComp as GreetingSelector } from "./myapp.main$package$.js";
 export { $t_Lmyapp_main$package$__TextInputComp as TextInput } from "./myapp.main$package$.js";
-export { $t_Lmyapp_main$package$__GreetingComp as Greeting } from "./myapp.main$package$.js";
+export { $t_Lmyapp_components_Greeting$package$__GreetingComp as Greeting } from "./myapp.components.-Greeting$package$.js";
+export { $t_Lmyapp_components_Counter$package$__CounterComp as Counter } from "./myapp.components.-Counter$package$.js";

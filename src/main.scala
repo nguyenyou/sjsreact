@@ -5,6 +5,7 @@ import org.scalajs.dom
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.annotation.JSExportTopLevel
+import myapp.components.Greeting
 
 @js.native
 @JSImport("react", JSImport.Namespace)
@@ -76,44 +77,6 @@ val HelloWorld = functionComponent("HelloWorld") { _ =>
   div(null, "Hello Worldddd")
 }
 
-object Counter {
-  trait Props extends js.Object {
-    val initialCount: Int
-  }
-
-  object Props {
-    def apply(initialCount: Int): Props =
-      js.Dynamic.literal(initialCount = initialCount).asInstanceOf[Props]
-  }
-
-  val component = functionComponent[Props]("Counter") { p =>
-    val (count, setCount) = React.useState(p.initialCount)
-
-    div(
-      null,
-      button(
-        js.Dynamic.literal(onClick = () => setCount(count + 1)),
-        "+"
-      ),
-      button(
-        js.Dynamic.literal(onClick = () => setCount(count - 1)),
-        "-"
-      ),
-      button(
-        js.Dynamic.literal(onClick = () => setCount(p.initialCount)),
-        "reset"
-      ),
-      span(null, s"Count: $count")
-    )
-  }
-
-  def apply(iCount: Int): ReactElement =
-    React.createElement(
-      component,
-      Props(initialCount = iCount)
-    )
-}
-
 object GreetingSelector {
   trait Props extends js.Object {
     val value: String
@@ -167,30 +130,6 @@ object ThemeContext {
     )
 }
 
-object Greeting {
-  trait Props extends js.Object {
-    val name: String
-  }
-
-  object Props {
-    def apply(name: String): Props =
-      js.Dynamic.literal(name = name).asInstanceOf[Props]
-  }
-
-  val component = functionComponent[Props]("Greeting") { p =>
-    println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
-
-    val theme = React.useContext(ThemeContext.Context)
-
-    h3(
-      js.Dynamic.literal(className = theme),
-      s"Hello, ${p.name}!"
-    )
-  }
-
-  def apply(name: String): ReactElement =
-    React.createElement(component, Props(name = name))
-}
 
 object TextInput {
   val component = functionComponent("TextInput") { _ =>
@@ -285,14 +224,9 @@ val MyAppComp = MyApp
 @JSExportTopLevel("HelloWorld")
 val HelloWorldComp = HelloWorld
 
-@JSExportTopLevel("Counter")
-val CounterComp = Counter.component
 
 @JSExportTopLevel("GreetingSelector")
 val GreetingSelectorComp = GreetingSelector.component
-
-@JSExportTopLevel("Greeting")
-val GreetingComp = Greeting.component
 
 @JSExportTopLevel("TextInput")
 val TextInputComp = TextInput.component
