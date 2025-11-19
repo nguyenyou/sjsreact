@@ -294,6 +294,8 @@ object Button {
       dynamicProps.children
     )
   }
+  def apply(onClick: js.Function0[Unit])(children: js.Any*): ReactElement =
+    React.createElement(component, js.Dynamic.literal(onClick = onClick), children*)
 }
 
 @JSExportTopLevel("Button")
