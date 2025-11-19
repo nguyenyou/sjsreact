@@ -18,7 +18,7 @@ root.render(
       </div>
       <Counter initialCount={5} />
       <div style={{ marginTop: 20 }}>
-        <Button onClick={() => console.log("clicked")}>Click me</Button>
+        <Button onClick={(e) => console.log(e)}>Click me</Button>
       </div>
     </div>
   </StrictMode>
