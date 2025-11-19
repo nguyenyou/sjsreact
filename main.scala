@@ -34,12 +34,19 @@ trait ReactRoot extends js.Object {
   def render(element: ReactElement): Unit = js.native
 }
 
-val HelloWorld: js.Function0[ReactElement] = () => {
-  React.createElement("div", null, "Hello World")
+val HelloWorld: js.Function0[ReactElement] = {
+  val component: js.Function0[ReactElement] = () => {
+    React.createElement("div", null, "Hello World")
+  }
+  component.asInstanceOf[js.Dynamic].displayName = "HelloWorld"
+  component
 }
 
 @main
 def run(): Unit = {
+  println(
+    s"HelloWorld displayName: ${HelloWorld.asInstanceOf[js.Dynamic].displayName}"
+  )
   val container = dom.document.getElementById("app")
   val root = ReactDOM.createRoot(container)
   root.render(HelloWorld())

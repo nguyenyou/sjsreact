@@ -944,7 +944,9 @@ var $d_jl_Void = new $TypeData().initClass(0, "java.lang.Void", ({
 function $c_Lmain$package$() {
   this.Lmain$package$__f_HelloWorld = null;
   $n_Lmain$package$ = this;
-  this.Lmain$package$__f_HelloWorld = (() => $i_react.createElement("div", null, "Hello World"));
+  var component = (() => $i_react.createElement("div", null, "Hello World"));
+  component.displayName = "HelloWorld";
+  this.Lmain$package$__f_HelloWorld = component;
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -953,6 +955,10 @@ function $h_Lmain$package$() {
 }
 $h_Lmain$package$.prototype = $c_Lmain$package$.prototype;
 $c_Lmain$package$.prototype.run__V = (function() {
+  var x = ("HelloWorld displayName: " + $m_Lmain$package$().Lmain$package$__f_HelloWorld.displayName);
+  var this$2 = $m_s_Console$();
+  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
+  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
   root.render((0, $m_Lmain$package$().Lmain$package$__f_HelloWorld)());
