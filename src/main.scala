@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.components.Greeting
+import myapp.components.TextInput
 
 @js.native
 @JSImport("react", JSImport.Namespace)
@@ -73,51 +74,6 @@ trait ReactRoot extends js.Object {
   def unmount(): Unit = js.native
 }
 
-val HelloWorld = functionComponent("HelloWorld") { _ =>
-  div(null, "Hello Worldddd")
-}
-
-object GreetingSelector {
-  trait Props extends js.Object {
-    val value: String
-    val onChange: js.Function1[String, Unit]
-  }
-
-  object Props {
-    def apply(value: String, onChange: String => Unit): Props =
-      js.Dynamic.literal(value = value, onChange = onChange).asInstanceOf[Props]
-  }
-
-  val component = functionComponent[Props]("GreetingSelector") { p =>
-    fragment(
-      label(
-        null,
-        input(
-          js.Dynamic.literal(
-            `type` = "radio",
-            checked = p.value == "Hello",
-            onChange = (_: js.Dynamic) => p.onChange("Hello")
-          )
-        ),
-        "Regular greeting"
-      ),
-      label(
-        null,
-        input(
-          js.Dynamic.literal(
-            `type` = "radio",
-            checked = p.value == "Hello and welcome",
-            onChange = (_: js.Dynamic) => p.onChange("Hello and welcome")
-          )
-        ),
-        "Enthusiastic greeting"
-      )
-    )
-  }
-
-  def apply(value: String, onChange: String => Unit): ReactElement =
-    React.createElement(component, Props(value, onChange))
-}
 
 object ThemeContext {
   val Context = React.createContext[String]("dark")
@@ -130,31 +86,6 @@ object ThemeContext {
     )
 }
 
-
-object TextInput {
-  val component = functionComponent("TextInput") { _ =>
-    val (text, setText) = React.useState("")
-
-    div(
-      null,
-      input(
-        js.Dynamic.literal(
-          value = text,
-          onChange =
-            (e: js.Dynamic) => setText(e.target.value.asInstanceOf[String]),
-          placeholder = "Type something..."
-        )
-      ),
-      span(
-        js.Dynamic.literal(style = js.Dynamic.literal(marginLeft = "10px")),
-        s"You typed: $text"
-      )
-    )
-  }
-
-  def apply(): ReactElement = React.createElement(component, null)
-}
-
 val MyApp = functionComponent("MyApp") { _ =>
   val (theme, setTheme) = React.useState("dark")
 
@@ -165,7 +96,7 @@ val MyApp = functionComponent("MyApp") { _ =>
   ThemeContext(value = theme)(
     button(
       js.Dynamic.literal(onClick = () => handleClick()),
-      "Switch Themeeee"
+      "Switch Themeeeee"
     ),
     h3(null, "Updated from Scala!"),
     Greeting(name = "Taylor"),
@@ -220,35 +151,3 @@ def renderApp(root: ReactRoot): Unit = {
 
 @JSExportTopLevel("MyApp")
 val MyAppComp = MyApp
-
-@JSExportTopLevel("HelloWorld")
-val HelloWorldComp = HelloWorld
-
-
-@JSExportTopLevel("GreetingSelector")
-val GreetingSelectorComp = GreetingSelector.component
-
-@JSExportTopLevel("TextInput")
-val TextInputComp = TextInput.component
-
-object Button {
-  val component = functionComponent("Button") { props =>
-    val dynamicProps = props.asInstanceOf[js.Dynamic]
-    button(
-      js.Dynamic.literal(onClick =
-        if (!js.isUndefined(dynamicProps.onClick)) dynamicProps.onClick
-        else null
-      ),
-      dynamicProps.children
-    )
-  }
-  def apply(onClick: js.Function0[Unit])(children: js.Any*): ReactElement =
-    React.createElement(
-      component,
-      js.Dynamic.literal(onClick = onClick),
-      children*
-    )
-}
-
-@JSExportTopLevel("Button")
-val ButtonComp = Button.component
