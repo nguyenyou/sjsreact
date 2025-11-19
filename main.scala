@@ -23,6 +23,14 @@ object React extends js.Object {
   def useState[T](initialState: T): js.Tuple2[T, js.Function1[T, Unit]] =
     js.native
   def memo(component: js.Any): js.Any = js.native
+
+  def createContext[T](defaultValue: T): Context[T] = js.native
+  def useContext[T](context: Context[T]): T = js.native
+
+  @js.native
+  trait Context[T] extends js.Object {
+    val Provider: js.Any = js.native
+  }
 }
 
 object tags {
