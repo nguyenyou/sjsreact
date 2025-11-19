@@ -72,14 +72,6 @@ trait ReactRoot extends js.Object {
   def unmount(): Unit = js.native
 }
 
-def functionComponent[P <: js.Object](
-    displayName: String
-)(render: js.Function1[P, ReactElement]): js.Any = {
-  val component = render
-  component.asInstanceOf[js.Dynamic].displayName = displayName
-  component
-}
-
 val HelloWorld = functionComponent("HelloWorld") { _ =>
   div(null, "Hello Worldddd")
 }
