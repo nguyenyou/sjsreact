@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation.JSImport
 @JSImport("react", JSImport.Namespace)
 object React extends js.Object {
   val StrictMode: js.Any = js.native
+  val Fragment: js.Any = js.native
   def createElement(
       tag: js.Any,
       props: js.Object | Null,
@@ -21,6 +22,7 @@ object React extends js.Object {
   ): ReactElement = js.native
   def useState[T](initialState: T): js.Tuple2[T, js.Function1[T, Unit]] =
     js.native
+  def memo(component: js.Any): js.Any = js.native
 }
 
 object tags {
@@ -30,6 +32,14 @@ object tags {
     React.createElement("button", props, children*)
   def span(props: js.Object | Null, children: js.Any*): ReactElement =
     React.createElement("span", props, children*)
+  def label(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("label", props, children*)
+  def input(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("input", props, children*)
+  def h3(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("h3", props, children*)
+  def fragment(children: js.Any*): ReactElement =
+    React.createElement(React.Fragment, null, children*)
 }
 
 import tags.*
@@ -104,6 +114,66 @@ object Counter {
     )
 }
 
+object Greeting {
+  trait Props extends js.Object {
+    val name: String
+  }
+
+  object Props {
+    def apply(name: String): Props =
+      js.Dynamic.literal(name = name).asInstanceOf[Props]
+  }
+
+  val component = React.memo(functionalComponent("Greeting") { props =>
+    val p = props.asInstanceOf[Props]
+    println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
+    h3(null, s"Hello${if (p.name.nonEmpty) ", " else ""}${p.name}!")
+  })
+
+  def apply(name: String): ReactElement =
+    React.createElement(component, Props(name = name))
+}
+
+object MyApp {
+  val component = functionalComponent("MyApp") { _ =>
+    val nameState = React.useState("")
+    val name = nameState._1
+    val setName = nameState._2
+
+    val addressState = React.useState("")
+    val address = addressState._1
+    val setAddress = addressState._2
+
+    fragment(
+      label(
+        null,
+        "Name: ",
+        input(
+          js.Dynamic.literal(
+            value = name,
+            onChange =
+              (e: js.Dynamic) => setName(e.target.value.asInstanceOf[String])
+          )
+        )
+      ),
+      label(
+        null,
+        "Address: ",
+        input(
+          js.Dynamic.literal(
+            value = address,
+            onChange =
+              (e: js.Dynamic) => setAddress(e.target.value.asInstanceOf[String])
+          )
+        )
+      ),
+      Greeting(name = name)
+    )
+  }
+
+  def apply(): ReactElement = React.createElement(component, null)
+}
+
 @main
 def run(): Unit = {
   val container = dom.document.getElementById("app")
@@ -112,12 +182,7 @@ def run(): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      div(
-        null,
-        HelloWorld(),
-        Counter(iCount = 10),
-        Counter(iCount = 5)
-      )
+      MyApp()
     )
   )
 }
