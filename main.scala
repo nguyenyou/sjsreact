@@ -86,11 +86,6 @@ def functionalComponent(
 )(render: js.Function1[js.Object, ReactElement]): js.Any = {
   val component = render
   component.asInstanceOf[js.Dynamic].displayName = displayName
-
-  if (js.typeOf(js.Dynamic.global.$RefreshReg$) != "undefined") {
-    js.Dynamic.global.$RefreshReg$(component, displayName)
-  }
-
   component
 }
 

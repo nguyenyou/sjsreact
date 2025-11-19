@@ -380,9 +380,6 @@ export { $h_Lmyapp_main$package$ as $h_Lmyapp_main$package$ };
 $h_Lmyapp_main$package$.prototype = $c_Lmyapp_main$package$.prototype;
 $c_Lmyapp_main$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any = (function(displayName, render) {
   render.displayName = displayName;
-  if (($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T((typeof $RefreshReg$)) !== "undefined")) {
-    $RefreshReg$(render, displayName);
-  }
   return render;
 });
 $c_Lmyapp_main$package$.prototype.createRoot__T__Lmyapp_ReactRoot = (function(containerId) {
