@@ -4,6 +4,10 @@
 //> using dep "org.scala-js::scalajs-dom::2.8.1"
 
 //> using jsModuleKind es
+//> using jsModuleSplitStyleStr smallmodulesfor
+//> using jsSmallModuleForPackage myapp
+
+package myapp
 
 import org.scalajs.dom
 

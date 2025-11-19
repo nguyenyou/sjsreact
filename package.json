@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "scala-cli --power package main.scala -f -o main.js"
+    "build": "scala-cli --power package main.scala -f -o main"
   },
   "dependencies": {
     "@awesome.me/webawesome": "3.0.0",
