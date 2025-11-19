@@ -945,7 +945,20 @@ function $c_LCounter$() {
       }))(setCount$3$1, count$3$1);
       return this$2$1;
     })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["-"])));
-    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["reset"])));
+    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
+      var setCount$5$2 = null;
+      var p$1$2 = null;
+      setCount$5$2 = setCount;
+      p$1$2 = props;
+      var this$3$1 = ({});
+      this$3$1.onClick = null;
+      var setCount$5$1 = setCount$5$2;
+      var p$1$1 = p$1$2;
+      this$3$1.onClick = ((setCount$5, p$1) => (() => {
+        setCount$5($uI(p$1.initialCount));
+      }))(setCount$5$1, p$1$1);
+      return this$3$1;
+    })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["reset"])));
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
     var s = ("Count: " + count);

@@ -89,7 +89,9 @@ object Counter {
         "-"
       ),
       button(
-        null,
+        new js.Object {
+          val onClick: js.Function0[Unit] = () => setCount(p.initialCount)
+        },
         "reset"
       ),
       span(null, s"Count: $count")
