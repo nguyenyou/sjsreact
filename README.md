@@ -80,3 +80,35 @@ Button(onClick = () => println("Clicked!"))("Click Me")
 ```
 
 This allows us to keep our component logic pure Scala while satisfying React's requirement for JS object props.
+
+### Performance & Re-rendering
+
+You raised a valid concern: **Does the Box pattern break React's shallow comparison?**
+
+**The short answer:** Yes, for `React.memo`.
+
+**The detailed explanation:**
+
+1.  **Standard Components**: By default, React function components re-render whenever their parent re-renders, regardless of props. So, for standard components, the `Box` pattern **does not** negatively affect performance (beyond the tiny allocation cost).
+
+2.  **React.memo**: If you use `React.memo` to optimize performance, React does a **shallow comparison** of props.
+    *   Without Box: `props` is a JS object. React compares `prevProps.x === nextProps.x`.
+    *   With Box: `props` is the `Box` object itself.
+    *   Since we create a **new Box instance** every time we call `apply` (e.g., `Box(Props(...))`), the reference is always different (`prevBox !== nextBox`).
+    *   Therefore, `React.memo` will **always re-render**, defeating its purpose.
+
+**The Solution:**
+
+When using `React.memo` with the Box pattern, you must provide a custom comparison function that unboxes the values and compares them using Scala equality.
+
+```scala
+val component = scalaFunctionComponent[Props]("MyComponent") { p => ... }
+
+// Create a memoized version with custom comparison
+val memoizedComponent = React.memo(
+  component,
+  (prev: Box[Props], next: Box[Props]) => prev.unbox == next.unbox
+)
+```
+
+Since `Props` is a `case class`, `==` performs a structural comparison (checking if all fields are equal), which is exactly what we want for correct and efficient re-renders.
