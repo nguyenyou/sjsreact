@@ -12,7 +12,12 @@ function $h_Lmyapp_ReactExtensions$package$() {
 export { $h_Lmyapp_ReactExtensions$package$ as $h_Lmyapp_ReactExtensions$package$ };
 $h_Lmyapp_ReactExtensions$package$.prototype = $c_Lmyapp_ReactExtensions$package$.prototype;
 $c_Lmyapp_ReactExtensions$package$.prototype.scalaFunctionComponent__T__F1__sjs_js_Function1 = (function(displayName, render) {
-  var f = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((box) => $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(render).apply__O__O(box.value)));
+  var f = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((box) => $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(render).apply__O__O(box.a)));
+  f.displayName = displayName;
+  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(f);
+});
+$c_Lmyapp_ReactExtensions$package$.prototype.scalaFunctionComponentWithChildren__T__F2__sjs_js_Function1 = (function(displayName, render) {
+  var f = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((props) => $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(render).apply__O__O__O(props.a, props.children)));
   f.displayName = displayName;
   return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(f);
 });

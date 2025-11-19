@@ -1,6 +1,5 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
-import * as $j_myapp$002e$002dBox$0024 from "./myapp.-Box$.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
 import * as $j_myapp$002e$002dReact$002dExtensions$0024package$0024 from "./myapp.-React-Extensions$package$.js";
 import * as $j_myapp$002ecomponents$002e$002dGreeting$0024$002dProps from "./myapp.components.-Greeting$-Props.js";
@@ -30,7 +29,11 @@ function $h_Lmyapp_components_Greeting$() {
 export { $h_Lmyapp_components_Greeting$ as $h_Lmyapp_components_Greeting$ };
 $h_Lmyapp_components_Greeting$.prototype = $c_Lmyapp_components_Greeting$.prototype;
 $c_Lmyapp_components_Greeting$.prototype.apply__T__Lmyapp_ReactElement = (function(name) {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(this.Lmyapp_components_Greeting$__f_component, $j_myapp$002e$002dBox$0024.$m_Lmyapp_Box$().apply__O__Lmyapp_Box(new $j_myapp$002ecomponents$002e$002dGreeting$0024$002dProps.$c_Lmyapp_components_Greeting$Props(name)), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
+  var $x_2 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$();
+  var $x_1 = this.Lmyapp_components_Greeting$__f_component;
+  var value$proxy1 = new $j_myapp$002ecomponents$002e$002dGreeting$0024$002dProps.$c_Lmyapp_components_Greeting$Props(name);
+  var fields = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("a", value$proxy1)]));
+  return $x_2.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
 });
 var $d_Lmyapp_components_Greeting$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_components_Greeting$, "myapp.components.Greeting$", ({
   Lmyapp_components_Greeting$: 1

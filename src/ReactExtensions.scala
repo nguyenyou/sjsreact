@@ -2,19 +2,42 @@ package myapp
 
 import scala.scalajs.js
 
-trait Box[+T] extends js.Object {
-  val value: T
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Box[+A] extends js.Object {
+  @JSName("a") val unbox: A = js.native
 }
 
 object Box {
-  def apply[T](v: T): Box[T] =
-    js.Dynamic.literal(value = v.asInstanceOf[js.Any]).asInstanceOf[Box[T]]
+  inline def apply[A](value: A): Box[A] =
+    js.Dynamic.literal(a = value.asInstanceOf[js.Any]).asInstanceOf[Box[A]]
+
+  val Unit: Box[Unit] =
+    Box(())
 }
 
 def scalaFunctionComponent[P](
     displayName: String
 )(render: P => ReactElement): js.Function1[Box[P], ReactElement] = {
-  val f = (box: Box[P]) => render(box.value)
+  val f = (box: Box[P]) => render(box.unbox)
+  val component = f
+  component.asInstanceOf[js.Dynamic].displayName = displayName
+  component
+}
+
+@js.native
+trait PropsWithChildren extends js.Object {
+  val children: js.Any
+}
+
+def scalaFunctionComponentWithChildren[P](
+    displayName: String
+)(
+    render: (P, js.Any) => ReactElement
+): js.Function1[Box[P] & PropsWithChildren, ReactElement] = {
+  val f = (props: Box[P] & PropsWithChildren) =>
+    render(props.unbox, props.children)
   val component = f
   component.asInstanceOf[js.Dynamic].displayName = displayName
   component
