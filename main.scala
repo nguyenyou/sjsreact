@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation.JSImport
 @js.native
 @JSImport("react", JSImport.Namespace)
 object React extends js.Object {
+  val StrictMode: js.Any = js.native
   def createElement(
       tag: js.Any,
       props: js.Object | Null,
@@ -50,5 +51,11 @@ val HelloWorld = functionalComponent("HelloWorld") { _ =>
 def run(): Unit = {
   val container = dom.document.getElementById("app")
   val root = ReactDOM.createRoot(container)
-  root.render(React.createElement(HelloWorld, null))
+  root.render(
+    React.createElement(
+      React.StrictMode,
+      null,
+      React.createElement(HelloWorld, null)
+    )
+  )
 }

@@ -959,7 +959,7 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null));
+  root.render($i_react.createElement($i_react.StrictMode, null, $i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null)));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
