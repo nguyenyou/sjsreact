@@ -81,7 +81,7 @@ trait ReactRoot extends js.Object {
   def unmount(): Unit = js.native
 }
 
-def functionalComponent[P <: js.Object](
+def functionComponent[P <: js.Object](
     displayName: String
 )(render: js.Function1[P, ReactElement]): js.Any = {
   val component = render
@@ -90,7 +90,7 @@ def functionalComponent[P <: js.Object](
 }
 
 object HelloWorld {
-  val component = functionalComponent("HelloWorld") { _ =>
+  val component = functionComponent("HelloWorld") { _ =>
     div(null, "Hello Worldddd")
   }
   def apply(): ReactElement = React.createElement(component, null)
@@ -106,7 +106,7 @@ object Counter {
       js.Dynamic.literal(initialCount = initialCount).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("Counter") { (p: Props) =>
+  val component = functionComponent[Props]("Counter") { p =>
     val (count, setCount) = React.useState(p.initialCount)
 
     div(
@@ -145,7 +145,7 @@ object GreetingSelector {
       js.Dynamic.literal(value = value, onChange = onChange).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("GreetingSelector") { (p: Props) =>
+  val component = functionComponent[Props]("GreetingSelector") { p =>
     fragment(
       label(
         null,
@@ -194,7 +194,7 @@ object Greeting {
       js.Dynamic.literal(name = name).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("Greeting") { (p: Props) =>
+  val component = functionComponent[Props]("Greeting") { p =>
     println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
 
     val theme = React.useContext(ThemeContext.Context)
@@ -210,7 +210,7 @@ object Greeting {
 }
 
 object TextInput {
-  val component = functionalComponent("TextInput") { _ =>
+  val component = functionComponent("TextInput") { _ =>
     val (text, setText) = React.useState("")
 
     div(
@@ -230,7 +230,7 @@ object TextInput {
 }
 
 object MyApp {
-  val component = functionalComponent("MyApp") { _ =>
+  val component = functionComponent("MyApp") { _ =>
     val (theme, setTheme) = React.useState("dark")
 
     def handleClick(): Unit = {
@@ -287,7 +287,7 @@ val GreetingComp = Greeting.component
 val TextInputComp = TextInput.component
 
 object Button {
-  val component = functionalComponent("Button") { props =>
+  val component = functionComponent("Button") { props =>
     val dynamicProps = props.asInstanceOf[js.Dynamic]
     button(
       js.Dynamic.literal(onClick = if (!js.isUndefined(dynamicProps.onClick)) dynamicProps.onClick else null),

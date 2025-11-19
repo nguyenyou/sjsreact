@@ -9,7 +9,7 @@ import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
 function $c_Lmyapp_Button$() {
   this.Lmyapp_Button$__f_component = null;
   $n_Lmyapp_Button$ = this;
-  this.Lmyapp_Button$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Button", ((props) => {
+  this.Lmyapp_Button$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("Button", ((props) => {
     var $x_2 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var v = props.onClick;
@@ -46,7 +46,7 @@ export { $m_Lmyapp_Button$ as $m_Lmyapp_Button$ };
 function $c_Lmyapp_Counter$() {
   this.Lmyapp_Counter$__f_component = null;
   $n_Lmyapp_Counter$ = this;
-  this.Lmyapp_Counter$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((p) => {
+  this.Lmyapp_Counter$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((p) => {
     matchResult1: {
       var \u03b42$;
       var x1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(p.initialCount));
@@ -111,7 +111,7 @@ export { $m_Lmyapp_Counter$ as $m_Lmyapp_Counter$ };
 function $c_Lmyapp_Greeting$() {
   this.Lmyapp_Greeting$__f_component = null;
   $n_Lmyapp_Greeting$ = this;
-  this.Lmyapp_Greeting$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((p) => {
+  this.Lmyapp_Greeting$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((p) => {
     var x = ("Greeting was rendered at " + $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(new Date().toLocaleTimeString()));
     var this$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_s_Console$();
     var this$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this$3.out__Ljava_io_PrintStream());
@@ -152,7 +152,7 @@ export { $m_Lmyapp_Greeting$ as $m_Lmyapp_Greeting$ };
 function $c_Lmyapp_GreetingSelector$() {
   this.Lmyapp_GreetingSelector$__f_component = null;
   $n_Lmyapp_GreetingSelector$ = this;
-  this.Lmyapp_GreetingSelector$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((p) => {
+  this.Lmyapp_GreetingSelector$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((p) => {
     var $x_14 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_13 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_12 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
@@ -205,7 +205,7 @@ export { $m_Lmyapp_GreetingSelector$ as $m_Lmyapp_GreetingSelector$ };
 function $c_Lmyapp_HelloWorld$() {
   this.Lmyapp_HelloWorld$__f_component = null;
   $n_Lmyapp_HelloWorld$ = this;
-  this.Lmyapp_HelloWorld$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $j_myapp$002etags$0024.$m_Lmyapp_tags$().div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Hello Worldddd"])))));
+  this.Lmyapp_HelloWorld$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $j_myapp$002etags$0024.$m_Lmyapp_tags$().div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Hello Worldddd"])))));
 }
 export { $c_Lmyapp_HelloWorld$ as $c_Lmyapp_HelloWorld$ };
 $c_Lmyapp_HelloWorld$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();
@@ -235,7 +235,7 @@ export { $p_Lmyapp_MyApp$__handleClick$1__F1__T__V as $p_Lmyapp_MyApp$__handleCl
 function $c_Lmyapp_MyApp$() {
   this.Lmyapp_MyApp$__f_component = null;
   $n_Lmyapp_MyApp$ = this;
-  this.Lmyapp_MyApp$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$5) => {
+  this.Lmyapp_MyApp$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$5) => {
     matchResult3: {
       var \u03b46$;
       var x7 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("dark");
@@ -293,7 +293,7 @@ export { $m_Lmyapp_MyApp$ as $m_Lmyapp_MyApp$ };
 function $c_Lmyapp_TextInput$() {
   this.Lmyapp_TextInput$__f_component = null;
   $n_Lmyapp_TextInput$ = this;
-  this.Lmyapp_TextInput$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("TextInput", ((_$4) => {
+  this.Lmyapp_TextInput$__f_component = $m_Lmyapp_main$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("TextInput", ((_$4) => {
     matchResult2: {
       var \u03b44$;
       var x4 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("");
@@ -372,7 +372,7 @@ function $h_Lmyapp_main$package$() {
 }
 export { $h_Lmyapp_main$package$ as $h_Lmyapp_main$package$ };
 $h_Lmyapp_main$package$.prototype = $c_Lmyapp_main$package$.prototype;
-$c_Lmyapp_main$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any = (function(displayName, render) {
+$c_Lmyapp_main$package$.prototype.functionComponent__T__sjs_js_Function1__sjs_js_Any = (function(displayName, render) {
   render.displayName = displayName;
   return render;
 });
