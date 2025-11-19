@@ -9,6 +9,7 @@ import org.scalajs.dom
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
+import scala.scalajs.js.annotation.JSExportTopLevel
 
 @js.native
 @JSImport("react", JSImport.Namespace)
@@ -73,6 +74,7 @@ object ReactDOM extends js.Object {
 @js.native
 trait ReactRoot extends js.Object {
   def render(element: ReactElement): Unit = js.native
+  def unmount(): Unit = js.native
 }
 
 def functionalComponent(
@@ -214,7 +216,7 @@ object MyApp {
       fragment(
         button(
           js.Dynamic.literal(onClick = () => handleClick()),
-          "Switch theme"
+          "Switch themeeeeeeeeeeeeee"
         ),
         Greeting(name = "Taylor")
       )
@@ -224,9 +226,9 @@ object MyApp {
   def apply(): ReactElement = React.createElement(component, null)
 }
 
-@main
-def run(): Unit = {
-  val container = dom.document.getElementById("app")
+@JSExportTopLevel("mount")
+def mount(containerId: String): ReactRoot = {
+  val container = dom.document.getElementById(containerId)
   val root = ReactDOM.createRoot(container)
   root.render(
     React.createElement(
@@ -235,4 +237,5 @@ def run(): Unit = {
       MyApp()
     )
   )
+  root
 }

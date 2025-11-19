@@ -998,7 +998,7 @@ function $c_LMyApp$() {
       $p_LMyApp$__handleClick$1__F1__T__V(this, setTheme, theme);
     })));
     var fields$1 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
-    var children = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch theme"]))), $m_LGreeting$().apply__T__LReactElement("Taylor")]));
+    var children = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch themeeeeeeeeeeeeee"]))), $m_LGreeting$().apply__T__LReactElement("Taylor")]));
     return $x_7.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($x_6, $x_5, $x_4.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().Fragment__sjs_js_Any(), null, children)])));
   }));
 }
@@ -1168,10 +1168,11 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
   render.displayName = displayName;
   return render;
 });
-$c_Lmain$package$.prototype.run__V = (function() {
-  var container = document.getElementById("app");
+$c_Lmain$package$.prototype.mount__T__LReactRoot = (function(containerId) {
+  var container = document.getElementById(containerId);
   var root = $i_react$002ddom$002fclient.createRoot(container);
   root.render($m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().StrictMode__sjs_js_Any(), null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LMyApp$().apply__LReactElement()]))));
+  return root;
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
@@ -1708,18 +1709,6 @@ function $m_RTLong$() {
   }
   return $n_RTLong$;
 }
-function $s_Lrun__main__AT__V(args) {
-  try {
-    $m_Lmain$package$().run__V();
-  } catch (e) {
-    if (false) {
-      var error = $as_s_util_CommandLineParser$ParseError(e);
-      $m_s_util_CommandLineParser$().showError__s_util_CommandLineParser$ParseError__V(error);
-    } else {
-      throw e;
-    }
-  }
-}
 function $is_F1(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F1)));
 }
@@ -1974,32 +1963,6 @@ function $m_sjsr_Compat$() {
     $n_sjsr_Compat$ = new $c_sjsr_Compat$();
   }
   return $n_sjsr_Compat$;
-}
-/** @constructor */
-function $c_s_util_CommandLineParser$() {
-}
-$c_s_util_CommandLineParser$.prototype = new $h_O();
-$c_s_util_CommandLineParser$.prototype.constructor = $c_s_util_CommandLineParser$;
-/** @constructor */
-function $h_s_util_CommandLineParser$() {
-}
-$h_s_util_CommandLineParser$.prototype = $c_s_util_CommandLineParser$.prototype;
-$c_s_util_CommandLineParser$.prototype.showError__s_util_CommandLineParser$ParseError__V = (function(err) {
-  var where = (($n(err).idx__I() === 0) ? "" : (($n(err).idx__I() === 1) ? " after first argument" : ((" after " + $n(err).idx__I()) + " arguments")));
-  var x = ((("Illegal command line" + where) + ": ") + $n(err).msg__T());
-  var this$2 = $m_s_Console$();
-  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
-  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-});
-var $d_s_util_CommandLineParser$ = new $TypeData().initClass($c_s_util_CommandLineParser$, "scala.util.CommandLineParser$", ({
-  s_util_CommandLineParser$: 1
-}));
-var $n_s_util_CommandLineParser$;
-function $m_s_util_CommandLineParser$() {
-  if ((!$n_s_util_CommandLineParser$)) {
-    $n_s_util_CommandLineParser$ = new $c_s_util_CommandLineParser$();
-  }
-  return $n_s_util_CommandLineParser$;
 }
 /** @constructor */
 function $c_s_util_DynamicVariable(init) {
@@ -2595,15 +2558,6 @@ $c_sc_AbstractIterator.prototype.toString__T = (function() {
 $c_sc_AbstractIterator.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
   return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end);
 });
-function $as_s_util_CommandLineParser$ParseError(obj) {
-  return ((false || (obj === null)) ? obj : $throwClassCastException(obj, "scala.util.CommandLineParser$ParseError"));
-}
-function $isArrayOf_s_util_CommandLineParser$ParseError(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.s_util_CommandLineParser$ParseError)));
-}
-function $asArrayOf_s_util_CommandLineParser$ParseError(obj, depth) {
-  return (($isArrayOf_s_util_CommandLineParser$ParseError(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.util.CommandLineParser$ParseError;", depth));
-}
 function $ct_Ljava_io_FilterOutputStream__Ljava_io_OutputStream__($thiz, out) {
   return $thiz;
 }
@@ -3745,4 +3699,8 @@ var $d_scm_StringBuilder = new $TypeData().initClass($c_scm_StringBuilder, "scal
 }));
 $L0 = new $c_RTLong(0, 0);
 $d_J.zero = $L0;
-$s_Lrun__main__AT__V(new ($d_T.getArrayOf().constr)([]));
+let $e_mount = (function(arg) {
+  var prep0 = $as_T(arg);
+  return $m_Lmain$package$().mount__T__LReactRoot(prep0);
+});
+export { $e_mount as mount };
