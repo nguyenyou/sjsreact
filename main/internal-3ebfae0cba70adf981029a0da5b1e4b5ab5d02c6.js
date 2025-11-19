@@ -1034,6 +1034,18 @@ function $f_jl_Void__toString__T($thiz) {
   return "undefined";
 }
 export { $f_jl_Void__toString__T as $f_jl_Void__toString__T };
+function $as_jl_Void(obj) {
+  return (((obj === (void 0)) || (obj === null)) ? obj : $throwClassCastException(obj, "java.lang.Void"));
+}
+export { $as_jl_Void as $as_jl_Void };
+function $isArrayOf_jl_Void(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.jl_Void)));
+}
+export { $isArrayOf_jl_Void as $isArrayOf_jl_Void };
+function $asArrayOf_jl_Void(obj, depth) {
+  return (($isArrayOf_jl_Void(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Ljava.lang.Void;", depth));
+}
+export { $asArrayOf_jl_Void as $asArrayOf_jl_Void };
 var $d_jl_Void = new $TypeData().initClass(0, "java.lang.Void", ({
   jl_Void: 1
 }), ((x) => (x === (void 0))));

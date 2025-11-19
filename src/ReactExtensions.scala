@@ -42,3 +42,18 @@ def scalaFunctionComponentWithChildren[P](
   component.asInstanceOf[js.Dynamic].displayName = displayName
   component
 }
+
+class FunctionalComponent[P](displayName: String)(render: P => ReactElement) {
+  private val component = scalaFunctionComponent[P](displayName)(render)
+  def apply(props: P): ReactElement =
+    React.createElement(component, Box(props))
+}
+
+class FunctionalComponentWithChildren[P](displayName: String)(
+    render: (P, js.Any) => ReactElement
+) {
+  private val component =
+    scalaFunctionComponentWithChildren[P](displayName)(render)
+  def apply(props: P)(children: js.Any*): ReactElement =
+    React.createElement(component, Box(props), children*)
+}

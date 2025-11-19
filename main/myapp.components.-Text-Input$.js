@@ -1,13 +1,14 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
+import * as $j_myapp$002e$002dFunctional$002dComponent from "./myapp.-Functional-Component.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
-import * as $j_myapp$002efunction$002dComponent$0024package$0024 from "./myapp.function-Component$package$.js";
 import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
 /** @constructor */
 function $c_Lmyapp_components_TextInput$() {
   this.Lmyapp_components_TextInput$__f_component = null;
   $n_Lmyapp_components_TextInput$ = this;
-  this.Lmyapp_components_TextInput$__f_component = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("TextInput", ((_$1) => {
+  this.Lmyapp_components_TextInput$__f_component = new $j_myapp$002e$002dFunctional$002dComponent.$c_Lmyapp_FunctionalComponent("TextInput", new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$1) => {
+    $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_jl_Void(_$1);
     matchResult1: {
       var \u03b42$;
       var x1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2("");
@@ -38,7 +39,7 @@ function $c_Lmyapp_components_TextInput$() {
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var s = ("You typed: " + text);
     return $x_10.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $x_9.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_5, $x_4.span__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_3, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([s])))])));
-  }));
+  })));
 }
 export { $c_Lmyapp_components_TextInput$ as $c_Lmyapp_components_TextInput$ };
 $c_Lmyapp_components_TextInput$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();
@@ -49,7 +50,7 @@ function $h_Lmyapp_components_TextInput$() {
 export { $h_Lmyapp_components_TextInput$ as $h_Lmyapp_components_TextInput$ };
 $h_Lmyapp_components_TextInput$.prototype = $c_Lmyapp_components_TextInput$.prototype;
 $c_Lmyapp_components_TextInput$.prototype.apply__Lmyapp_ReactElement = (function() {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(this.Lmyapp_components_TextInput$__f_component, null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
+  return $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this.Lmyapp_components_TextInput$__f_component).apply__O__Lmyapp_ReactElement((void 0));
 });
 var $d_Lmyapp_components_TextInput$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_components_TextInput$, "myapp.components.TextInput$", ({
   Lmyapp_components_TextInput$: 1

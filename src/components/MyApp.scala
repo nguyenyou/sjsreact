@@ -26,7 +26,7 @@ object MyApp {
         "Switch Themeeee"
       ),
       h3(null, "Updated from Scala!"),
-      Greeting(name = "Taylor")(),
+      Greeting(name = "Taylor"),
       div(
         js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
         TextInput()
