@@ -998,7 +998,7 @@ function $c_LMyApp$() {
       $p_LMyApp$__handleClick$1__F1__T__V(this, setTheme, theme);
     })));
     var fields$1 = $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
-    var $x_4 = $x_6.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch themeeeeeeeeeeeeee"])));
+    var $x_4 = $x_6.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch eeee"])));
     var $x_3 = $m_LGreeting$().apply__T__LReactElement("Taylor");
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
@@ -1229,13 +1229,17 @@ function $h_Lmain$package$() {
 $h_Lmain$package$.prototype = $c_Lmain$package$.prototype;
 $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any = (function(displayName, render) {
   render.displayName = displayName;
+  if (($as_T((typeof $RefreshReg$)) !== "undefined")) {
+    $RefreshReg$(render, displayName);
+  }
   return render;
 });
-$c_Lmain$package$.prototype.mount__T__LReactRoot = (function(containerId) {
+$c_Lmain$package$.prototype.createRoot__T__LReactRoot = (function(containerId) {
   var container = document.getElementById(containerId);
-  var root = $i_react$002ddom$002fclient.createRoot(container);
+  return $i_react$002ddom$002fclient.createRoot(container);
+});
+$c_Lmain$package$.prototype.renderApp__LReactRoot__V = (function(root) {
   root.render($m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().StrictMode__sjs_js_Any(), null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LMyApp$().apply__LReactElement()]))));
-  return root;
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
@@ -3774,8 +3778,12 @@ var $d_scm_StringBuilder = new $TypeData().initClass($c_scm_StringBuilder, "scal
 }));
 $L0 = new $c_RTLong(0, 0);
 $d_J.zero = $L0;
-let $e_mount = (function(arg) {
-  var prep0 = $as_T(arg);
-  return $m_Lmain$package$().mount__T__LReactRoot(prep0);
+let $e_renderApp = (function(arg) {
+  $m_Lmain$package$().renderApp__LReactRoot__V(arg);
 });
-export { $e_mount as mount };
+export { $e_renderApp as renderApp };
+let $e_createRoot = (function(arg) {
+  var prep0 = $as_T(arg);
+  return $m_Lmain$package$().createRoot__T__LReactRoot(prep0);
+});
+export { $e_createRoot as createRoot };

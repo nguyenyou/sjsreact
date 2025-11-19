@@ -82,6 +82,11 @@ def functionalComponent(
 )(render: js.Function1[js.Object, ReactElement]): js.Any = {
   val component = render
   component.asInstanceOf[js.Dynamic].displayName = displayName
+
+  if (js.typeOf(js.Dynamic.global.$RefreshReg$) != "undefined") {
+    js.Dynamic.global.$RefreshReg$(component, displayName)
+  }
+
   component
 }
 
@@ -236,7 +241,7 @@ object MyApp {
       fragment(
         button(
           js.Dynamic.literal(onClick = () => handleClick()),
-          "Switch themeeeeeeeeeeeeee"
+          "Switch eeee"
         ),
         Greeting(name = "Taylor"),
         div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
@@ -247,10 +252,14 @@ object MyApp {
   def apply(): ReactElement = React.createElement(component, null)
 }
 
-@JSExportTopLevel("mount")
-def mount(containerId: String): ReactRoot = {
+@JSExportTopLevel("createRoot")
+def createRoot(containerId: String): ReactRoot = {
   val container = dom.document.getElementById(containerId)
-  val root = ReactDOM.createRoot(container)
+  ReactDOM.createRoot(container)
+}
+
+@JSExportTopLevel("renderApp")
+def renderApp(root: ReactRoot): Unit = {
   root.render(
     React.createElement(
       React.StrictMode,
@@ -258,5 +267,4 @@ def mount(containerId: String): ReactRoot = {
       MyApp()
     )
   )
-  root
 }
