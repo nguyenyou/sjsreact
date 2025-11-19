@@ -2,6 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
+import myapp.{Box, scalaFunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.div
@@ -10,16 +11,9 @@ import myapp.tags.span
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 object Counter {
-  trait Props extends js.Object {
-    val initialCount: Int
-  }
+  case class Props(initialCount: Int)
 
-  object Props {
-    def apply(initialCount: Int): Props =
-      js.Dynamic.literal(initialCount = initialCount).asInstanceOf[Props]
-  }
-
-  val component = functionComponent[Props]("Counter") { p =>
+  val component = scalaFunctionComponent[Props]("Counter") { p =>
     val (count, setCount) = React.useState(p.initialCount)
 
     div(
@@ -43,7 +37,7 @@ object Counter {
   def apply(iCount: Int): ReactElement =
     React.createElement(
       component,
-      Props(initialCount = iCount)
+      Box(Props(initialCount = iCount))
     )
 }
 

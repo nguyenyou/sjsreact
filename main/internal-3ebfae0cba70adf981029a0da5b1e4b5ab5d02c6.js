@@ -1761,6 +1761,11 @@ $c_sr_ScalaRunTime$.prototype.array_apply__O__I__O = (function(xs, idx) {
     throw new $c_s_MatchError(xs);
   }
 });
+$c_sr_ScalaRunTime$.prototype._toString__s_Product__T = (function(x) {
+  var this$1 = $n($n(x).productIterator__sc_Iterator());
+  var start = ($n(x).productPrefix__T() + "(");
+  return $f_sc_IterableOnceOps__mkString__T__T__T__T(this$1, start, ",", ")");
+});
 $c_sr_ScalaRunTime$.prototype.wrapRefArray__AO__sci_ArraySeq = (function(xs) {
   if ((xs === null)) {
     return null;
@@ -2487,6 +2492,9 @@ $c_sc_AbstractIterator.prototype.toString__T = (function() {
 $c_sc_AbstractIterator.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
   return $f_sc_IterableOnceOps__addString__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end);
 });
+$c_sc_AbstractIterator.prototype.knownSize__I = (function() {
+  return (-1);
+});
 class $c_jl_ArithmeticException extends $c_jl_RuntimeException {
   constructor(s) {
     super();
@@ -2719,6 +2727,40 @@ var $d_s_MatchError = new $TypeData().initClass($c_s_MatchError, "scala.MatchErr
 }));
 export { $d_s_MatchError as $d_s_MatchError };
 /** @constructor */
+function $c_s_Product$$anon$1(outer) {
+  this.s_Product$$anon$1__f_c = 0;
+  this.s_Product$$anon$1__f_cmax = 0;
+  this.s_Product$$anon$1__f_$outer = null;
+  $n(outer);
+  this.s_Product$$anon$1__f_$outer = outer;
+  this.s_Product$$anon$1__f_c = 0;
+  this.s_Product$$anon$1__f_cmax = $n(outer).productArity__I();
+}
+export { $c_s_Product$$anon$1 as $c_s_Product$$anon$1 };
+$c_s_Product$$anon$1.prototype = new $h_sc_AbstractIterator();
+$c_s_Product$$anon$1.prototype.constructor = $c_s_Product$$anon$1;
+/** @constructor */
+function $h_s_Product$$anon$1() {
+}
+export { $h_s_Product$$anon$1 as $h_s_Product$$anon$1 };
+$h_s_Product$$anon$1.prototype = $c_s_Product$$anon$1.prototype;
+$c_s_Product$$anon$1.prototype.hasNext__Z = (function() {
+  return (this.s_Product$$anon$1__f_c < this.s_Product$$anon$1__f_cmax);
+});
+$c_s_Product$$anon$1.prototype.next__O = (function() {
+  var result = $n(this.s_Product$$anon$1__f_$outer).productElement__I__O(this.s_Product$$anon$1__f_c);
+  this.s_Product$$anon$1__f_c = ((1 + this.s_Product$$anon$1__f_c) | 0);
+  return result;
+});
+var $d_s_Product$$anon$1 = new $TypeData().initClass($c_s_Product$$anon$1, "scala.Product$$anon$1", ({
+  s_Product$$anon$1: 1,
+  sc_AbstractIterator: 1,
+  sc_Iterator: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOnceOps: 1
+}));
+export { $d_s_Product$$anon$1 as $d_s_Product$$anon$1 };
+/** @constructor */
 function $c_T2(_1, _2) {
   this.T2__f__1 = null;
   this.T2__f__2 = null;
@@ -2744,6 +2786,9 @@ $c_T2.prototype.toString__T = (function() {
 });
 $c_T2.prototype.productPrefix__T = (function() {
   return "Tuple2";
+});
+$c_T2.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1(this);
 });
 $c_T2.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -2816,6 +2861,39 @@ function $f_sc_LinearSeqOps__apply__I__O($thiz, n) {
   return $n(skipped).head__O();
 }
 export { $f_sc_LinearSeqOps__apply__I__O as $f_sc_LinearSeqOps__apply__I__O };
+/** @constructor */
+function $c_sr_ScalaRunTime$$anon$1(x$2) {
+  this.sr_ScalaRunTime$$anon$1__f_c = 0;
+  this.sr_ScalaRunTime$$anon$1__f_cmax = 0;
+  this.sr_ScalaRunTime$$anon$1__f_x$2 = null;
+  this.sr_ScalaRunTime$$anon$1__f_x$2 = x$2;
+  this.sr_ScalaRunTime$$anon$1__f_c = 0;
+  this.sr_ScalaRunTime$$anon$1__f_cmax = $n(x$2).productArity__I();
+}
+export { $c_sr_ScalaRunTime$$anon$1 as $c_sr_ScalaRunTime$$anon$1 };
+$c_sr_ScalaRunTime$$anon$1.prototype = new $h_sc_AbstractIterator();
+$c_sr_ScalaRunTime$$anon$1.prototype.constructor = $c_sr_ScalaRunTime$$anon$1;
+/** @constructor */
+function $h_sr_ScalaRunTime$$anon$1() {
+}
+export { $h_sr_ScalaRunTime$$anon$1 as $h_sr_ScalaRunTime$$anon$1 };
+$h_sr_ScalaRunTime$$anon$1.prototype = $c_sr_ScalaRunTime$$anon$1.prototype;
+$c_sr_ScalaRunTime$$anon$1.prototype.hasNext__Z = (function() {
+  return (this.sr_ScalaRunTime$$anon$1__f_c < this.sr_ScalaRunTime$$anon$1__f_cmax);
+});
+$c_sr_ScalaRunTime$$anon$1.prototype.next__O = (function() {
+  var result = $n(this.sr_ScalaRunTime$$anon$1__f_x$2).productElement__I__O(this.sr_ScalaRunTime$$anon$1__f_c);
+  this.sr_ScalaRunTime$$anon$1__f_c = ((1 + this.sr_ScalaRunTime$$anon$1__f_c) | 0);
+  return result;
+});
+var $d_sr_ScalaRunTime$$anon$1 = new $TypeData().initClass($c_sr_ScalaRunTime$$anon$1, "scala.runtime.ScalaRunTime$$anon$1", ({
+  sr_ScalaRunTime$$anon$1: 1,
+  sc_AbstractIterator: 1,
+  sc_Iterator: 1,
+  sc_IterableOnce: 1,
+  sc_IterableOnceOps: 1
+}));
+export { $d_sr_ScalaRunTime$$anon$1 as $d_sr_ScalaRunTime$$anon$1 };
 class $c_jl_ArrayIndexOutOfBoundsException extends $c_jl_IndexOutOfBoundsException {
   constructor(s) {
     super();
@@ -3527,6 +3605,9 @@ $c_sci_Nil$.prototype.productArity__I = (function() {
 });
 $c_sci_Nil$.prototype.productElement__I__O = (function(x$1) {
   return $m_sr_Statics$().ioobe__I__O(x$1);
+});
+$c_sci_Nil$.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1(this);
 });
 $c_sci_Nil$.prototype.tail__O = (function() {
   this.tail__E();

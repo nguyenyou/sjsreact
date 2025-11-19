@@ -2,6 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
+import myapp.{Box, scalaFunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.h3
@@ -10,16 +11,9 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 
 object Greeting {
 
-  trait Props extends js.Object {
-    val name: String
-  }
+  case class Props(name: String)
 
-  object Props {
-    def apply(name: String): Props =
-      js.Dynamic.literal(name = name).asInstanceOf[Props]
-  }
-
-  val component = functionComponent[Props]("Greeting") { p =>
+  val component = scalaFunctionComponent[Props]("Greeting") { p =>
     val theme = React.useContext(ThemeContext.Context)
 
     h3(
@@ -29,7 +23,7 @@ object Greeting {
   }
 
   def apply(name: String): ReactElement =
-    React.createElement(component, Props(name = name))
+    React.createElement(component, Box(Props(name)))
 }
 
 @JSExportTopLevel("Greeting")
