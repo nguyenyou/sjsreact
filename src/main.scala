@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.components.Greeting
 import myapp.components.TextInput
+import myapp.components.MyApp
 
 @js.native
 @JSImport("react", JSImport.Namespace)
@@ -75,63 +76,6 @@ trait ReactRoot extends js.Object {
 }
 
 
-object ThemeContext {
-  val Context = React.createContext[String]("dark")
-
-  def apply(value: String)(children: js.Any*): ReactElement =
-    React.createElement(
-      Context.Provider,
-      js.Dynamic.literal(value = value),
-      children*
-    )
-}
-
-val MyApp = functionComponent("MyApp") { _ =>
-  val (theme, setTheme) = React.useState("dark")
-
-  def handleClick(): Unit = {
-    setTheme(if (theme == "dark") "light" else "dark")
-  }
-
-  ThemeContext(value = theme)(
-    button(
-      js.Dynamic.literal(onClick = () => handleClick()),
-      "Switch Themeeeee"
-    ),
-    h3(null, "Updated from Scala!"),
-    Greeting(name = "Taylor"),
-    div(
-      js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
-      TextInput()
-    )
-  )
-}
-
-// object MyApp {
-//   val component = functionComponent("MyApp") { _ =>
-//     val (theme, setTheme) = React.useState("dark")
-
-//     def handleClick(): Unit = {
-//       setTheme(if (theme == "dark") "light" else "dark")
-//     }
-
-//     ThemeContext(value = theme)(
-//       button(
-//         js.Dynamic.literal(onClick = () => handleClick()),
-//         "Switch Theme"
-//       ),
-//       h3(null, "Updated from Scala!"),
-//       Greeting(name = "Taylor"),
-//       div(
-//         js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
-//         TextInput()
-//       )
-//     )
-//   }
-
-//   def apply(): ReactElement = React.createElement(component, null)
-// }
-
 @JSExportTopLevel("createRoot")
 def createRoot(containerId: String): ReactRoot = {
   val container = dom.document.getElementById(containerId)
@@ -144,10 +88,7 @@ def renderApp(root: ReactRoot): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      MyApp
+      MyApp.component
     )
   )
 }
-
-@JSExportTopLevel("MyApp")
-val MyAppComp = MyApp

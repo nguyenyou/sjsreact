@@ -5,7 +5,7 @@ import myapp.functionComponent
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.h3
-import myapp.ThemeContext
+import myapp.components.ThemeContext
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 object Greeting {
