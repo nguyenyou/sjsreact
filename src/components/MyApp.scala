@@ -20,10 +20,18 @@ object MyApp {
       setTheme(if (theme == "dark") "light" else "dark")
     }
 
-    val greeting = Greeting(name = "Taylor").apply()
-    val textInput = TextInput()
-
-    h3(null, "Updated from Scala!")
+    ThemeContext(value = theme)(
+      button(
+        js.Dynamic.literal(onClick = () => handleClick()),
+        "Switch Themeeee"
+      ),
+      h3(null, "Updated from Scala!"),
+      Greeting(name = "Taylor")(),
+      div(
+        js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
+        TextInput()
+      )
+    )
   }
 
   def apply(): ReactElement = React.createElement(component, null)
