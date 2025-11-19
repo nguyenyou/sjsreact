@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.JSImport
 @JSImport("react", JSImport.Namespace)
 object React extends js.Object {
   def createElement(
-      tag: String,
+      tag: js.Any,
       props: js.Object | Null,
       children: js.Any*
   ): ReactElement = js.native
@@ -34,20 +34,21 @@ trait ReactRoot extends js.Object {
   def render(element: ReactElement): Unit = js.native
 }
 
-val HelloWorld: js.Function0[ReactElement] = {
-  val component: js.Function0[ReactElement] = () => {
-    React.createElement("div", null, "Hello World")
-  }
-  component.asInstanceOf[js.Dynamic].displayName = "HelloWorld"
+def functionalComponent(
+    displayName: String
+)(render: js.Function1[js.Object, ReactElement]): js.Any = {
+  val component = render
+  component.asInstanceOf[js.Dynamic].displayName = displayName
   component
+}
+
+val HelloWorld = functionalComponent("HelloWorld") { _ =>
+  React.createElement("div", null, "Hello World")
 }
 
 @main
 def run(): Unit = {
-  println(
-    s"HelloWorld displayName: ${HelloWorld.asInstanceOf[js.Dynamic].displayName}"
-  )
   val container = dom.document.getElementById("app")
   val root = ReactDOM.createRoot(container)
-  root.render(HelloWorld())
+  root.render(React.createElement(HelloWorld, null))
 }

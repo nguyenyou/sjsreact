@@ -944,9 +944,7 @@ var $d_jl_Void = new $TypeData().initClass(0, "java.lang.Void", ({
 function $c_Lmain$package$() {
   this.Lmain$package$__f_HelloWorld = null;
   $n_Lmain$package$ = this;
-  var component = (() => $i_react.createElement("div", null, "Hello World"));
-  component.displayName = "HelloWorld";
-  this.Lmain$package$__f_HelloWorld = component;
+  this.Lmain$package$__f_HelloWorld = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $i_react.createElement("div", null, "Hello World")));
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -954,14 +952,14 @@ $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
 function $h_Lmain$package$() {
 }
 $h_Lmain$package$.prototype = $c_Lmain$package$.prototype;
+$c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any = (function(displayName, render) {
+  render.displayName = displayName;
+  return render;
+});
 $c_Lmain$package$.prototype.run__V = (function() {
-  var x = ("HelloWorld displayName: " + $m_Lmain$package$().Lmain$package$__f_HelloWorld.displayName);
-  var this$2 = $m_s_Console$();
-  var this$3 = $n(this$2.out__Ljava_io_PrintStream());
-  this$3.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render((0, $m_Lmain$package$().Lmain$package$__f_HelloWorld)());
+  root.render($i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
