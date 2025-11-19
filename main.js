@@ -916,12 +916,17 @@ function $c_LGreeting$() {
     var this$3 = $m_s_Console$();
     var this$4 = $n(this$3.out__Ljava_io_PrintStream());
     this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
+    var greetingState = $i_react.useState("Hello");
+    var greeting = $as_T(greetingState[0]);
+    var setGreeting = greetingState[1];
+    var $x_4 = $m_Ltags$();
+    var $x_3 = $m_sr_ScalaRunTime$();
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
     var x$1 = $as_T(props.name);
     var this$7 = $n(x$1);
-    var s = ((("Hello" + ((!(this$7 === "")) ? ", " : "")) + $as_T(props.name)) + "!");
-    return $x_2.h3__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])));
+    var s = (((greeting + ((!(this$7 === "")) ? ", " : "")) + $as_T(props.name)) + "!");
+    return $x_4.fragment__sci_Seq__LReactElement($x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.h3__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s]))), $m_LGreetingSelector$().apply__T__F1__LReactElement(greeting, $m_sjs_js_Any$().toFunction1__sjs_js_Function1__F1(setGreeting))])));
   })));
 }
 $c_LGreeting$.prototype = new $h_O();
@@ -967,10 +972,88 @@ function $m_LGreeting$Props$() {
   return $n_LGreeting$Props$;
 }
 /** @constructor */
+function $c_LGreetingSelector$() {
+  this.LGreetingSelector$__f_component = null;
+  $n_LGreetingSelector$ = this;
+  this.LGreetingSelector$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((props) => {
+    var $x_15 = $m_Ltags$();
+    var $x_14 = $m_sr_ScalaRunTime$();
+    var $x_13 = $m_Ltags$();
+    var $x_12 = $m_sr_ScalaRunTime$();
+    var $x_11 = $m_Ltags$();
+    var $x_10 = $m_sr_ScalaRunTime$();
+    var $x_9 = new $c_T2("type", "radio");
+    var value = ($as_T(props.value) === "Hello");
+    var $x_8 = new $c_T2("checked", value);
+    var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$2) => {
+      (0, props.onChange)("Hello");
+    })));
+    var fields = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_9, $x_8, new $c_T2("onChange", _2)]));
+    var $x_7 = $x_13.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_12.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_11.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Regular greeting"])));
+    var $x_6 = $m_Ltags$();
+    var $x_5 = $m_sr_ScalaRunTime$();
+    var $x_4 = $m_Ltags$();
+    var $x_3 = $m_sr_ScalaRunTime$();
+    var $x_2 = new $c_T2("type", "radio");
+    var value$1 = ($as_T(props.value) === "Hello and welcome");
+    var $x_1 = new $c_T2("checked", value$1);
+    var _2$1 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$3) => {
+      (0, props.onChange)("Hello and welcome");
+    })));
+    var fields$1 = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_2, $x_1, new $c_T2("onChange", _2$1)]));
+    return $x_15.fragment__sci_Seq__LReactElement($x_14.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_7, $x_6.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Enthusiastic greeting"])))])));
+  }));
+}
+$c_LGreetingSelector$.prototype = new $h_O();
+$c_LGreetingSelector$.prototype.constructor = $c_LGreetingSelector$;
+/** @constructor */
+function $h_LGreetingSelector$() {
+}
+$h_LGreetingSelector$.prototype = $c_LGreetingSelector$.prototype;
+$c_LGreetingSelector$.prototype.apply__T__F1__LReactElement = (function(value, onChange) {
+  return $i_react.createElement(this.LGreetingSelector$__f_component, $m_LGreetingSelector$Props$().apply__T__F1__LGreetingSelector$Props(value, onChange));
+});
+var $d_LGreetingSelector$ = new $TypeData().initClass($c_LGreetingSelector$, "GreetingSelector$", ({
+  LGreetingSelector$: 1
+}));
+var $n_LGreetingSelector$;
+function $m_LGreetingSelector$() {
+  if ((!$n_LGreetingSelector$)) {
+    $n_LGreetingSelector$ = new $c_LGreetingSelector$();
+  }
+  return $n_LGreetingSelector$;
+}
+/** @constructor */
+function $c_LGreetingSelector$Props$() {
+}
+$c_LGreetingSelector$Props$.prototype = new $h_O();
+$c_LGreetingSelector$Props$.prototype.constructor = $c_LGreetingSelector$Props$;
+/** @constructor */
+function $h_LGreetingSelector$Props$() {
+}
+$h_LGreetingSelector$Props$.prototype = $c_LGreetingSelector$Props$.prototype;
+$c_LGreetingSelector$Props$.prototype.apply__T__F1__LGreetingSelector$Props = (function(value, onChange) {
+  var $x_2 = $m_sr_ScalaRunTime$();
+  var $x_1 = new $c_T2("value", value);
+  var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(onChange);
+  var fields = $x_2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_1, new $c_T2("onChange", _2)]));
+  return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+});
+var $d_LGreetingSelector$Props$ = new $TypeData().initClass($c_LGreetingSelector$Props$, "GreetingSelector$Props$", ({
+  LGreetingSelector$Props$: 1
+}));
+var $n_LGreetingSelector$Props$;
+function $m_LGreetingSelector$Props$() {
+  if ((!$n_LGreetingSelector$Props$)) {
+    $n_LGreetingSelector$Props$ = new $c_LGreetingSelector$Props$();
+  }
+  return $n_LGreetingSelector$Props$;
+}
+/** @constructor */
 function $c_LMyApp$() {
   this.LMyApp$__f_component = null;
   $n_LMyApp$ = this;
-  this.LMyApp$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$2) => {
+  this.LMyApp$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$4) => {
     var nameState = $i_react.useState("");
     var name = $as_T(nameState[0]);
     var setName = nameState[1];
@@ -2412,6 +2495,9 @@ function $h_sjs_js_Any$() {
 $h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
 $c_sjs_js_Any$.prototype.fromFunction1__F1__sjs_js_Function1 = (function(f) {
   return ((arg1$2) => $n(f).apply__O__O(arg1$2));
+});
+$c_sjs_js_Any$.prototype.toFunction1__sjs_js_Function1__F1 = (function(f) {
+  return new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((x1$2$2) => f(x1$2$2)));
 });
 var $d_sjs_js_Any$ = new $TypeData().initClass($c_sjs_js_Any$, "scala.scalajs.js.Any$", ({
   sjs_js_Any$: 1,

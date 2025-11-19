@@ -114,6 +114,49 @@ object Counter {
     )
 }
 
+object GreetingSelector {
+  trait Props extends js.Object {
+    val value: String
+    val onChange: js.Function1[String, Unit]
+  }
+
+  object Props {
+    def apply(value: String, onChange: String => Unit): Props =
+      js.Dynamic.literal(value = value, onChange = onChange).asInstanceOf[Props]
+  }
+
+  val component = functionalComponent("GreetingSelector") { props =>
+    val p = props.asInstanceOf[Props]
+    fragment(
+      label(
+        null,
+        input(
+          js.Dynamic.literal(
+            `type` = "radio",
+            checked = p.value == "Hello",
+            onChange = (_: js.Dynamic) => p.onChange("Hello")
+          )
+        ),
+        "Regular greeting"
+      ),
+      label(
+        null,
+        input(
+          js.Dynamic.literal(
+            `type` = "radio",
+            checked = p.value == "Hello and welcome",
+            onChange = (_: js.Dynamic) => p.onChange("Hello and welcome")
+          )
+        ),
+        "Enthusiastic greeting"
+      )
+    )
+  }
+
+  def apply(value: String, onChange: String => Unit): ReactElement =
+    React.createElement(component, Props(value, onChange))
+}
+
 object Greeting {
   trait Props extends js.Object {
     val name: String
@@ -127,7 +170,15 @@ object Greeting {
   val component = React.memo(functionalComponent("Greeting") { props =>
     val p = props.asInstanceOf[Props]
     println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
-    h3(null, s"Hello${if (p.name.nonEmpty) ", " else ""}${p.name}!")
+
+    val greetingState = React.useState("Hello")
+    val greeting = greetingState._1
+    val setGreeting = greetingState._2
+
+    fragment(
+      h3(null, s"$greeting${if (p.name.nonEmpty) ", " else ""}${p.name}!"),
+      GreetingSelector(greeting, setGreeting)
+    )
   })
 
   def apply(name: String): ReactElement =
