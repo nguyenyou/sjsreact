@@ -1,12 +1,3 @@
-//> using scala 3.7.3
-//> using platform scala-js
-
-//> using dep "org.scala-js::scalajs-dom::2.8.1"
-
-//> using jsModuleKind es
-//> using jsModuleSplitStyleStr smallmodulesfor
-//> using jsSmallModuleForPackage myapp
-
 package myapp
 
 import org.scalajs.dom
@@ -89,11 +80,8 @@ def functionComponent[P <: js.Object](
   component
 }
 
-object HelloWorld {
-  val component = functionComponent("HelloWorld") { _ =>
-    div(null, "Hello Worldddd")
-  }
-  def apply(): ReactElement = React.createElement(component, null)
+val HelloWorld = functionComponent("HelloWorld") { _ =>
+  div(null, "Hello Worldddd")
 }
 
 object Counter {
@@ -180,9 +168,12 @@ object ThemeContext {
   val Context = React.createContext[String]("dark")
 
   def apply(value: String)(children: js.Any*): ReactElement =
-    React.createElement(Context.Provider, js.Dynamic.literal(value = value), children*)
+    React.createElement(
+      Context.Provider,
+      js.Dynamic.literal(value = value),
+      children*
+    )
 }
-
 
 object Greeting {
   trait Props extends js.Object {
@@ -218,38 +209,66 @@ object TextInput {
       input(
         js.Dynamic.literal(
           value = text,
-          onChange = (e: js.Dynamic) => setText(e.target.value.asInstanceOf[String]),
+          onChange =
+            (e: js.Dynamic) => setText(e.target.value.asInstanceOf[String]),
           placeholder = "Type something..."
         )
       ),
-      span(js.Dynamic.literal(style = js.Dynamic.literal(marginLeft = "10px")), s"You typed: $text")
+      span(
+        js.Dynamic.literal(style = js.Dynamic.literal(marginLeft = "10px")),
+        s"You typed: $text"
+      )
     )
   }
 
   def apply(): ReactElement = React.createElement(component, null)
 }
 
-object MyApp {
-  val component = functionComponent("MyApp") { _ =>
-    val (theme, setTheme) = React.useState("dark")
+val MyApp = functionComponent("MyApp") { _ =>
+  val (theme, setTheme) = React.useState("dark")
 
-    def handleClick(): Unit = {
-      setTheme(if (theme == "dark") "light" else "dark")
-    }
-
-    ThemeContext(value = theme)(
-      button(
-        js.Dynamic.literal(onClick = () => handleClick()),
-        "Switch Theme"
-      ),
-      h3(null, "Updated from Scala!"),
-      Greeting(name = "Taylor"),
-      div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
-    )
+  def handleClick(): Unit = {
+    setTheme(if (theme == "dark") "light" else "dark")
   }
 
-  def apply(): ReactElement = React.createElement(component, null)
+  ThemeContext(value = theme)(
+    button(
+      js.Dynamic.literal(onClick = () => handleClick()),
+      "Switch Themeeee"
+    ),
+    h3(null, "Updated from Scala!"),
+    Greeting(name = "Taylor"),
+    div(
+      js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
+      TextInput()
+    )
+  )
 }
+
+// object MyApp {
+//   val component = functionComponent("MyApp") { _ =>
+//     val (theme, setTheme) = React.useState("dark")
+
+//     def handleClick(): Unit = {
+//       setTheme(if (theme == "dark") "light" else "dark")
+//     }
+
+//     ThemeContext(value = theme)(
+//       button(
+//         js.Dynamic.literal(onClick = () => handleClick()),
+//         "Switch Theme"
+//       ),
+//       h3(null, "Updated from Scala!"),
+//       Greeting(name = "Taylor"),
+//       div(
+//         js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
+//         TextInput()
+//       )
+//     )
+//   }
+
+//   def apply(): ReactElement = React.createElement(component, null)
+// }
 
 @JSExportTopLevel("createRoot")
 def createRoot(containerId: String): ReactRoot = {
@@ -263,16 +282,16 @@ def renderApp(root: ReactRoot): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      MyApp()
+      MyApp
     )
   )
 }
 
 @JSExportTopLevel("MyApp")
-val MyAppComp = MyApp.component
+val MyAppComp = MyApp
 
 @JSExportTopLevel("HelloWorld")
-val HelloWorldComp = HelloWorld.component
+val HelloWorldComp = HelloWorld
 
 @JSExportTopLevel("Counter")
 val CounterComp = Counter.component
@@ -290,12 +309,19 @@ object Button {
   val component = functionComponent("Button") { props =>
     val dynamicProps = props.asInstanceOf[js.Dynamic]
     button(
-      js.Dynamic.literal(onClick = if (!js.isUndefined(dynamicProps.onClick)) dynamicProps.onClick else null),
+      js.Dynamic.literal(onClick =
+        if (!js.isUndefined(dynamicProps.onClick)) dynamicProps.onClick
+        else null
+      ),
       dynamicProps.children
     )
   }
   def apply(onClick: js.Function0[Unit])(children: js.Any*): ReactElement =
-    React.createElement(component, js.Dynamic.literal(onClick = onClick), children*)
+    React.createElement(
+      component,
+      js.Dynamic.literal(onClick = onClick),
+      children*
+    )
 }
 
 @JSExportTopLevel("Button")
