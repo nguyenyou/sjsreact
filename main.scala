@@ -81,9 +81,9 @@ trait ReactRoot extends js.Object {
   def unmount(): Unit = js.native
 }
 
-def functionalComponent(
+def functionalComponent[P <: js.Object](
     displayName: String
-)(render: js.Function1[js.Object, ReactElement]): js.Any = {
+)(render: js.Function1[P, ReactElement]): js.Any = {
   val component = render
   component.asInstanceOf[js.Dynamic].displayName = displayName
   component
@@ -106,8 +106,7 @@ object Counter {
       js.Dynamic.literal(initialCount = initialCount).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("Counter") { props =>
-    val p = props.asInstanceOf[Props]
+  val component = functionalComponent("Counter") { (p: Props) =>
     val (count, setCount) = React.useState(p.initialCount)
 
     div(
@@ -146,8 +145,7 @@ object GreetingSelector {
       js.Dynamic.literal(value = value, onChange = onChange).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("GreetingSelector") { props =>
-    val p = props.asInstanceOf[Props]
+  val component = functionalComponent("GreetingSelector") { (p: Props) =>
     fragment(
       label(
         null,
@@ -196,8 +194,7 @@ object Greeting {
       js.Dynamic.literal(name = name).asInstanceOf[Props]
   }
 
-  val component = functionalComponent("Greeting") { props =>
-    val p = props.asInstanceOf[Props]
+  val component = functionalComponent("Greeting") { (p: Props) =>
     println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
 
     val theme = React.useContext(ThemeContext.Context)

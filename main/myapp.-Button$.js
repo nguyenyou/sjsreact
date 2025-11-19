@@ -46,10 +46,10 @@ export { $m_Lmyapp_Button$ as $m_Lmyapp_Button$ };
 function $c_Lmyapp_Counter$() {
   this.Lmyapp_Counter$__f_component = null;
   $n_Lmyapp_Counter$ = this;
-  this.Lmyapp_Counter$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((props) => {
+  this.Lmyapp_Counter$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((p) => {
     matchResult1: {
       var \u03b42$;
-      var x1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(props.initialCount));
+      var x1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useState__O__T2($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(p.initialCount));
       if ((x1 !== null)) {
         var \u03b42$ = x1;
         break matchResult1;
@@ -77,7 +77,7 @@ function $c_Lmyapp_Counter$() {
     var $x_5 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var _2$2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
-      $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(props.initialCount));
+      $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(p.initialCount));
     })));
     var fields$2 = $x_4.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onClick", _2$2)]));
     var $x_3 = $x_5.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["reset"])));
@@ -111,7 +111,7 @@ export { $m_Lmyapp_Counter$ as $m_Lmyapp_Counter$ };
 function $c_Lmyapp_Greeting$() {
   this.Lmyapp_Greeting$__f_component = null;
   $n_Lmyapp_Greeting$ = this;
-  this.Lmyapp_Greeting$__f_component = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().memo__sjs_js_Any__sjs_js_Any($m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((props) => {
+  this.Lmyapp_Greeting$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((p) => {
     var x = ("Greeting was rendered at " + $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(new Date().toLocaleTimeString()));
     var this$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_s_Console$();
     var this$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this$3.out__Ljava_io_PrintStream());
@@ -121,9 +121,9 @@ function $c_Lmyapp_Greeting$() {
     var fields = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("className", theme)]));
     var $x_2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var s = (("Hello, " + $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(props.name)) + "!");
+    var s = (("Hello, " + $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(p.name)) + "!");
     return $x_3.h3__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_2, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([s])));
-  })));
+  }));
 }
 export { $c_Lmyapp_Greeting$ as $c_Lmyapp_Greeting$ };
 $c_Lmyapp_Greeting$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();
@@ -152,17 +152,17 @@ export { $m_Lmyapp_Greeting$ as $m_Lmyapp_Greeting$ };
 function $c_Lmyapp_GreetingSelector$() {
   this.Lmyapp_GreetingSelector$__f_component = null;
   $n_Lmyapp_GreetingSelector$ = this;
-  this.Lmyapp_GreetingSelector$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((props) => {
+  this.Lmyapp_GreetingSelector$__f_component = $m_Lmyapp_main$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((p) => {
     var $x_14 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_13 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_12 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_11 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_10 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_9 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("type", "radio");
-    var value = ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(props.value) === "Hello");
+    var value = ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(p.value) === "Hello");
     var $x_8 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("checked", value);
     var _2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$2) => {
-      (0, props.onChange)("Hello");
+      (0, p.onChange)("Hello");
     })));
     var fields = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([$x_9, $x_8, new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onChange", _2)]));
     var $x_7 = $x_13.label__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $x_12.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_11.input__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([]))), "Regular greeting"])));
@@ -171,10 +171,10 @@ function $c_Lmyapp_GreetingSelector$() {
     var $x_4 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_2 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("type", "radio");
-    var value$1 = ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(props.value) === "Hello and welcome");
+    var value$1 = ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(p.value) === "Hello and welcome");
     var $x_1 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("checked", value$1);
     var _2$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$3) => {
-      (0, props.onChange)("Hello and welcome");
+      (0, p.onChange)("Hello and welcome");
     })));
     var fields$1 = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([$x_2, $x_1, new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onChange", _2$1)]));
     var children = $x_14.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_7, $x_6.label__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_4.input__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([]))), "Enthusiastic greeting"])))]));

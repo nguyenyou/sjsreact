@@ -15,9 +15,6 @@ $h_Lmyapp_React$.prototype = $c_Lmyapp_React$.prototype;
 $c_Lmyapp_React$.prototype.StrictMode__sjs_js_Any = (function() {
   return $i_react.StrictMode;
 });
-$c_Lmyapp_React$.prototype.memo__sjs_js_Any__sjs_js_Any = (function(component) {
-  return $i_react.memo(component);
-});
 $c_Lmyapp_React$.prototype.Fragment__sjs_js_Any = (function() {
   return $i_react.Fragment;
 });
