@@ -275,3 +275,15 @@ val MyAppComp = MyApp.component
 
 @JSExportTopLevel("HelloWorld")
 val HelloWorldComp = HelloWorld.component
+
+@JSExportTopLevel("Counter")
+val CounterComp = Counter.component
+
+@JSExportTopLevel("GreetingSelector")
+val GreetingSelectorComp = GreetingSelector.component
+
+@JSExportTopLevel("Greeting")
+val GreetingComp = Greeting.component
+
+@JSExportTopLevel("TextInput")
+val TextInputComp = TextInput.component

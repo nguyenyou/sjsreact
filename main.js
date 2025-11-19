@@ -908,6 +908,67 @@ var $d_J = new $TypeData().initPrim(null, "J", "long", $ac_J, (void 0));
 var $d_F = new $TypeData().initPrim(0.0, "F", "float", $ac_F, Float32Array);
 var $d_D = new $TypeData().initPrim(0.0, "D", "double", $ac_D, Float64Array);
 /** @constructor */
+function $c_LCounter$() {
+  this.LCounter$__f_component = null;
+  $n_LCounter$ = this;
+  this.LCounter$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((props) => {
+    matchResult1: {
+      var \u03b42$;
+      var x1 = $m_LReact$().useState__O__T2($uI(props.initialCount));
+      if ((x1 !== null)) {
+        var \u03b42$ = x1;
+        break matchResult1;
+      }
+      throw new $c_s_MatchError(x1);
+    }
+    var count = $uI($n(\u03b42$).T2__f__1);
+    var setCount = $as_F1($n(\u03b42$).T2__f__2);
+    var $x_13 = $m_Ltags$();
+    var $x_12 = $m_sr_ScalaRunTime$();
+    var $x_11 = $m_Ltags$();
+    var $x_10 = $m_sr_ScalaRunTime$();
+    var _2 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
+      $n(setCount).apply__O__O(((1 + count) | 0));
+    })));
+    var fields = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
+    var $x_9 = $x_11.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["+"])));
+    var $x_8 = $m_Ltags$();
+    var $x_7 = $m_sr_ScalaRunTime$();
+    var _2$1 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
+      $n(setCount).apply__O__O((((-1) + count) | 0));
+    })));
+    var fields$1 = $x_7.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2$1)]));
+    var $x_6 = $x_8.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["-"])));
+    var $x_5 = $m_Ltags$();
+    var $x_4 = $m_sr_ScalaRunTime$();
+    var _2$2 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
+      $n(setCount).apply__O__O($uI(props.initialCount));
+    })));
+    var fields$2 = $x_4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2$2)]));
+    var $x_3 = $x_5.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["reset"])));
+    var $x_2 = $m_Ltags$();
+    var $x_1 = $m_sr_ScalaRunTime$();
+    var s = ("Count: " + count);
+    return $x_13.div__sjs_js_Object__sci_Seq__LReactElement(null, $x_12.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_9, $x_6, $x_3, $x_2.span__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])))])));
+  }));
+}
+$c_LCounter$.prototype = new $h_O();
+$c_LCounter$.prototype.constructor = $c_LCounter$;
+/** @constructor */
+function $h_LCounter$() {
+}
+$h_LCounter$.prototype = $c_LCounter$.prototype;
+var $d_LCounter$ = new $TypeData().initClass($c_LCounter$, "Counter$", ({
+  LCounter$: 1
+}));
+var $n_LCounter$;
+function $m_LCounter$() {
+  if ((!$n_LCounter$)) {
+    $n_LCounter$ = new $c_LCounter$();
+  }
+  return $n_LCounter$;
+}
+/** @constructor */
 function $c_LGreeting$() {
   this.LGreeting$__f_component = null;
   $n_LGreeting$ = this;
@@ -966,6 +1027,55 @@ function $m_LGreeting$Props$() {
     $n_LGreeting$Props$ = new $c_LGreeting$Props$();
   }
   return $n_LGreeting$Props$;
+}
+/** @constructor */
+function $c_LGreetingSelector$() {
+  this.LGreetingSelector$__f_component = null;
+  $n_LGreetingSelector$ = this;
+  this.LGreetingSelector$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((props) => {
+    var $x_14 = $m_sr_ScalaRunTime$();
+    var $x_13 = $m_Ltags$();
+    var $x_12 = $m_sr_ScalaRunTime$();
+    var $x_11 = $m_Ltags$();
+    var $x_10 = $m_sr_ScalaRunTime$();
+    var $x_9 = new $c_T2("type", "radio");
+    var value = ($as_T(props.value) === "Hello");
+    var $x_8 = new $c_T2("checked", value);
+    var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$2) => {
+      (0, props.onChange)("Hello");
+    })));
+    var fields = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_9, $x_8, new $c_T2("onChange", _2)]));
+    var $x_7 = $x_13.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_12.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_11.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Regular greeting"])));
+    var $x_6 = $m_Ltags$();
+    var $x_5 = $m_sr_ScalaRunTime$();
+    var $x_4 = $m_Ltags$();
+    var $x_3 = $m_sr_ScalaRunTime$();
+    var $x_2 = new $c_T2("type", "radio");
+    var value$1 = ($as_T(props.value) === "Hello and welcome");
+    var $x_1 = new $c_T2("checked", value$1);
+    var _2$1 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$3) => {
+      (0, props.onChange)("Hello and welcome");
+    })));
+    var fields$1 = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_2, $x_1, new $c_T2("onChange", _2$1)]));
+    var children = $x_14.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_7, $x_6.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Enthusiastic greeting"])))]));
+    return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().Fragment__sjs_js_Any(), null, children);
+  }));
+}
+$c_LGreetingSelector$.prototype = new $h_O();
+$c_LGreetingSelector$.prototype.constructor = $c_LGreetingSelector$;
+/** @constructor */
+function $h_LGreetingSelector$() {
+}
+$h_LGreetingSelector$.prototype = $c_LGreetingSelector$.prototype;
+var $d_LGreetingSelector$ = new $TypeData().initClass($c_LGreetingSelector$, "GreetingSelector$", ({
+  LGreetingSelector$: 1
+}));
+var $n_LGreetingSelector$;
+function $m_LGreetingSelector$() {
+  if ((!$n_LGreetingSelector$)) {
+    $n_LGreetingSelector$ = new $c_LGreetingSelector$();
+  }
+  return $n_LGreetingSelector$;
 }
 /** @constructor */
 function $c_LHelloWorld$() {
@@ -1248,6 +1358,10 @@ function $c_Lmain$package$() {
   this.Lmain$package$__f_ThemeContext = $m_LReact$().createContext__O__LReactRaw$Context("dark");
   $t_Lmain$package$__MyAppComp = $m_LMyApp$().LMyApp$__f_component;
   $t_Lmain$package$__HelloWorldComp = $m_LHelloWorld$().LHelloWorld$__f_component;
+  $t_Lmain$package$__CounterComp = $m_LCounter$().LCounter$__f_component;
+  $t_Lmain$package$__GreetingSelectorComp = $m_LGreetingSelector$().LGreetingSelector$__f_component;
+  $t_Lmain$package$__GreetingComp = $m_LGreeting$().LGreeting$__f_component;
+  $t_Lmain$package$__TextInputComp = $m_LTextInput$().LTextInput$__f_component;
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -2311,6 +2425,9 @@ $c_Ltags$.prototype.button__sjs_js_Object__sci_Seq__LReactElement = (function(pr
 });
 $c_Ltags$.prototype.span__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
   return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement("span", props, children);
+});
+$c_Ltags$.prototype.label__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
+  return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement("label", props, children);
 });
 $c_Ltags$.prototype.input__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
   return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement("input", props, children);
@@ -3808,7 +3925,12 @@ $L0 = new $c_RTLong(0, 0);
 $d_J.zero = $L0;
 var $t_Lmain$package$__MyAppComp = null;
 var $t_Lmain$package$__HelloWorldComp = null;
+var $t_Lmain$package$__CounterComp = null;
+var $t_Lmain$package$__GreetingSelectorComp = null;
+var $t_Lmain$package$__GreetingComp = null;
+var $t_Lmain$package$__TextInputComp = null;
 $sct_Lmain$package$__stinit__();
+export { $t_Lmain$package$__CounterComp as Counter };
 let $e_renderApp = (function(arg) {
   $m_Lmain$package$().renderApp__LReactRoot__V(arg);
 });
@@ -3820,3 +3942,6 @@ let $e_createRoot = (function(arg) {
 });
 export { $e_createRoot as createRoot };
 export { $t_Lmain$package$__HelloWorldComp as HelloWorld };
+export { $t_Lmain$package$__GreetingSelectorComp as GreetingSelector };
+export { $t_Lmain$package$__TextInputComp as TextInput };
+export { $t_Lmain$package$__GreetingComp as Greeting };
