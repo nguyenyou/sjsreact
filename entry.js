@@ -5,7 +5,7 @@
 
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import { MyApp, HelloWorld, Counter } from "./main/main.js";
+import { MyApp, HelloWorld, Counter, Button } from "./main/main.js";
 
 const root = createRoot(document.getElementById("app"));
 root.render(
@@ -17,6 +17,9 @@ root.render(
         <HelloWorld />
       </div>
       <Counter initialCount={5} />
+      <div style={{ marginTop: 20 }}>
+        <Button onClick={() => console.log("clicked")}>Click me</Button>
+      </div>
     </div>
   </StrictMode>
 );

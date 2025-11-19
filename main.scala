@@ -291,3 +291,16 @@ val GreetingComp = Greeting.component
 
 @JSExportTopLevel("TextInput")
 val TextInputComp = TextInput.component
+
+object Button {
+  val component = functionalComponent("Button") { props =>
+    val dynamicProps = props.asInstanceOf[js.Dynamic]
+    tags.button(
+      js.Dynamic.literal(onClick = if (!js.isUndefined(dynamicProps.onClick)) dynamicProps.onClick else null),
+      dynamicProps.children
+    )
+  }
+}
+
+@JSExportTopLevel("Button")
+val ButtonComp = Button.component
