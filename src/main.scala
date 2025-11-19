@@ -85,7 +85,7 @@ def renderApp(root: ReactRoot): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      MyApp.component
+      MyApp()
     )
   )
 }

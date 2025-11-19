@@ -21,9 +21,6 @@ $c_Lmyapp_tags$.prototype.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = 
 $c_Lmyapp_tags$.prototype.span__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
   return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("span", props, children);
 });
-$c_Lmyapp_tags$.prototype.label__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("label", props, children);
-});
 $c_Lmyapp_tags$.prototype.input__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
   return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("input", props, children);
 });

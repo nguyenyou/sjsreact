@@ -15,9 +15,6 @@ $h_Lmyapp_React$.prototype = $c_Lmyapp_React$.prototype;
 $c_Lmyapp_React$.prototype.StrictMode__sjs_js_Any = (function() {
   return $i_react.StrictMode;
 });
-$c_Lmyapp_React$.prototype.Fragment__sjs_js_Any = (function() {
-  return $i_react.Fragment;
-});
 $c_Lmyapp_React$.prototype.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(tag, props, children) {
   return $i_react.createElement(tag, props, ...$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
 });

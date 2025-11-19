@@ -33,4 +33,6 @@ object MyApp {
       )
     )
   }
+
+  def apply(): ReactElement = React.createElement(component, null)
 }

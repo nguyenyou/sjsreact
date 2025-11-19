@@ -19,7 +19,7 @@ $c_Lmyapp_main$package$.prototype.createRoot__T__Lmyapp_ReactRoot = (function(co
   return $i_react$002ddom$002fclient.createRoot(container);
 });
 $c_Lmyapp_main$package$.prototype.renderApp__Lmyapp_ReactRoot__V = (function(root) {
-  root.render($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().StrictMode__sjs_js_Any(), null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$j_myapp$002ecomponents$002e$002dMy$002dApp$0024.$m_Lmyapp_components_MyApp$().Lmyapp_components_MyApp$__f_component]))));
+  root.render($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().StrictMode__sjs_js_Any(), null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$j_myapp$002ecomponents$002e$002dMy$002dApp$0024.$m_Lmyapp_components_MyApp$().apply__Lmyapp_ReactElement()]))));
 });
 $c_Lmyapp_main$package$.prototype.run__V = (function() {
   var root = $m_Lmyapp_main$package$().createRoot__T__Lmyapp_ReactRoot("app");
