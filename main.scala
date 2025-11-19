@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.JSImport
 
 @js.native
 @JSImport("react", JSImport.Namespace)
-object React extends js.Object {
+object ReactRaw extends js.Object {
   val StrictMode: js.Any = js.native
   val Fragment: js.Any = js.native
   def createElement(
@@ -30,6 +30,15 @@ object React extends js.Object {
   @js.native
   trait Context[T] extends js.Object {
     val Provider: js.Any = js.native
+  }
+}
+
+object React {
+  export ReactRaw.{useState as _, *}
+
+  def useState[T](initialState: T): (T, T => Unit) = {
+    val res = ReactRaw.useState(initialState)
+    (res._1, res._2)
   }
 }
 
@@ -93,9 +102,7 @@ object Counter {
 
   val component = functionalComponent("Counter") { props =>
     val p = props.asInstanceOf[Props]
-    val state = React.useState(p.initialCount)
-    val count = state._1
-    val setCount = state._2
+    val (count, setCount) = React.useState(p.initialCount)
 
     div(
       null,
@@ -195,9 +202,7 @@ object Greeting {
 
 object MyApp {
   val component = functionalComponent("MyApp") { _ =>
-    val themeState = React.useState("dark")
-    val theme = themeState._1
-    val setTheme = themeState._2
+    val (theme, setTheme) = React.useState("dark")
 
     def handleClick(): Unit = {
       setTheme(if (theme == "dark") "light" else "dark")

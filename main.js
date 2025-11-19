@@ -911,12 +911,12 @@ var $d_D = new $TypeData().initPrim(0.0, "D", "double", $ac_D, Float64Array);
 function $c_LGreeting$() {
   this.LGreeting$__f_component = null;
   $n_LGreeting$ = this;
-  this.LGreeting$__f_component = $i_react.memo($m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((props) => {
+  this.LGreeting$__f_component = $m_LReact$().memo__sjs_js_Any__sjs_js_Any($m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Greeting", ((props) => {
     var x = ("Greeting was rendered at " + $as_T(new Date().toLocaleTimeString()));
     var this$3 = $m_s_Console$();
     var this$4 = $n(this$3.out__Ljava_io_PrintStream());
     this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-    var theme = $as_T($i_react.useContext($m_Lmain$package$().Lmain$package$__f_ThemeContext));
+    var theme = $as_T($m_LReact$().useContext__LReactRaw$Context__O($m_Lmain$package$().Lmain$package$__f_ThemeContext));
     var $x_3 = $m_Ltags$();
     var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("className", theme)]));
     var $x_2 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
@@ -932,7 +932,7 @@ function $h_LGreeting$() {
 }
 $h_LGreeting$.prototype = $c_LGreeting$.prototype;
 $c_LGreeting$.prototype.apply__T__LReactElement = (function(name) {
-  return $i_react.createElement(this.LGreeting$__f_component, $m_LGreeting$Props$().apply__T__LGreeting$Props(name));
+  return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement(this.LGreeting$__f_component, $m_LGreeting$Props$().apply__T__LGreeting$Props(name), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([])));
 });
 var $d_LGreeting$ = new $TypeData().initClass($c_LGreeting$, "Greeting$", ({
   LGreeting$: 1
@@ -967,30 +967,39 @@ function $m_LGreeting$Props$() {
   }
   return $n_LGreeting$Props$;
 }
-function $p_LMyApp$__handleClick$1__sjs_js_Function1__T__V($thiz, setTheme$1, theme$1) {
-  setTheme$1(((theme$1 === "dark") ? "light" : "dark"));
+function $p_LMyApp$__handleClick$1__F1__T__V($thiz, setTheme$1, theme$1) {
+  $n(setTheme$1).apply__O__O(((theme$1 === "dark") ? "light" : "dark"));
 }
 /** @constructor */
 function $c_LMyApp$() {
   this.LMyApp$__f_component = null;
   $n_LMyApp$ = this;
   this.LMyApp$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$4) => {
-    var themeState = $i_react.useState("dark");
-    var theme = $as_T(themeState[0]);
-    var setTheme = themeState[1];
-    var $x_7 = $i_react;
+    matchResult2: {
+      var \u03b44$;
+      var x4 = $m_LReact$().useState__O__T2("dark");
+      if ((x4 !== null)) {
+        var \u03b44$ = x4;
+        break matchResult2;
+      }
+      throw new $c_s_MatchError(x4);
+    }
+    var theme = $as_T($n(\u03b44$).T2__f__1);
+    var setTheme = $as_F1($n(\u03b44$).T2__f__2);
+    var $x_7 = $m_LReact$();
     var $x_6 = $m_Lmain$package$().Lmain$package$__f_ThemeContext.Provider;
     var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("value", theme)]));
     var $x_5 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
-    var $x_4 = $m_Ltags$();
+    var $x_4 = $m_sr_ScalaRunTime$();
     var $x_3 = $m_sr_ScalaRunTime$();
     var $x_2 = $m_Ltags$();
     var $x_1 = $m_sr_ScalaRunTime$();
     var _2 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
-      $p_LMyApp$__handleClick$1__sjs_js_Function1__T__V(this, setTheme, theme);
+      $p_LMyApp$__handleClick$1__F1__T__V(this, setTheme, theme);
     })));
     var fields$1 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
-    return $x_7.createElement($x_6, $x_5, $x_4.fragment__sci_Seq__LReactElement($x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch theme"]))), $m_LGreeting$().apply__T__LReactElement("Taylor")]))));
+    var children = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch theme"]))), $m_LGreeting$().apply__T__LReactElement("Taylor")]));
+    return $x_7.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($x_6, $x_5, $x_4.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().Fragment__sjs_js_Any(), null, children)])));
   }));
 }
 $c_LMyApp$.prototype = new $h_O();
@@ -1000,7 +1009,7 @@ function $h_LMyApp$() {
 }
 $h_LMyApp$.prototype = $c_LMyApp$.prototype;
 $c_LMyApp$.prototype.apply__LReactElement = (function() {
-  return $i_react.createElement(this.LMyApp$__f_component, null);
+  return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement(this.LMyApp$__f_component, null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([])));
 });
 var $d_LMyApp$ = new $TypeData().initClass($c_LMyApp$, "MyApp$", ({
   LMyApp$: 1
@@ -1011,6 +1020,49 @@ function $m_LMyApp$() {
     $n_LMyApp$ = new $c_LMyApp$();
   }
   return $n_LMyApp$;
+}
+/** @constructor */
+function $c_LReact$() {
+}
+$c_LReact$.prototype = new $h_O();
+$c_LReact$.prototype.constructor = $c_LReact$;
+/** @constructor */
+function $h_LReact$() {
+}
+$h_LReact$.prototype = $c_LReact$.prototype;
+$c_LReact$.prototype.StrictMode__sjs_js_Any = (function() {
+  return $i_react.StrictMode;
+});
+$c_LReact$.prototype.memo__sjs_js_Any__sjs_js_Any = (function(component) {
+  return $i_react.memo(component);
+});
+$c_LReact$.prototype.Fragment__sjs_js_Any = (function() {
+  return $i_react.Fragment;
+});
+$c_LReact$.prototype.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement = (function(tag, props, children) {
+  return $i_react.createElement(tag, props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
+});
+$c_LReact$.prototype.useContext__LReactRaw$Context__O = (function(context) {
+  return $i_react.useContext(context);
+});
+$c_LReact$.prototype.createContext__O__LReactRaw$Context = (function(defaultValue) {
+  return $i_react.createContext(defaultValue);
+});
+$c_LReact$.prototype.useState__O__T2 = (function(initialState) {
+  var res = $i_react.useState(initialState);
+  var _1 = res[0];
+  var _2 = $m_sjs_js_Any$().toFunction1__sjs_js_Function1__F1(res[1]);
+  return new $c_T2(_1, _2);
+});
+var $d_LReact$ = new $TypeData().initClass($c_LReact$, "React$", ({
+  LReact$: 1
+}));
+var $n_LReact$;
+function $m_LReact$() {
+  if ((!$n_LReact$)) {
+    $n_LReact$ = new $c_LReact$();
+  }
+  return $n_LReact$;
 }
 /** @constructor */
 function $c_jl_System$Streams$() {
@@ -1104,7 +1156,7 @@ function $m_jl_reflect_Array$() {
 function $c_Lmain$package$() {
   this.Lmain$package$__f_ThemeContext = null;
   $n_Lmain$package$ = this;
-  this.Lmain$package$__f_ThemeContext = $i_react.createContext("dark");
+  this.Lmain$package$__f_ThemeContext = $m_LReact$().createContext__O__LReactRaw$Context("dark");
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -1119,7 +1171,7 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement($i_react.StrictMode, null, $m_LMyApp$().apply__LReactElement()));
+  root.render($m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement($m_LReact$().StrictMode__sjs_js_Any(), null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LMyApp$().apply__LReactElement()]))));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
@@ -1668,6 +1720,18 @@ function $s_Lrun__main__AT__V(args) {
     }
   }
 }
+function $is_F1(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F1)));
+}
+function $as_F1(obj) {
+  return (($is_F1(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Function1"));
+}
+function $isArrayOf_F1(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.F1)));
+}
+function $asArrayOf_F1(obj, depth) {
+  return (($isArrayOf_F1(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Function1;", depth));
+}
 function $is_sc_IterableOnce(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.sc_IterableOnce)));
 }
@@ -2182,13 +2246,10 @@ function $h_Ltags$() {
 }
 $h_Ltags$.prototype = $c_Ltags$.prototype;
 $c_Ltags$.prototype.button__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
-  return $i_react.createElement("button", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
+  return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement("button", props, children);
 });
 $c_Ltags$.prototype.h3__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
-  return $i_react.createElement("h3", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
-});
-$c_Ltags$.prototype.fragment__sci_Seq__LReactElement = (function(children) {
-  return $i_react.createElement($i_react.Fragment, null, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
+  return $m_LReact$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__LReactElement("h3", props, children);
 });
 var $d_Ltags$ = new $TypeData().initClass($c_Ltags$, "tags$", ({
   Ltags$: 1
@@ -2435,6 +2496,9 @@ function $h_sjs_js_Any$() {
 $h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
 $c_sjs_js_Any$.prototype.fromFunction0__F0__sjs_js_Function0 = (function(f) {
   return (() => $n(f).apply__O());
+});
+$c_sjs_js_Any$.prototype.toFunction1__sjs_js_Function1__F1 = (function(f) {
+  return new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((x1$2$2) => f(x1$2$2)));
 });
 var $d_sjs_js_Any$ = new $TypeData().initClass($c_sjs_js_Any$, "scala.scalajs.js.Any$", ({
   sjs_js_Any$: 1,
