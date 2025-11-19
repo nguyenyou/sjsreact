@@ -165,6 +165,8 @@ object GreetingSelector {
     React.createElement(component, Props(value, onChange))
 }
 
+val ThemeContext = React.createContext[String]("dark")
+
 object Greeting {
   trait Props extends js.Object {
     val name: String
@@ -179,13 +181,11 @@ object Greeting {
     val p = props.asInstanceOf[Props]
     println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
 
-    val greetingState = React.useState("Hello")
-    val greeting = greetingState._1
-    val setGreeting = greetingState._2
+    val theme = React.useContext(ThemeContext)
 
-    fragment(
-      h3(null, s"$greeting${if (p.name.nonEmpty) ", " else ""}${p.name}!"),
-      GreetingSelector(greeting, setGreeting)
+    h3(
+      js.Dynamic.literal(className = theme),
+      s"Hello, ${p.name}!"
     )
   })
 
@@ -195,38 +195,24 @@ object Greeting {
 
 object MyApp {
   val component = functionalComponent("MyApp") { _ =>
-    val nameState = React.useState("")
-    val name = nameState._1
-    val setName = nameState._2
+    val themeState = React.useState("dark")
+    val theme = themeState._1
+    val setTheme = themeState._2
 
-    val addressState = React.useState("")
-    val address = addressState._1
-    val setAddress = addressState._2
+    def handleClick(): Unit = {
+      setTheme(if (theme == "dark") "light" else "dark")
+    }
 
-    fragment(
-      label(
-        null,
-        "Name: ",
-        input(
-          js.Dynamic.literal(
-            value = name,
-            onChange =
-              (e: js.Dynamic) => setName(e.target.value.asInstanceOf[String])
-          )
-        )
-      ),
-      label(
-        null,
-        "Address: ",
-        input(
-          js.Dynamic.literal(
-            value = address,
-            onChange =
-              (e: js.Dynamic) => setAddress(e.target.value.asInstanceOf[String])
-          )
-        )
-      ),
-      Greeting(name = name)
+    React.createElement(
+      ThemeContext.Provider,
+      js.Dynamic.literal(value = theme),
+      fragment(
+        button(
+          js.Dynamic.literal(onClick = () => handleClick()),
+          "Switch theme"
+        ),
+        Greeting(name = "Taylor")
+      )
     )
   }
 

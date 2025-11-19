@@ -916,17 +916,13 @@ function $c_LGreeting$() {
     var this$3 = $m_s_Console$();
     var this$4 = $n(this$3.out__Ljava_io_PrintStream());
     this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-    var greetingState = $i_react.useState("Hello");
-    var greeting = $as_T(greetingState[0]);
-    var setGreeting = greetingState[1];
-    var $x_4 = $m_Ltags$();
-    var $x_3 = $m_sr_ScalaRunTime$();
-    var $x_2 = $m_Ltags$();
+    var theme = $as_T($i_react.useContext($m_Lmain$package$().Lmain$package$__f_ThemeContext));
+    var $x_3 = $m_Ltags$();
+    var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("className", theme)]));
+    var $x_2 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
     var $x_1 = $m_sr_ScalaRunTime$();
-    var x$1 = $as_T(props.name);
-    var this$7 = $n(x$1);
-    var s = (((greeting + ((!(this$7 === "")) ? ", " : "")) + $as_T(props.name)) + "!");
-    return $x_4.fragment__sci_Seq__LReactElement($x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.h3__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s]))), $m_LGreetingSelector$().apply__T__F1__LReactElement(greeting, $m_sjs_js_Any$().toFunction1__sjs_js_Function1__F1(setGreeting))])));
+    var s = (("Hello, " + $as_T(props.name)) + "!");
+    return $x_3.h3__sjs_js_Object__sci_Seq__LReactElement($x_2, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])));
   })));
 }
 $c_LGreeting$.prototype = new $h_O();
@@ -971,117 +967,30 @@ function $m_LGreeting$Props$() {
   }
   return $n_LGreeting$Props$;
 }
-/** @constructor */
-function $c_LGreetingSelector$() {
-  this.LGreetingSelector$__f_component = null;
-  $n_LGreetingSelector$ = this;
-  this.LGreetingSelector$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("GreetingSelector", ((props) => {
-    var $x_15 = $m_Ltags$();
-    var $x_14 = $m_sr_ScalaRunTime$();
-    var $x_13 = $m_Ltags$();
-    var $x_12 = $m_sr_ScalaRunTime$();
-    var $x_11 = $m_Ltags$();
-    var $x_10 = $m_sr_ScalaRunTime$();
-    var $x_9 = new $c_T2("type", "radio");
-    var value = ($as_T(props.value) === "Hello");
-    var $x_8 = new $c_T2("checked", value);
-    var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$2) => {
-      (0, props.onChange)("Hello");
-    })));
-    var fields = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_9, $x_8, new $c_T2("onChange", _2)]));
-    var $x_7 = $x_13.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_12.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_11.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Regular greeting"])));
-    var $x_6 = $m_Ltags$();
-    var $x_5 = $m_sr_ScalaRunTime$();
-    var $x_4 = $m_Ltags$();
-    var $x_3 = $m_sr_ScalaRunTime$();
-    var $x_2 = new $c_T2("type", "radio");
-    var value$1 = ($as_T(props.value) === "Hello and welcome");
-    var $x_1 = new $c_T2("checked", value$1);
-    var _2$1 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$3) => {
-      (0, props.onChange)("Hello and welcome");
-    })));
-    var fields$1 = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_2, $x_1, new $c_T2("onChange", _2$1)]));
-    return $x_15.fragment__sci_Seq__LReactElement($x_14.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_7, $x_6.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([]))), "Enthusiastic greeting"])))])));
-  }));
-}
-$c_LGreetingSelector$.prototype = new $h_O();
-$c_LGreetingSelector$.prototype.constructor = $c_LGreetingSelector$;
-/** @constructor */
-function $h_LGreetingSelector$() {
-}
-$h_LGreetingSelector$.prototype = $c_LGreetingSelector$.prototype;
-$c_LGreetingSelector$.prototype.apply__T__F1__LReactElement = (function(value, onChange) {
-  return $i_react.createElement(this.LGreetingSelector$__f_component, $m_LGreetingSelector$Props$().apply__T__F1__LGreetingSelector$Props(value, onChange));
-});
-var $d_LGreetingSelector$ = new $TypeData().initClass($c_LGreetingSelector$, "GreetingSelector$", ({
-  LGreetingSelector$: 1
-}));
-var $n_LGreetingSelector$;
-function $m_LGreetingSelector$() {
-  if ((!$n_LGreetingSelector$)) {
-    $n_LGreetingSelector$ = new $c_LGreetingSelector$();
-  }
-  return $n_LGreetingSelector$;
-}
-/** @constructor */
-function $c_LGreetingSelector$Props$() {
-}
-$c_LGreetingSelector$Props$.prototype = new $h_O();
-$c_LGreetingSelector$Props$.prototype.constructor = $c_LGreetingSelector$Props$;
-/** @constructor */
-function $h_LGreetingSelector$Props$() {
-}
-$h_LGreetingSelector$Props$.prototype = $c_LGreetingSelector$Props$.prototype;
-$c_LGreetingSelector$Props$.prototype.apply__T__F1__LGreetingSelector$Props = (function(value, onChange) {
-  var $x_2 = $m_sr_ScalaRunTime$();
-  var $x_1 = new $c_T2("value", value);
-  var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(onChange);
-  var fields = $x_2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_1, new $c_T2("onChange", _2)]));
-  return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
-});
-var $d_LGreetingSelector$Props$ = new $TypeData().initClass($c_LGreetingSelector$Props$, "GreetingSelector$Props$", ({
-  LGreetingSelector$Props$: 1
-}));
-var $n_LGreetingSelector$Props$;
-function $m_LGreetingSelector$Props$() {
-  if ((!$n_LGreetingSelector$Props$)) {
-    $n_LGreetingSelector$Props$ = new $c_LGreetingSelector$Props$();
-  }
-  return $n_LGreetingSelector$Props$;
+function $p_LMyApp$__handleClick$1__sjs_js_Function1__T__V($thiz, setTheme$1, theme$1) {
+  setTheme$1(((theme$1 === "dark") ? "light" : "dark"));
 }
 /** @constructor */
 function $c_LMyApp$() {
   this.LMyApp$__f_component = null;
   $n_LMyApp$ = this;
   this.LMyApp$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$4) => {
-    var nameState = $i_react.useState("");
-    var name = $as_T(nameState[0]);
-    var setName = nameState[1];
-    var addressState = $i_react.useState("");
-    var address = $as_T(addressState[0]);
-    var setAddress = addressState[1];
-    var $x_13 = $m_Ltags$();
-    var $x_12 = $m_sr_ScalaRunTime$();
-    var $x_11 = $m_Ltags$();
-    var $x_10 = $m_sr_ScalaRunTime$();
-    var $x_9 = $m_Ltags$();
-    var $x_8 = $m_sr_ScalaRunTime$();
-    var $x_7 = new $c_T2("value", name);
-    var _2 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((e) => {
-      setName($as_T(e.target.value));
+    var themeState = $i_react.useState("dark");
+    var theme = $as_T(themeState[0]);
+    var setTheme = themeState[1];
+    var $x_7 = $i_react;
+    var $x_6 = $m_Lmain$package$().Lmain$package$__f_ThemeContext.Provider;
+    var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("value", theme)]));
+    var $x_5 = $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+    var $x_4 = $m_Ltags$();
+    var $x_3 = $m_sr_ScalaRunTime$();
+    var $x_2 = $m_Ltags$();
+    var $x_1 = $m_sr_ScalaRunTime$();
+    var _2 = $m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
+      $p_LMyApp$__handleClick$1__sjs_js_Function1__T__V(this, setTheme, theme);
     })));
-    var fields = $x_8.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_7, new $c_T2("onChange", _2)]));
-    var $x_6 = $x_11.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Name: ", $x_9.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([])))])));
-    var $x_5 = $m_Ltags$();
-    var $x_4 = $m_sr_ScalaRunTime$();
-    var $x_3 = $m_Ltags$();
-    var $x_2 = $m_sr_ScalaRunTime$();
-    var $x_1 = new $c_T2("value", address);
-    var _2$1 = $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((e$2) => {
-      setAddress($as_T(e$2.target.value));
-    })));
-    var fields$1 = $x_2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$x_1, new $c_T2("onChange", _2$1)]));
-    return $x_13.fragment__sci_Seq__LReactElement($x_12.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_6, $x_5.label__sjs_js_Object__sci_Seq__LReactElement(null, $x_4.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Address: ", $x_3.input__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([])))]))), $m_LGreeting$().apply__T__LReactElement(name)])));
+    var fields$1 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("onClick", _2)]));
+    return $x_7.createElement($x_6, $x_5, $x_4.fragment__sci_Seq__LReactElement($x_3.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_2.button__sjs_js_Object__sci_Seq__LReactElement($m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Switch theme"]))), $m_LGreeting$().apply__T__LReactElement("Taylor")]))));
   }));
 }
 $c_LMyApp$.prototype = new $h_O();
@@ -1193,6 +1102,9 @@ function $m_jl_reflect_Array$() {
 }
 /** @constructor */
 function $c_Lmain$package$() {
+  this.Lmain$package$__f_ThemeContext = null;
+  $n_Lmain$package$ = this;
+  this.Lmain$package$__f_ThemeContext = $i_react.createContext("dark");
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -2269,11 +2181,8 @@ $c_Ltags$.prototype.constructor = $c_Ltags$;
 function $h_Ltags$() {
 }
 $h_Ltags$.prototype = $c_Ltags$.prototype;
-$c_Ltags$.prototype.label__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
-  return $i_react.createElement("label", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
-});
-$c_Ltags$.prototype.input__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
-  return $i_react.createElement("input", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
+$c_Ltags$.prototype.button__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
+  return $i_react.createElement("button", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
 });
 $c_Ltags$.prototype.h3__sjs_js_Object__sci_Seq__LReactElement = (function(props, children) {
   return $i_react.createElement("h3", props, ...$m_sjsr_Compat$().toJSVarArgsImpl__sci_Seq__sjs_js_Array(children));
@@ -2373,6 +2282,18 @@ function $m_s_Console$() {
   return $n_s_Console$;
 }
 /** @constructor */
+function $c_sr_AbstractFunction0() {
+}
+$c_sr_AbstractFunction0.prototype = new $h_O();
+$c_sr_AbstractFunction0.prototype.constructor = $c_sr_AbstractFunction0;
+/** @constructor */
+function $h_sr_AbstractFunction0() {
+}
+$h_sr_AbstractFunction0.prototype = $c_sr_AbstractFunction0.prototype;
+$c_sr_AbstractFunction0.prototype.toString__T = (function() {
+  return "<function0>";
+});
+/** @constructor */
 function $c_sr_AbstractFunction1() {
 }
 $c_sr_AbstractFunction1.prototype = new $h_O();
@@ -2466,6 +2387,25 @@ function $m_sc_Iterator$() {
   return $n_sc_Iterator$;
 }
 /** @constructor */
+function $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855(f) {
+  this.sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855__f_f = null;
+  this.sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855__f_f = f;
+}
+$c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855.prototype = new $h_sr_AbstractFunction0();
+$c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855.prototype.constructor = $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855;
+/** @constructor */
+function $h_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855() {
+}
+$h_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855.prototype = $c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855.prototype;
+$c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855.prototype.apply__O = (function() {
+  return $n(this.sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855__f_f)();
+});
+var $d_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855 = new $TypeData().initClass($c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855, "scala.runtime.AbstractFunction0.$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855", ({
+  sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855: 1,
+  sr_AbstractFunction0: 1,
+  F0: 1
+}));
+/** @constructor */
 function $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(f) {
   this.sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28__f_f = null;
   this.sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28__f_f = f;
@@ -2493,11 +2433,8 @@ $c_sjs_js_Any$.prototype.constructor = $c_sjs_js_Any$;
 function $h_sjs_js_Any$() {
 }
 $h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
-$c_sjs_js_Any$.prototype.fromFunction1__F1__sjs_js_Function1 = (function(f) {
-  return ((arg1$2) => $n(f).apply__O__O(arg1$2));
-});
-$c_sjs_js_Any$.prototype.toFunction1__sjs_js_Function1__F1 = (function(f) {
-  return new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((x1$2$2) => f(x1$2$2)));
+$c_sjs_js_Any$.prototype.fromFunction0__F0__sjs_js_Function0 = (function(f) {
+  return (() => $n(f).apply__O());
 });
 var $d_sjs_js_Any$ = new $TypeData().initClass($c_sjs_js_Any$, "scala.scalajs.js.Any$", ({
   sjs_js_Any$: 1,
