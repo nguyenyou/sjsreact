@@ -56,36 +56,49 @@ def functionalComponent(
   component
 }
 
-val HelloWorld = functionalComponent("HelloWorld") { _ =>
-  div(null, "Hello World")
+object HelloWorld {
+  val component = functionalComponent("HelloWorld") { _ =>
+    div(null, "Hello Worldddd")
+  }
+  def apply(): ReactElement = React.createElement(component, null)
 }
 
 trait CounterProps extends js.Object {
   val initialCount: Int
 }
 
-val Counter = functionalComponent("Counter") { props =>
-  val p = props.asInstanceOf[CounterProps]
-  val state = React.useState(p.initialCount)
-  val count = state._1
-  val setCount = state._2
+object Counter {
+  val component = functionalComponent("Counter") { props =>
+    val p = props.asInstanceOf[CounterProps]
+    val state = React.useState(p.initialCount)
+    val count = state._1
+    val setCount = state._2
 
-  div(
-    null,
-    button(
+    div(
+      null,
+      button(
+        new js.Object {
+          val onClick: js.Function0[Unit] = () => setCount(count + 1)
+        },
+        "+"
+      ),
+      button(
+        new js.Object {
+          val onClick: js.Function0[Unit] = () => setCount(count - 1)
+        },
+        "-"
+      ),
+      span(null, s"Count: $count")
+    )
+  }
+
+  def apply(iCount: Int): ReactElement =
+    React.createElement(
+      component,
       new js.Object {
-        val onClick: js.Function0[Unit] = () => setCount(count + 1)
-      },
-      "+"
-    ),
-    button(
-      new js.Object {
-        val onClick: js.Function0[Unit] = () => setCount(count - 1)
-      },
-      "-"
-    ),
-    span(null, s"Count: $count")
-  )
+        val initialCount = iCount
+      }
+    )
 }
 
 @main
@@ -98,13 +111,9 @@ def run(): Unit = {
       null,
       div(
         null,
-        React.createElement(HelloWorld, null),
-        React.createElement(
-          Counter,
-          new js.Object {
-            val initialCount = 10
-          }
-        )
+        HelloWorld(),
+        Counter(iCount = 10),
+        Counter(iCount = 5)
       )
     )
   )

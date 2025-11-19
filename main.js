@@ -908,6 +908,101 @@ var $d_J = new $TypeData().initPrim(null, "J", "long", $ac_J, (void 0));
 var $d_F = new $TypeData().initPrim(0.0, "F", "float", $ac_F, Float32Array);
 var $d_D = new $TypeData().initPrim(0.0, "D", "double", $ac_D, Float64Array);
 /** @constructor */
+function $c_LCounter$() {
+  this.LCounter$__f_component = null;
+  $n_LCounter$ = this;
+  this.LCounter$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((props) => {
+    var state = $i_react.useState($uI(props.initialCount));
+    var count = $uI(state[0]);
+    var setCount = state[1];
+    var $x_6 = $m_Ltags$();
+    var $x_5 = $m_sr_ScalaRunTime$();
+    var $x_4 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
+      var setCount$1$2 = null;
+      var count$1$2 = 0;
+      setCount$1$2 = setCount;
+      count$1$2 = count;
+      var this$2 = ({});
+      this$2.onClick = null;
+      var setCount$1$1 = setCount$1$2;
+      var count$1$1 = count$1$2;
+      this$2.onClick = ((setCount$1, count$1) => (() => {
+        setCount$1(((1 + count$1) | 0));
+      }))(setCount$1$1, count$1$1);
+      return this$2;
+    })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["+"])));
+    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
+      var setCount$3$2 = null;
+      var count$3$2 = 0;
+      setCount$3$2 = setCount;
+      count$3$2 = count;
+      var this$2$1 = ({});
+      this$2$1.onClick = null;
+      var setCount$3$1 = setCount$3$2;
+      var count$3$1 = count$3$2;
+      this$2$1.onClick = ((setCount$3, count$3) => (() => {
+        setCount$3((((-1) + count$3) | 0));
+      }))(setCount$3$1, count$3$1);
+      return this$2$1;
+    })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["-"])));
+    var $x_2 = $m_Ltags$();
+    var $x_1 = $m_sr_ScalaRunTime$();
+    var s = ("Count: " + count);
+    return $x_6.div__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4, $x_3, $x_2.span__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])))])));
+  }));
+}
+$c_LCounter$.prototype = new $h_O();
+$c_LCounter$.prototype.constructor = $c_LCounter$;
+/** @constructor */
+function $h_LCounter$() {
+}
+$h_LCounter$.prototype = $c_LCounter$.prototype;
+$c_LCounter$.prototype.apply__I__LReactElement = (function(iCount) {
+  return $i_react.createElement(this.LCounter$__f_component, (() => {
+    var iCount$1 = 0;
+    iCount$1 = iCount;
+    var this$1 = ({});
+    this$1.initialCount = 0;
+    this$1.initialCount = iCount$1;
+    return this$1;
+  })());
+});
+var $d_LCounter$ = new $TypeData().initClass($c_LCounter$, "Counter$", ({
+  LCounter$: 1
+}));
+var $n_LCounter$;
+function $m_LCounter$() {
+  if ((!$n_LCounter$)) {
+    $n_LCounter$ = new $c_LCounter$();
+  }
+  return $n_LCounter$;
+}
+/** @constructor */
+function $c_LHelloWorld$() {
+  this.LHelloWorld$__f_component = null;
+  $n_LHelloWorld$ = this;
+  this.LHelloWorld$__f_component = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Hello Worldddd"])))));
+}
+$c_LHelloWorld$.prototype = new $h_O();
+$c_LHelloWorld$.prototype.constructor = $c_LHelloWorld$;
+/** @constructor */
+function $h_LHelloWorld$() {
+}
+$h_LHelloWorld$.prototype = $c_LHelloWorld$.prototype;
+$c_LHelloWorld$.prototype.apply__LReactElement = (function() {
+  return $i_react.createElement(this.LHelloWorld$__f_component, null);
+});
+var $d_LHelloWorld$ = new $TypeData().initClass($c_LHelloWorld$, "HelloWorld$", ({
+  LHelloWorld$: 1
+}));
+var $n_LHelloWorld$;
+function $m_LHelloWorld$() {
+  if ((!$n_LHelloWorld$)) {
+    $n_LHelloWorld$ = new $c_LHelloWorld$();
+  }
+  return $n_LHelloWorld$;
+}
+/** @constructor */
 function $c_jl_System$Streams$() {
   this.jl_System$Streams$__f_out = null;
   this.jl_System$Streams$__f_err = null;
@@ -997,49 +1092,6 @@ function $m_jl_reflect_Array$() {
 }
 /** @constructor */
 function $c_Lmain$package$() {
-  this.Lmain$package$__f_HelloWorld = null;
-  this.Lmain$package$__f_Counter = null;
-  $n_Lmain$package$ = this;
-  this.Lmain$package$__f_HelloWorld = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["Hello World"])))));
-  this.Lmain$package$__f_Counter = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((props) => {
-    var state = $i_react.useState($uI(props.initialCount));
-    var count = $uI(state[0]);
-    var setCount = state[1];
-    var $x_6 = $m_Ltags$();
-    var $x_5 = $m_sr_ScalaRunTime$();
-    var $x_4 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
-      var setCount$1$2 = null;
-      var count$1$2 = 0;
-      setCount$1$2 = setCount;
-      count$1$2 = count;
-      var this$3 = ({});
-      this$3.onClick = null;
-      var setCount$1$1 = setCount$1$2;
-      var count$1$1 = count$1$2;
-      this$3.onClick = ((setCount$1, count$1) => (() => {
-        setCount$1(((1 + count$1) | 0));
-      }))(setCount$1$1, count$1$1);
-      return this$3;
-    })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["+"])));
-    var $x_3 = $m_Ltags$().button__sjs_js_Object__sci_Seq__LReactElement((() => {
-      var setCount$3$2 = null;
-      var count$3$2 = 0;
-      setCount$3$2 = setCount;
-      count$3$2 = count;
-      var this$2$2 = ({});
-      this$2$2.onClick = null;
-      var setCount$3$1 = setCount$3$2;
-      var count$3$1 = count$3$2;
-      this$2$2.onClick = ((setCount$3, count$3) => (() => {
-        setCount$3((((-1) + count$3) | 0));
-      }))(setCount$3$1, count$3$1);
-      return this$2$2;
-    })(), $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)(["-"])));
-    var $x_2 = $m_Ltags$();
-    var $x_1 = $m_sr_ScalaRunTime$();
-    var s = ("Count: " + count);
-    return $x_6.div__sjs_js_Object__sci_Seq__LReactElement(null, $x_5.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$x_4, $x_3, $x_2.span__sjs_js_Object__sci_Seq__LReactElement(null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([s])))])));
-  }));
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -1054,12 +1106,7 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement($i_react.StrictMode, null, $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null), $i_react.createElement($m_Lmain$package$().Lmain$package$__f_Counter, (() => {
-    var this$1 = ({});
-    this$1.initialCount = 0;
-    this$1.initialCount = 10;
-    return this$1;
-  })())])))));
+  root.render($i_react.createElement($i_react.StrictMode, null, $m_Ltags$().div__sjs_js_Object__sci_Seq__LReactElement(null, $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_sjs_js_Any.getArrayOf().constr)([$m_LHelloWorld$().apply__LReactElement(), $m_LCounter$().apply__I__LReactElement(10), $m_LCounter$().apply__I__LReactElement(5)])))));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
