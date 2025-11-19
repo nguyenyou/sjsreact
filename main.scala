@@ -23,6 +23,17 @@ object React extends js.Object {
     js.native
 }
 
+object tags {
+  def div(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("div", props, children*)
+  def button(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("button", props, children*)
+  def span(props: js.Object | Null, children: js.Any*): ReactElement =
+    React.createElement("span", props, children*)
+}
+
+import tags.*
+
 @js.native
 trait ReactElement extends js.Object
 
@@ -46,7 +57,7 @@ def functionalComponent(
 }
 
 val HelloWorld = functionalComponent("HelloWorld") { _ =>
-  React.createElement("div", null, "Hello World")
+  div(null, "Hello World")
 }
 
 val Counter = functionalComponent("Counter") { _ =>
@@ -54,24 +65,21 @@ val Counter = functionalComponent("Counter") { _ =>
   val count = state._1
   val setCount = state._2
 
-  React.createElement(
-    "div",
+  div(
     null,
-    React.createElement(
-      "button",
+    button(
       new js.Object {
         val onClick: js.Function0[Unit] = () => setCount(count + 1)
       },
       "+"
     ),
-    React.createElement(
-      "button",
+    button(
       new js.Object {
         val onClick: js.Function0[Unit] = () => setCount(count - 1)
       },
       "-"
     ),
-    React.createElement("span", null, s"Count: $count")
+    span(null, s"Count: $count")
   )
 }
 
@@ -83,8 +91,7 @@ def run(): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      React.createElement(
-        "div",
+      div(
         null,
         React.createElement(HelloWorld, null),
         React.createElement(Counter, null)
