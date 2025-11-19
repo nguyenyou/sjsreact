@@ -19,6 +19,8 @@ object React extends js.Object {
       props: js.Object | Null,
       children: js.Any*
   ): ReactElement = js.native
+  def useState[T](initialState: T): js.Tuple2[T, js.Function1[T, Unit]] =
+    js.native
 }
 
 @js.native
@@ -47,6 +49,32 @@ val HelloWorld = functionalComponent("HelloWorld") { _ =>
   React.createElement("div", null, "Hello World")
 }
 
+val Counter = functionalComponent("Counter") { _ =>
+  val state = React.useState(0)
+  val count = state._1
+  val setCount = state._2
+
+  React.createElement(
+    "div",
+    null,
+    React.createElement(
+      "button",
+      new js.Object {
+        val onClick: js.Function0[Unit] = () => setCount(count + 1)
+      },
+      "+"
+    ),
+    React.createElement(
+      "button",
+      new js.Object {
+        val onClick: js.Function0[Unit] = () => setCount(count - 1)
+      },
+      "-"
+    ),
+    React.createElement("span", null, s"Count: $count")
+  )
+}
+
 @main
 def run(): Unit = {
   val container = dom.document.getElementById("app")
@@ -55,7 +83,12 @@ def run(): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      React.createElement(HelloWorld, null)
+      React.createElement(
+        "div",
+        null,
+        React.createElement(HelloWorld, null),
+        React.createElement(Counter, null)
+      )
     )
   )
 }

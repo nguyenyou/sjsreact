@@ -943,8 +943,47 @@ var $d_jl_Void = new $TypeData().initClass(0, "java.lang.Void", ({
 /** @constructor */
 function $c_Lmain$package$() {
   this.Lmain$package$__f_HelloWorld = null;
+  this.Lmain$package$__f_Counter = null;
   $n_Lmain$package$ = this;
   this.Lmain$package$__f_HelloWorld = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("HelloWorld", ((_$1) => $i_react.createElement("div", null, "Hello World")));
+  this.Lmain$package$__f_Counter = $m_Lmain$package$().functionalComponent__T__sjs_js_Function1__sjs_js_Any("Counter", ((_$2) => {
+    var state = $i_react.useState(0);
+    var count = $uI(state[0]);
+    var setCount = state[1];
+    var $x_5 = $i_react;
+    var $x_4 = $i_react.createElement("button", (() => {
+      var setCount$1$2 = null;
+      var count$1$2 = 0;
+      setCount$1$2 = setCount;
+      count$1$2 = count;
+      var this$6 = ({});
+      this$6.onClick = null;
+      var setCount$1$1 = setCount$1$2;
+      var count$1$1 = count$1$2;
+      this$6.onClick = ((setCount$1, count$1) => (() => {
+        setCount$1(((1 + count$1) | 0));
+      }))(setCount$1$1, count$1$1);
+      return this$6;
+    })(), "+");
+    var $x_3 = $i_react.createElement("button", (() => {
+      var setCount$3$2 = null;
+      var count$3$2 = 0;
+      setCount$3$2 = setCount;
+      count$3$2 = count;
+      var this$2$2 = ({});
+      this$2$2.onClick = null;
+      var setCount$3$1 = setCount$3$2;
+      var count$3$1 = count$3$2;
+      this$2$2.onClick = ((setCount$3, count$3) => (() => {
+        setCount$3((((-1) + count$3) | 0));
+      }))(setCount$3$1, count$3$1);
+      return this$2$2;
+    })(), "-");
+    var $x_2 = $i_react;
+    var s = ("Count: " + count);
+    var $x_1 = $x_2.createElement("span", null, s);
+    return $x_5.createElement("div", null, $x_4, $x_3, $x_1);
+  }));
 }
 $c_Lmain$package$.prototype = new $h_O();
 $c_Lmain$package$.prototype.constructor = $c_Lmain$package$;
@@ -959,7 +998,7 @@ $c_Lmain$package$.prototype.functionalComponent__T__sjs_js_Function1__sjs_js_Any
 $c_Lmain$package$.prototype.run__V = (function() {
   var container = document.getElementById("app");
   var root = $i_react$002ddom$002fclient.createRoot(container);
-  root.render($i_react.createElement($i_react.StrictMode, null, $i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null)));
+  root.render($i_react.createElement($i_react.StrictMode, null, $i_react.createElement("div", null, $i_react.createElement($m_Lmain$package$().Lmain$package$__f_HelloWorld, null), $i_react.createElement($m_Lmain$package$().Lmain$package$__f_Counter, null))));
 });
 var $d_Lmain$package$ = new $TypeData().initClass($c_Lmain$package$, "main$package$", ({
   Lmain$package$: 1
