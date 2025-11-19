@@ -3,6 +3,7 @@ import * as $i_react$002ddom$002fclient from "react-dom/client";
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
 import * as $j_myapp$002e$002dGreeting$0024$002dProps$0024 from "./myapp.-Greeting$-Props$.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
+import * as $j_myapp$002e$002dTheme$002dContext$0024 from "./myapp.-Theme-Context$.js";
 import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
 /** @constructor */
 function $c_Lmyapp_Button$() {
@@ -115,7 +116,7 @@ function $c_Lmyapp_Greeting$() {
     var this$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_s_Console$();
     var this$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this$3.out__Ljava_io_PrintStream());
     this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"));
-    var theme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useContext__Lmyapp_ReactRaw$Context__O($m_Lmyapp_main$package$().Lmyapp_main$package$__f_ThemeContext));
+    var theme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().useContext__Lmyapp_ReactRaw$Context__O($j_myapp$002e$002dTheme$002dContext$0024.$m_Lmyapp_ThemeContext$().Lmyapp_ThemeContext$__f_Context));
     var $x_3 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var fields = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("className", theme)]));
     var $x_2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
@@ -246,28 +247,23 @@ function $c_Lmyapp_MyApp$() {
     }
     var theme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b46$).T2__f__1);
     var setTheme = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(\u03b46$).T2__f__2);
-    var $x_12 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$();
-    var $x_11 = $m_Lmyapp_main$package$().Lmyapp_main$package$__f_ThemeContext.Provider;
-    var fields = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("value", theme)]));
-    var $x_10 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
-    var $x_9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+    var $x_9 = $j_myapp$002e$002dTheme$002dContext$0024.$m_Lmyapp_ThemeContext$();
     var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_7 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_6 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var _2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction0__F0__sjs_js_Function0(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction0_$$Lambda$a02b774b97db8234e08c6a02dd06557c99779855((() => {
       $p_Lmyapp_MyApp$__handleClick$1__F1__T__V(this, setTheme, theme);
     })));
-    var fields$1 = $x_6.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onClick", _2)]));
-    var $x_5 = $x_7.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Switch Theme"])));
+    var fields = $x_6.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("onClick", _2)]));
+    var $x_5 = $x_7.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Switch Theme"])));
     var $x_4 = $j_myapp$002etags$0024.$m_Lmyapp_tags$().h3__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Updated from Scala!"])));
     var $x_3 = $m_Lmyapp_Greeting$().apply__T__Lmyapp_ReactElement("Taylor");
     var $x_2 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var fields$2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("marginTop", "20px")]));
-    var _2$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2);
-    var fields$3 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("style", _2$1)]));
-    var children = $x_8.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_5, $x_4, $x_3, $x_2.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$3), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$m_Lmyapp_TextInput$().apply__Lmyapp_ReactElement()])))]));
-    return $x_12.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_11, $x_10, $x_9.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().Fragment__sjs_js_Any(), null, children)])));
+    var fields$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("marginTop", "20px")]));
+    var _2$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1);
+    var fields$2 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("style", _2$1)]));
+    return $x_9.apply__T__sci_Seq__Lmyapp_ReactElement(theme, $x_8.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_5, $x_4, $x_3, $x_2.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$m_Lmyapp_TextInput$().apply__Lmyapp_ReactElement()])))])));
   }));
 }
 export { $c_Lmyapp_MyApp$ as $c_Lmyapp_MyApp$ };
@@ -359,9 +355,7 @@ function $sct_Lmyapp_main$package$__stinit__() {
 export { $sct_Lmyapp_main$package$__stinit__ as $sct_Lmyapp_main$package$__stinit__ };
 /** @constructor */
 function $c_Lmyapp_main$package$() {
-  this.Lmyapp_main$package$__f_ThemeContext = null;
   $n_Lmyapp_main$package$ = this;
-  this.Lmyapp_main$package$__f_ThemeContext = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createContext__O__Lmyapp_ReactRaw$Context("dark");
   $t_Lmyapp_main$package$__MyAppComp = $m_Lmyapp_MyApp$().Lmyapp_MyApp$__f_component;
   $t_Lmyapp_main$package$__HelloWorldComp = $m_Lmyapp_HelloWorld$().Lmyapp_HelloWorld$__f_component;
   $t_Lmyapp_main$package$__CounterComp = $m_Lmyapp_Counter$().Lmyapp_Counter$__f_component;

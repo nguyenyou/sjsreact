@@ -178,7 +178,13 @@ object GreetingSelector {
     React.createElement(component, Props(value, onChange))
 }
 
-val ThemeContext = React.createContext[String]("dark")
+object ThemeContext {
+  val Context = React.createContext[String]("dark")
+
+  def apply(value: String)(children: js.Any*): ReactElement =
+    React.createElement(Context.Provider, js.Dynamic.literal(value = value), children*)
+}
+
 
 object Greeting {
   trait Props extends js.Object {
@@ -190,17 +196,17 @@ object Greeting {
       js.Dynamic.literal(name = name).asInstanceOf[Props]
   }
 
-  val component = React.memo(functionalComponent("Greeting") { props =>
+  val component = functionalComponent("Greeting") { props =>
     val p = props.asInstanceOf[Props]
     println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
 
-    val theme = React.useContext(ThemeContext)
+    val theme = React.useContext(ThemeContext.Context)
 
     h3(
       js.Dynamic.literal(className = theme),
       s"Hello, ${p.name}!"
     )
-  })
+  }
 
   def apply(name: String): ReactElement =
     React.createElement(component, Props(name = name))
@@ -234,18 +240,14 @@ object MyApp {
       setTheme(if (theme == "dark") "light" else "dark")
     }
 
-    React.createElement(
-      ThemeContext.Provider,
-      js.Dynamic.literal(value = theme),
-      fragment(
-        button(
-          js.Dynamic.literal(onClick = () => handleClick()),
-          "Switch Theme"
-        ),
-        h3(null, "Updated from Scala!"),
-        Greeting(name = "Taylor"),
-        div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
-      )
+    ThemeContext(value = theme)(
+      button(
+        js.Dynamic.literal(onClick = () => handleClick()),
+        "Switch Theme"
+      ),
+      h3(null, "Updated from Scala!"),
+      Greeting(name = "Taylor"),
+      div(js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")), TextInput())
     )
   }
 
