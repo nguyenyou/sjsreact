@@ -8,6 +8,7 @@ import myapp.tags.h3
 import myapp.ThemeContext
 
 object Greeting {
+
   trait Props extends js.Object {
     val name: String
   }
@@ -18,8 +19,6 @@ object Greeting {
   }
 
   val component = functionComponent[Props]("Greeting") { p =>
-    println(s"Greeting was rendered at ${new js.Date().toLocaleTimeString()}")
-
     val theme = React.useContext(ThemeContext.Context)
 
     h3(
@@ -27,7 +26,4 @@ object Greeting {
       s"Hello, ${p.name}!"
     )
   }
-
-  def apply(name: String): ReactElement =
-    React.createElement(component, Props(name = name))
 }
