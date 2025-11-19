@@ -10,7 +10,7 @@ import myapp.components.ThemeContext
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 case class Greeting(name: String) {
-  def apply() =
+  def apply(): ReactElement =
     React.createElement(Greeting.component, Box(this))
 }
 
