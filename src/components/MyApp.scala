@@ -23,7 +23,7 @@ object MyApp {
     ThemeContext(value = theme)(
       button(
         js.Dynamic.literal(onClick = () => handleClick()),
-        "Switch Theme"
+        "Switch Themeeee"
       ),
       h3(null, "Updated from Scala!"),
       Greeting(name = "Taylor"),
