@@ -67,6 +67,11 @@ trait CounterProps extends js.Object {
   val initialCount: Int
 }
 
+object CounterProps {
+  def apply(initialCount: Int): CounterProps =
+    js.Dynamic.literal(initialCount = initialCount).asInstanceOf[CounterProps]
+}
+
 object Counter {
   val component = functionalComponent("Counter") { props =>
     val p = props.asInstanceOf[CounterProps]
@@ -95,7 +100,7 @@ object Counter {
   def apply(iCount: Int): ReactElement =
     React.createElement(
       component,
-      js.Dynamic.literal(initialCount = iCount)
+      CounterProps(initialCount = iCount)
     )
 }
 

@@ -951,10 +951,7 @@ function $h_LCounter$() {
 }
 $h_LCounter$.prototype = $c_LCounter$.prototype;
 $c_LCounter$.prototype.apply__I__LReactElement = (function(iCount) {
-  var $x_2 = $i_react;
-  var $x_1 = this.LCounter$__f_component;
-  var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("initialCount", iCount)]));
-  return $x_2.createElement($x_1, $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields));
+  return $i_react.createElement(this.LCounter$__f_component, $m_LCounterProps$().apply__I__LCounterProps(iCount));
 });
 var $d_LCounter$ = new $TypeData().initClass($c_LCounter$, "Counter$", ({
   LCounter$: 1
@@ -965,6 +962,29 @@ function $m_LCounter$() {
     $n_LCounter$ = new $c_LCounter$();
   }
   return $n_LCounter$;
+}
+/** @constructor */
+function $c_LCounterProps$() {
+}
+$c_LCounterProps$.prototype = new $h_O();
+$c_LCounterProps$.prototype.constructor = $c_LCounterProps$;
+/** @constructor */
+function $h_LCounterProps$() {
+}
+$h_LCounterProps$.prototype = $c_LCounterProps$.prototype;
+$c_LCounterProps$.prototype.apply__I__LCounterProps = (function(initialCount) {
+  var fields = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("initialCount", initialCount)]));
+  return $m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
+});
+var $d_LCounterProps$ = new $TypeData().initClass($c_LCounterProps$, "CounterProps$", ({
+  LCounterProps$: 1
+}));
+var $n_LCounterProps$;
+function $m_LCounterProps$() {
+  if ((!$n_LCounterProps$)) {
+    $n_LCounterProps$ = new $c_LCounterProps$();
+  }
+  return $n_LCounterProps$;
 }
 /** @constructor */
 function $c_LHelloWorld$() {
