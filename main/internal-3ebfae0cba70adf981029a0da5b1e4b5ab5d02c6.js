@@ -1894,6 +1894,22 @@ function $m_RTLong$() {
   return $n_RTLong$;
 }
 export { $m_RTLong$ as $m_RTLong$ };
+function $is_F1(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.F1)));
+}
+export { $is_F1 as $is_F1 };
+function $as_F1(obj) {
+  return (($is_F1(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Function1"));
+}
+export { $as_F1 as $as_F1 };
+function $isArrayOf_F1(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.F1)));
+}
+export { $isArrayOf_F1 as $isArrayOf_F1 };
+function $asArrayOf_F1(obj, depth) {
+  return (($isArrayOf_F1(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Function1;", depth));
+}
+export { $asArrayOf_F1 as $asArrayOf_F1 };
 function $is_sc_IterableOnce(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.sc_IterableOnce)));
 }
@@ -3563,6 +3579,34 @@ var $d_sr_Nothing$ = new $TypeData().initClass(0, "scala.runtime.Nothing$", ({
   Ljava_io_Serializable: 1
 }));
 export { $d_sr_Nothing$ as $d_sr_Nothing$ };
+/** @constructor */
+function $c_sjs_js_Any$() {
+}
+export { $c_sjs_js_Any$ as $c_sjs_js_Any$ };
+$c_sjs_js_Any$.prototype = new $h_O();
+$c_sjs_js_Any$.prototype.constructor = $c_sjs_js_Any$;
+/** @constructor */
+function $h_sjs_js_Any$() {
+}
+export { $h_sjs_js_Any$ as $h_sjs_js_Any$ };
+$h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
+$c_sjs_js_Any$.prototype.toFunction1__sjs_js_Function1__F1 = (function(f) {
+  return new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((x1$2$2) => f(x1$2$2)));
+});
+var $d_sjs_js_Any$ = new $TypeData().initClass($c_sjs_js_Any$, "scala.scalajs.js.Any$", ({
+  sjs_js_Any$: 1,
+  sjs_js_LowPrioAnyImplicits: 1,
+  sjs_js_LowestPrioAnyImplicits: 1
+}));
+export { $d_sjs_js_Any$ as $d_sjs_js_Any$ };
+var $n_sjs_js_Any$;
+function $m_sjs_js_Any$() {
+  if ((!$n_sjs_js_Any$)) {
+    $n_sjs_js_Any$ = new $c_sjs_js_Any$();
+  }
+  return $n_sjs_js_Any$;
+}
+export { $m_sjs_js_Any$ as $m_sjs_js_Any$ };
 /** @constructor */
 function $c_Ljava_io_OutputStream() {
 }

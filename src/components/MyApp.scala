@@ -31,11 +31,14 @@ object MyApp {
     org.scalajs.dom.console.log(x)
   })
 
-  val handleClickContainer = Callback(() => {
-    org.scalajs.dom.console.log("Clickkkkkk")
-  })
-
   val component = FunctionComponent[Props]("MyApp") { _ =>
+    val (count, setCount) = React.useState(1)
+
+    val handleClickContainer = Callback(() => {
+      org.scalajs.dom.console.log("Clickkkkkk")
+      setCount(count + 1)
+    })
+
     div(
       onClick := handleClickContainer,
       marginLeft := "20px",
@@ -43,7 +46,7 @@ object MyApp {
       color := "#000",
       height := "200px",
       border := "1px solid #000",
-      div("Lorem ipsum")
+      div(s"Lorem ipsum: ${count}")
     )
   }
 
