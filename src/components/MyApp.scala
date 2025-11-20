@@ -43,7 +43,7 @@ object MyApp {
       color := "#000",
       height := "200px",
       border := "1px solid #000",
-      div("Hello world")
+      div("Lorem ipsum")
     )
   }
 

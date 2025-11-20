@@ -28,7 +28,7 @@ function $c_Lmyapp_components_MyApp$() {
     var $x_3 = new $j_myapp$002e$002dStyle$002dModifier.$c_Lmyapp_StyleModifier("color", "#000");
     var $x_2 = new $j_myapp$002e$002dStyle$002dModifier.$c_Lmyapp_StyleModifier("height", "200px");
     var $x_1 = new $j_myapp$002e$002dStyle$002dModifier.$c_Lmyapp_StyleModifier("border", "1px solid #000");
-    var element = $j_myapp$002ehtml$0024.$m_Lmyapp_html$().div__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("Hello world")])));
+    var element = $j_myapp$002ehtml$0024.$m_Lmyapp_html$().div__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("Lorem ipsum")])));
     return $x_8.div__sci_Seq__Lmyapp_ReactElement($x_7.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$x_6, $x_5, $x_4, $x_3, $x_2, $x_1, new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element)])));
   }));
   this.Lmyapp_components_MyApp$__f_component = new $j_myapp$002e$002dFunction$002dComponent.$c_Lmyapp_FunctionComponent("MyApp", render);
