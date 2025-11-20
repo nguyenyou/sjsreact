@@ -20,7 +20,7 @@ object Box {
 def scalaFunctionComponent[P](
     displayName: String
 )(render: P => ReactElement): js.Function1[Box[P], ReactElement] = {
-  val f = (box: Box[P]) => render(box.unbox)
+  val f: js.Function1[Box[P], ReactElement] = (box: Box[P]) => render(box.unbox)
   val component = f
   component.asInstanceOf[js.Dynamic].displayName = displayName
   component
@@ -36,8 +36,8 @@ def scalaFunctionComponentWithChildren[P](
 )(
     render: (P, js.Any) => ReactElement
 ): js.Function1[Box[P] & PropsWithChildren, ReactElement] = {
-  val f = (props: Box[P] & PropsWithChildren) =>
-    render(props.unbox, props.children)
+  val f: js.Function1[Box[P] & PropsWithChildren, ReactElement] =
+    (props: Box[P] & PropsWithChildren) => render(props.unbox, props.children)
   val component = f
   component.asInstanceOf[js.Dynamic].displayName = displayName
   component

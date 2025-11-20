@@ -2428,34 +2428,6 @@ var $d_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28 = 
 }));
 export { $d_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28 as $d_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28 };
 /** @constructor */
-function $c_sjs_js_Any$() {
-}
-export { $c_sjs_js_Any$ as $c_sjs_js_Any$ };
-$c_sjs_js_Any$.prototype = new $h_O();
-$c_sjs_js_Any$.prototype.constructor = $c_sjs_js_Any$;
-/** @constructor */
-function $h_sjs_js_Any$() {
-}
-export { $h_sjs_js_Any$ as $h_sjs_js_Any$ };
-$h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
-$c_sjs_js_Any$.prototype.fromFunction1__F1__sjs_js_Function1 = (function(f) {
-  return ((arg1$2) => $n(f).apply__O__O(arg1$2));
-});
-var $d_sjs_js_Any$ = new $TypeData().initClass($c_sjs_js_Any$, "scala.scalajs.js.Any$", ({
-  sjs_js_Any$: 1,
-  sjs_js_LowPrioAnyImplicits: 1,
-  sjs_js_LowestPrioAnyImplicits: 1
-}));
-export { $d_sjs_js_Any$ as $d_sjs_js_Any$ };
-var $n_sjs_js_Any$;
-function $m_sjs_js_Any$() {
-  if ((!$n_sjs_js_Any$)) {
-    $n_sjs_js_Any$ = new $c_sjs_js_Any$();
-  }
-  return $n_sjs_js_Any$;
-}
-export { $m_sjs_js_Any$ as $m_sjs_js_Any$ };
-/** @constructor */
 function $c_Ljava_io_OutputStream() {
 }
 export { $c_Ljava_io_OutputStream as $c_Ljava_io_OutputStream };
