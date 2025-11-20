@@ -10,10 +10,12 @@ import myapp.tags.button
 import myapp.tags.span
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-object Counter {
-  case class Props(initialCount: Int)
+case class Counter(initialCount: Int) {
+  inline def apply(): ReactElement = Counter.component(this)
+}
 
-  val component = FunctionComponent[Props]("Counter")(p => {
+object Counter {
+  val component = FunctionComponent[Counter]("Counter")(p => {
     val (count, setCount) = React.useState(p.initialCount)
 
     div(
