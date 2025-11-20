@@ -41,7 +41,7 @@ object MyApp {
     })
 
     div(
-      onClick := handleClickContainer,
+      onClick --> handleClickContainer,
       marginLeft := "20px",
       background := "#fff",
       color := "#000",
@@ -49,7 +49,7 @@ object MyApp {
       border := "1px solid #000",
       div(s"Lorem ipsum: ${count}"),
       button(
-        onClick := handleClickContainer,
+        onClick --> handleClickContainer,
         "Click me"
       )
     )

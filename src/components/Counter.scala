@@ -25,17 +25,17 @@ object Counter {
     val logEnter = Callback(() => org.scalajs.dom.console.log("Mouse entered!"))
 
     div(
-      onMouseEnter := logEnter,
+      onMouseEnter --> logEnter,
       button(
-        onClick := increase,
+        onClick --> increase,
         "+"
       ),
       button(
-        onClick := decrease,
+        onClick --> decrease,
         "-"
       ),
       button(
-        onClick := reset,
+        onClick --> reset,
         "reset"
       ),
       div(s"Count: $count")
