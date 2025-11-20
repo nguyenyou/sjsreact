@@ -29,7 +29,7 @@ object MyApp {
       null,
       Greeting("Hello Worldddd")(),
       Counter(0)(),
-      Button(handleClick)("Click me!")
+      Button(onClick = handleClick)("Click me!")
     )
   }
 
