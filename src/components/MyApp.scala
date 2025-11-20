@@ -39,10 +39,7 @@ object MyApp {
           background = "#fff",
           color = "#000"
         )
-      ),
-      Greeting("Hello")(),
-      Counter(0)(),
-      Button(onClick = handleClick)("Click me!")
+      )
     )
   }
 
