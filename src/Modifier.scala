@@ -21,8 +21,8 @@ class Event(name: String) {
   inline def :=(v: Callback): Modifier = PropModifier(name, v.toJs)
 }
 
-val onClick = new Event("onClick")
-val onMouseEnter = new Event("onMouseEnter")
+lazy val onClick = new Event("onClick")
+lazy val onMouseEnter = new Event("onMouseEnter")
 
 object marginLeft {
   def :=(v: String): Modifier = StyleModifier("marginLeft", v)

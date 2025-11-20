@@ -40,12 +40,12 @@ function $c_Lmyapp_components_Counter$() {
     });
     var logEnter = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$3);
     var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var Event_this = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onMouseEnter;
+    var Event_this = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
     var name = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this).Lmyapp_Event__f_name;
     var value = logEnter.Lmyapp_Callback__f_toJs;
     var $x_7 = new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name, value);
     var $x_5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var Event_this$2 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+    var Event_this$2 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
     var name$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$2).Lmyapp_Event__f_name;
     var value$1 = increase.Lmyapp_Callback__f_toJs;
     var modifiers$proxy1 = $x_5.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$1, value$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
@@ -92,7 +92,7 @@ function $c_Lmyapp_components_Counter$() {
     var element = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children)));
     var $x_6 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element);
     var $x_3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var Event_this$3 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+    var Event_this$3 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
     var name$2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$3).Lmyapp_Event__f_name;
     var value$2 = decrease.Lmyapp_Callback__f_toJs;
     var modifiers$proxy2 = $x_3.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$2, value$2), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
@@ -139,7 +139,7 @@ function $c_Lmyapp_components_Counter$() {
     var element$1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$3, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$3)));
     var $x_4 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$1);
     var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var Event_this$4 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+    var Event_this$4 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
     var name$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$4).Lmyapp_Event__f_name;
     var value$3 = reset.Lmyapp_Callback__f_toJs;
     var modifiers$proxy3 = $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$3, value$3), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));
@@ -300,12 +300,12 @@ function $c_Lmyapp_components_Counter$() {
       });
       var logEnter$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$8);
       var $x_16 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var Event_this$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onMouseEnter;
+      var Event_this$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
       var name$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$1).Lmyapp_Event__f_name;
       var value$4 = logEnter$1.Lmyapp_Callback__f_toJs;
       var $x_15 = new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$4, value$4);
       var $x_13 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var Event_this$2$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+      var Event_this$2$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
       var name$5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$2$1).Lmyapp_Event__f_name;
       var value$5 = increase$1.Lmyapp_Callback__f_toJs;
       var modifiers$proxy1$1 = $x_13.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$5, value$5), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
@@ -352,7 +352,7 @@ function $c_Lmyapp_components_Counter$() {
       var element$4 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$4, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$1)));
       var $x_14 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$4);
       var $x_11 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var Event_this$3$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+      var Event_this$3$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
       var name$6 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$3$1).Lmyapp_Event__f_name;
       var value$6 = decrease$1.Lmyapp_Callback__f_toJs;
       var modifiers$proxy2$1 = $x_11.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$6, value$6), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
@@ -399,7 +399,7 @@ function $c_Lmyapp_components_Counter$() {
       var element$5 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$3$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$3$1)));
       var $x_12 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$5);
       var $x_9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var Event_this$4$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick;
+      var Event_this$4$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
       var name$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$4$1).Lmyapp_Event__f_name;
       var value$7 = reset$1.Lmyapp_Callback__f_toJs;
       var modifiers$proxy3$1 = $x_9.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$7, value$7), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));

@@ -3,11 +3,10 @@ import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./int
 import * as $j_myapp$002e$002dEvent from "./myapp.-Event.js";
 /** @constructor */
 function $c_Lmyapp_Modifier$package$() {
-  this.Lmyapp_Modifier$package$__f_onClick = null;
-  this.Lmyapp_Modifier$package$__f_onMouseEnter = null;
-  $n_Lmyapp_Modifier$package$ = this;
-  this.Lmyapp_Modifier$package$__f_onClick = new $j_myapp$002e$002dEvent.$c_Lmyapp_Event("onClick");
-  this.Lmyapp_Modifier$package$__f_onMouseEnter = new $j_myapp$002e$002dEvent.$c_Lmyapp_Event("onMouseEnter");
+  this.Lmyapp_Modifier$package$__f_onClick$lzy1 = null;
+  this.Lmyapp_Modifier$package$__f_onClickbitmap$1 = false;
+  this.Lmyapp_Modifier$package$__f_onMouseEnter$lzy1 = null;
+  this.Lmyapp_Modifier$package$__f_onMouseEnterbitmap$1 = false;
 }
 export { $c_Lmyapp_Modifier$package$ as $c_Lmyapp_Modifier$package$ };
 $c_Lmyapp_Modifier$package$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();
@@ -17,6 +16,20 @@ function $h_Lmyapp_Modifier$package$() {
 }
 export { $h_Lmyapp_Modifier$package$ as $h_Lmyapp_Modifier$package$ };
 $h_Lmyapp_Modifier$package$.prototype = $c_Lmyapp_Modifier$package$.prototype;
+$c_Lmyapp_Modifier$package$.prototype.onClick__Lmyapp_Event = (function() {
+  if ((!this.Lmyapp_Modifier$package$__f_onClickbitmap$1)) {
+    this.Lmyapp_Modifier$package$__f_onClick$lzy1 = new $j_myapp$002e$002dEvent.$c_Lmyapp_Event("onClick");
+    this.Lmyapp_Modifier$package$__f_onClickbitmap$1 = true;
+  }
+  return this.Lmyapp_Modifier$package$__f_onClick$lzy1;
+});
+$c_Lmyapp_Modifier$package$.prototype.onMouseEnter__Lmyapp_Event = (function() {
+  if ((!this.Lmyapp_Modifier$package$__f_onMouseEnterbitmap$1)) {
+    this.Lmyapp_Modifier$package$__f_onMouseEnter$lzy1 = new $j_myapp$002e$002dEvent.$c_Lmyapp_Event("onMouseEnter");
+    this.Lmyapp_Modifier$package$__f_onMouseEnterbitmap$1 = true;
+  }
+  return this.Lmyapp_Modifier$package$__f_onMouseEnter$lzy1;
+});
 var $d_Lmyapp_Modifier$package$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_Modifier$package$, "myapp.Modifier$package$", ({
   Lmyapp_Modifier$package$: 1
 }));
