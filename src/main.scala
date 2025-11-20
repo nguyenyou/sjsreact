@@ -110,7 +110,7 @@ def renderApp(root: ReactRoot): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      Counter(1)()
+      Counter.component(Counter.Props(initialCount = 5))
     )
   )
 }
