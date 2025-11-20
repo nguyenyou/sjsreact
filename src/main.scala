@@ -36,7 +36,7 @@ object ReactRaw extends js.Object {
 object React {
   export ReactRaw.{useState as _, *}
 
-  def useState[T](initialState: T): (T, T => Unit) = {
+  inline def useState[T](initialState: T): (T, T => Unit) = {
     val res = ReactRaw.useState(initialState)
     (res._1, res._2)
   }
