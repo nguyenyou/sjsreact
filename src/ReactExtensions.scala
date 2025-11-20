@@ -74,6 +74,8 @@ trait MouseEvent[+T, +E] extends UIEvent[T, E] {
 
 type EventHandler[E <: SyntheticEvent[?, ?]] = js.Function1[E, Unit]
 
+type MouseEventHandler = EventHandler[MouseEvent[dom.Element, dom.MouseEvent]]
+
 
 @js.native
 trait PropsWithChildren extends js.Object {

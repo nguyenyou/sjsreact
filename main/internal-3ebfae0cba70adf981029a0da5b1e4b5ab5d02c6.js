@@ -3470,8 +3470,87 @@ function $m_s_util_hashing_MurmurHash3$() {
   return $n_s_util_hashing_MurmurHash3$;
 }
 export { $m_s_util_hashing_MurmurHash3$ as $m_s_util_hashing_MurmurHash3$ };
+function $p_jl_Class__computeCachedSimpleNameBestEffort__T($thiz) {
+  if ($thiz.data.isArrayClass) {
+    return ($n($thiz.data.getComponentType()).getSimpleName__T() + "[]");
+  } else {
+    var name = $thiz.data.name;
+    var idx = (((-1) + name.length) | 0);
+    while (true) {
+      if ((idx >= 0)) {
+        var index = idx;
+        var $x_1 = ($charAt(name, index) === 36);
+      } else {
+        var $x_1 = false;
+      }
+      if ($x_1) {
+        idx = (((-1) + idx) | 0);
+      } else {
+        break;
+      }
+    }
+    if ((idx >= 0)) {
+      var index$1 = idx;
+      var c = $charAt(name, index$1);
+      var $x_2 = ((c >= 48) && (c <= 57));
+    } else {
+      var $x_2 = false;
+    }
+    if ($x_2) {
+      idx = (((-1) + idx) | 0);
+      while (true) {
+        if ((idx >= 0)) {
+          var index$2 = idx;
+          var c$1 = $charAt(name, index$2);
+          var $x_3 = ((c$1 >= 48) && (c$1 <= 57));
+        } else {
+          var $x_3 = false;
+        }
+        if ($x_3) {
+          idx = (((-1) + idx) | 0);
+        } else {
+          break;
+        }
+      }
+      while (true) {
+        if ((idx >= 0)) {
+          var index$3 = idx;
+          var $x_4 = ($charAt(name, index$3) === 36);
+        } else {
+          var $x_4 = false;
+        }
+        if ($x_4) {
+          idx = (((-1) + idx) | 0);
+        } else {
+          break;
+        }
+      }
+    }
+    while (true) {
+      if ((idx >= 0)) {
+        var index$4 = idx;
+        var currChar = $charAt(name, index$4);
+        var $x_5 = ((currChar !== 46) && (currChar !== 36));
+      } else {
+        var $x_5 = false;
+      }
+      if ($x_5) {
+        idx = (((-1) + idx) | 0);
+      } else {
+        break;
+      }
+    }
+    var beginIndex = ((1 + idx) | 0);
+    if (((beginIndex < 0) || (beginIndex > name.length))) {
+      $charAt(name, beginIndex);
+    }
+    return $as_T(name.substring(beginIndex));
+  }
+}
+export { $p_jl_Class__computeCachedSimpleNameBestEffort__T as $p_jl_Class__computeCachedSimpleNameBestEffort__T };
 /** @constructor */
 function $c_jl_Class($data) {
+  this.jl_Class__f_cachedSimpleName = null;
   this.data = $data;
 }
 export { $c_jl_Class as $c_jl_Class };
@@ -3484,6 +3563,12 @@ export { $h_jl_Class as $h_jl_Class };
 $h_jl_Class.prototype = $c_jl_Class.prototype;
 $c_jl_Class.prototype.toString__T = (function() {
   return ((this.data.isInterface ? "interface " : (this.data.isPrimitive ? "" : "class ")) + this.data.name);
+});
+$c_jl_Class.prototype.getSimpleName__T = (function() {
+  if ((this.jl_Class__f_cachedSimpleName === null)) {
+    this.jl_Class__f_cachedSimpleName = $p_jl_Class__computeCachedSimpleNameBestEffort__T(this);
+  }
+  return this.jl_Class__f_cachedSimpleName;
 });
 var $d_jl_Class = new $TypeData().initClass($c_jl_Class, "java.lang.Class", ({
   jl_Class: 1,

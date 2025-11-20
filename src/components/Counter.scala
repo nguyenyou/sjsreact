@@ -19,7 +19,7 @@ case class Counter(initialCount: Int) {
 }
 
 object Counter {
-  val component = FunctionComponent[Counter]("Counter")(p => {
+  val component = FunctionComponent[Counter](getClass.getSimpleName)(p => {
     val (count, setCount) = React.useState(p.initialCount)
 
     val increase = Callback(() => setCount(count + 1))

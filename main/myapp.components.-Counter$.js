@@ -14,6 +14,7 @@ import * as $j_myapp$002ecomponents$002e$002dCounter from "./myapp.components.-C
 function $c_Lmyapp_components_Counter$() {
   this.Lmyapp_components_Counter$__f_component = null;
   $n_Lmyapp_components_Counter$ = this;
+  var displayName$proxy1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$objectGetClass(this).getSimpleName__T();
   var f$5 = ((box) => {
     var p = $j_myapp$002ecomponents$002e$002dCounter.$as_Lmyapp_components_Counter(box.a);
     var res = $i_react.useState($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p).Lmyapp_components_Counter__f_initialCount);
@@ -258,7 +259,7 @@ function $c_Lmyapp_components_Counter$() {
     }
     return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$9, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$9)));
   });
-  f$5.displayName = "Counter";
+  f$5.displayName = displayName$proxy1;
   var renderFunc = ((props$1) => {
     var props$2 = $j_myapp$002ecomponents$002e$002dCounter.$as_Lmyapp_components_Counter(props$1);
     var $x_13 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$();
@@ -506,7 +507,7 @@ function $c_Lmyapp_components_Counter$() {
       }
       return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$9$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$9$1)));
     });
-    f$11.displayName = "Counter";
+    f$11.displayName = displayName$proxy1;
     var fields$20 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("a", props$2)]));
     return $x_13.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(f$11, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$20), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
   });
