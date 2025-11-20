@@ -5,9 +5,10 @@ import myapp.functionComponent
 import myapp.{Box, scalaFunctionComponent, FunctionComponent}
 import myapp.React
 import myapp.ReactElement
-import myapp.tags.div
-import myapp.tags.button
+import myapp.html.{div, button}
 import myapp.tags.span
+import myapp.Callback
+import myapp.onClick
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 case class Counter(initialCount: Int) {
@@ -18,21 +19,24 @@ object Counter {
   val component = FunctionComponent[Counter]("Counter")(p => {
     val (count, setCount) = React.useState(p.initialCount)
 
+    val increase = Callback(() => setCount(count + 1))
+    val decrease = Callback(() => setCount(count - 1))
+    val reset = Callback(() => setCount(p.initialCount))
+
     div(
-      null,
       button(
-        js.Dynamic.literal(onClick = () => setCount(count + 1)),
+        onClick := increase,
         "+"
       ),
       button(
-        js.Dynamic.literal(onClick = () => setCount(count - 1)),
+        onClick := decrease,
         "-"
       ),
       button(
-        js.Dynamic.literal(onClick = () => setCount(p.initialCount)),
+        onClick := reset,
         "reset"
       ),
-      span(null, s"Count: $count")
+      div(s"Count: $count")
     )
   })
 }

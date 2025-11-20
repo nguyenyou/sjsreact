@@ -4,9 +4,10 @@ import scala.scalajs.js
 import myapp.functionComponent
 import myapp.React
 import myapp.ReactElement
-import myapp.tags.button
+
 import myapp.tags.h3
 import myapp.html.div
+import myapp.html.button
 import myapp.components.ThemeContext
 import myapp.components.Greeting
 import myapp.components.Counter
@@ -46,7 +47,11 @@ object MyApp {
       color := "#000",
       height := "200px",
       border := "1px solid #000",
-      div(s"Lorem ipsum: ${count}")
+      div(s"Lorem ipsum: ${count}"),
+      button(
+        onClick := handleClickContainer,
+        "Click me"
+      )
     )
   }
 

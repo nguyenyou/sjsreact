@@ -43,7 +43,7 @@ object React {
 }
 
 object html {
-  def div(modifiers: Modifier*): ReactElement = {
+  inline def create(tag: String, modifiers: Seq[Modifier]): ReactElement = {
     val props = js.Dynamic.literal()
     val style = js.Dynamic.literal()
     val children = js.Array[ReactElement]()
@@ -62,8 +62,12 @@ object html {
       props.updateDynamic("style")(style)
     }
 
-    React.createElement("div", props, children.toSeq*)
+    React.createElement(tag, props, children.toSeq*)
   }
+
+  inline def div(modifiers: Modifier*): ReactElement = create("div", modifiers)
+  inline def button(modifiers: Modifier*): ReactElement =
+    create("button", modifiers)
 }
 
 object tags {

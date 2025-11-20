@@ -12,12 +12,6 @@ function $h_Lmyapp_tags$() {
 }
 export { $h_Lmyapp_tags$ as $h_Lmyapp_tags$ };
 $h_Lmyapp_tags$.prototype = $c_Lmyapp_tags$.prototype;
-$c_Lmyapp_tags$.prototype.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props, children);
-});
-$c_Lmyapp_tags$.prototype.button__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props, children);
-});
 $c_Lmyapp_tags$.prototype.span__sjs_js_Object__sci_Seq__Lmyapp_ReactElement = (function(props, children) {
   return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("span", props, children);
 });
