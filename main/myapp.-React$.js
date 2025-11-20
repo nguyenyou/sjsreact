@@ -24,12 +24,6 @@ $c_Lmyapp_React$.prototype.useContext__Lmyapp_ReactRaw$Context__O = (function(co
 $c_Lmyapp_React$.prototype.createContext__O__Lmyapp_ReactRaw$Context = (function(defaultValue) {
   return $i_react.createContext(defaultValue);
 });
-$c_Lmyapp_React$.prototype.useState__O__T2 = (function(initialState) {
-  var res = $i_react.useState(initialState);
-  var _1 = res[0];
-  var _2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().toFunction1__sjs_js_Function1__F1(res[1]);
-  return new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2(_1, _2);
-});
 var $d_Lmyapp_React$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_React$, "myapp.React$", ({
   Lmyapp_React$: 1
 }));

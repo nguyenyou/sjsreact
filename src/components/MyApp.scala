@@ -15,25 +15,7 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 object MyApp {
 
   val component = functionComponent("MyApp") { _ =>
-    val (theme, setTheme) = React.useState("dark")
-
-    def handleClick(): Unit = {
-      setTheme(if (theme == "dark") "light" else "dark")
-    }
-
-    ThemeContext(value = theme)(
-      button(
-        js.Dynamic.literal(onClick = () => handleClick()),
-        "Switch Themeeee"
-      ),
-      h3(null, "Updated from Scala!"),
-      Greeting(name = "Taylor"),
-      Counter(initialCount = 5)(),
-      div(
-        js.Dynamic.literal(style = js.Dynamic.literal(marginTop = "20px")),
-        TextInput()
-      )
-    )
+    Greeting("Helloooo")
   }
 
   def apply(): ReactElement = React.createElement(component, null)
