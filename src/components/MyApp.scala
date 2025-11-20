@@ -20,12 +20,16 @@ case class MyApp() {
 object MyApp {
   type Props = MyApp
 
+  val handleClick: js.Function0[Unit] = () => {
+    println("Clickedddd")
+  }
+
   val component = FunctionComponent[Props]("MyApp") { _ =>
     div(
       null,
       Greeting("Hello Worldddd")(),
       Counter(0)(),
-      Button(() => println("Button clicked!"))("Click me!")
+      Button(handleClick)("Click me!")
     )
   }
 
