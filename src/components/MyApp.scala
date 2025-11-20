@@ -32,7 +32,12 @@ object MyApp {
   val component = FunctionComponent[Props]("MyApp") { _ =>
     html.div(
       js.Dynamic.literal(
-        onClick = handleClickContainer
+        onClick = handleClickContainer,
+        style = js.Dynamic.literal(
+          marginLeft = "20px",
+          background = "#fff",
+          color = "#000"
+        )
       ),
       Greeting("Hello")(),
       Counter(0)(),
