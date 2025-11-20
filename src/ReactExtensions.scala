@@ -1,6 +1,7 @@
 package myapp
 
 import scala.scalajs.js
+import org.scalajs.dom
 
 import scala.scalajs.js.annotation._
 
@@ -23,6 +24,14 @@ object Callback {
   def apply(f: js.Function0[Unit]): Callback = new Callback(f)
   def apply[A](f: js.Function1[A, Unit]): Callback = new Callback(f)
   def apply[A, B](f: js.Function2[A, B, Unit]): Callback = new Callback(f)
+}
+
+@js.native
+trait SyntheticBaseEvent[+E <: dom.Event] extends js.Object {
+  val _reactName: String = js.native
+  val `type`: String = js.native
+  val clientX: Double = js.native
+  val clientY: Double = js.native
 }
 
 @js.native

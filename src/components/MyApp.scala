@@ -15,11 +15,14 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.FunctionComponent
 import myapp.Callback
 import myapp.onClick
+import myapp.onMouseEnter
 import myapp.marginLeft
 import myapp.background
 import myapp.color
 import myapp.height
 import myapp.border
+import myapp.SyntheticBaseEvent
+import org.scalajs.dom
 
 case class MyApp() {
   def apply(): ReactElement = MyApp.component(this)
@@ -40,8 +43,16 @@ object MyApp {
       setCount(count + 1)
     })
 
+    val handleMouseEnter = Callback((e: SyntheticBaseEvent[dom.MouseEvent]) => {
+      org.scalajs.dom.console.log(e._reactName)
+      org.scalajs.dom.console.log(e.`type`)
+      org.scalajs.dom.console.log(e.clientX)
+      org.scalajs.dom.console.log(e.clientY)
+    })
+
     div(
       onClick --> handleClickContainer,
+      onMouseEnter --> handleMouseEnter,
       marginLeft := "20px",
       background := "#fff",
       color := "#000",
