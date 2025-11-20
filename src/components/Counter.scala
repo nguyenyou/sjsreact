@@ -25,15 +25,13 @@ object Counter {
     val decrease = Callback(() => setCount(count - 1))
     val reset = Callback(() => setCount(p.initialCount))
 
-    val handleMouseEnter = Callback((e: SyntheticBaseEvent[dom.MouseEvent]) => {
-      org.scalajs.dom.console.log(e._reactName)
-      org.scalajs.dom.console.log(e.`type`)
-      org.scalajs.dom.console.log(e.clientX)
-      org.scalajs.dom.console.log(e.clientY)
-    })
-
     div(
-      onMouseEnter --> handleMouseEnter,
+      onMouseEnter --> { e =>
+        org.scalajs.dom.console.log(e._reactName)
+        org.scalajs.dom.console.log(e.`type`)
+        org.scalajs.dom.console.log(e.clientX)
+        org.scalajs.dom.console.log(e.clientY)
+      },
       button(
         onClick --> increase,
         "+"

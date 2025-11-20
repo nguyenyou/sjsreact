@@ -27,7 +27,7 @@ object Callback {
 }
 
 @js.native
-trait SyntheticBaseEvent[+E <: dom.Event] extends js.Object {
+trait SyntheticBaseEvent[+E <: dom.MouseEvent] extends js.Object {
   val _reactName: String = js.native
   val `type`: String = js.native
   val clientX: Double = js.native

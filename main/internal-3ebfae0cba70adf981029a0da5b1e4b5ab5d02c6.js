@@ -3616,6 +3616,9 @@ function $h_sjs_js_Any$() {
 }
 export { $h_sjs_js_Any$ as $h_sjs_js_Any$ };
 $h_sjs_js_Any$.prototype = $c_sjs_js_Any$.prototype;
+$c_sjs_js_Any$.prototype.fromFunction1__F1__sjs_js_Function1 = (function(f) {
+  return ((arg1$2) => $n(f).apply__O__O(arg1$2));
+});
 $c_sjs_js_Any$.prototype.toFunction1__sjs_js_Function1__F1 = (function(f) {
   return new $c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((x1$2$2) => f(x1$2$2)));
 });

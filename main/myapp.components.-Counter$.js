@@ -35,17 +35,17 @@ function $c_Lmyapp_components_Counter$() {
       $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p).Lmyapp_components_Counter__f_initialCount);
     });
     var reset = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$2);
-    var f$3 = ((e) => {
+    var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+    var Event_this = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
+    var f$proxy1 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((e) => {
       console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(e._reactName));
       console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(e.type));
       console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uD(e.clientX));
       console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uD(e.clientY));
-    });
-    var handleMouseEnter = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$3);
-    var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var Event_this = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
+    }));
     var name = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this).Lmyapp_Event__f_name;
-    var value = handleMouseEnter.Lmyapp_Callback__f_toJs;
+    var f$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(f$proxy1);
+    var value = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$3).Lmyapp_Callback__f_toJs;
     var $x_7 = new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name, value);
     var $x_5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var Event_this$2 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();
@@ -298,17 +298,17 @@ function $c_Lmyapp_components_Counter$() {
         $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount$1).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p$1).Lmyapp_components_Counter__f_initialCount);
       });
       var reset$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$7);
-      var f$8 = ((e$1) => {
+      var $x_16 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+      var Event_this$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
+      var f$proxy1$1 = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((e$1) => {
         console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(e$1._reactName));
         console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_T(e$1.type));
         console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uD(e$1.clientX));
         console.log($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uD(e$1.clientY));
-      });
-      var handleMouseEnter$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$8);
-      var $x_16 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var Event_this$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onMouseEnter__Lmyapp_Event();
+      }));
       var name$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(Event_this$1).Lmyapp_Event__f_name;
-      var value$4 = handleMouseEnter$1.Lmyapp_Callback__f_toJs;
+      var f$8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(f$proxy1$1);
+      var value$4 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$8).Lmyapp_Callback__f_toJs;
       var $x_15 = new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier(name$4, value$4);
       var $x_13 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
       var Event_this$2$1 = $j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().onClick__Lmyapp_Event();

@@ -17,12 +17,16 @@ object Modifier {
   )
 }
 
-class Event(name: String) {
+import org.scalajs.dom
+
+class Event[E <: js.Any](name: String) {
   inline def -->(v: Callback): Modifier = PropModifier(name, v.toJs)
+  inline def -->(f: E => Unit): Modifier = PropModifier(name, Callback(f).toJs)
 }
 
-lazy val onClick = new Event("onClick")
-lazy val onMouseEnter = new Event("onMouseEnter")
+lazy val onClick = new Event[SyntheticBaseEvent[dom.MouseEvent]]("onClick")
+lazy val onMouseEnter =
+  new Event[SyntheticBaseEvent[dom.MouseEvent]]("onMouseEnter")
 
 object marginLeft {
   def :=(v: String): Modifier = StyleModifier("marginLeft", v)

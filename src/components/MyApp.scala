@@ -43,16 +43,14 @@ object MyApp {
       setCount(count + 1)
     })
 
-    val handleMouseEnter = Callback((e: SyntheticBaseEvent[dom.MouseEvent]) => {
-      org.scalajs.dom.console.log(e._reactName)
-      org.scalajs.dom.console.log(e.`type`)
-      org.scalajs.dom.console.log(e.clientX)
-      org.scalajs.dom.console.log(e.clientY)
-    })
-
     div(
       onClick --> handleClickContainer,
-      onMouseEnter --> handleMouseEnter,
+      onMouseEnter --> { e =>
+        org.scalajs.dom.console.log(e._reactName)
+        org.scalajs.dom.console.log(e.`type`)
+        org.scalajs.dom.console.log(e.clientX)
+        org.scalajs.dom.console.log(e.clientY)
+      },
       marginLeft := "20px",
       background := "#fff",
       color := "#000",
