@@ -19,8 +19,10 @@ case class Counter(initialCount: Int) {
 }
 
 object Counter {
-  val component = FunctionComponent[Counter](getClass.getSimpleName)(p => {
+  type Props = Counter
+  val component = FunctionComponent[Props](getClass.getSimpleName)(p => {
     val (count, setCount) = React.useState(p.initialCount)
+    val (anotherCount, setAnotherCount) = React.useState(p.initialCount)
 
     val increase = Callback(() => setCount(count + 1))
     val decrease = Callback(() => setCount(count - 1))
@@ -42,12 +44,20 @@ object Counter {
         "+1"
       ),
       button(
+        onClick --> { e =>
+          org.scalajs.dom.console.log(e)
+          setAnotherCount(anotherCount + 1)
+        },
+        "+1 another count"
+      ),
+      button(
         "-"
       ),
       button(
         "reset"
       ),
-      div(s"Count: $count")
+      div(s"Count: $count"),
+      div(s"Another Count: $anotherCount")
     )
   })
 }
