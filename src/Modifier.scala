@@ -18,7 +18,7 @@ object Modifier {
 }
 
 class Event(name: String) {
-  def :=(v: Callback): Modifier = PropModifier(name, v.toJs)
+  inline def :=(v: Callback): Modifier = PropModifier(name, v.toJs)
 }
 
 val onClick = new Event("onClick")
