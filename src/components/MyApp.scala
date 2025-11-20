@@ -43,7 +43,6 @@ object MyApp {
     })
 
     div(
-      onClick --> handleClickContainer,
       onMouseEnter --> { e =>
         org.scalajs.dom.console.log(e._reactName)
         org.scalajs.dom.console.log(e.`type`)
@@ -57,7 +56,6 @@ object MyApp {
       border := "1px solid #000",
       div(s"Lorem ipsum: ${count}"),
       button(
-        onClick --> handleClickContainer,
         "Click me"
       )
     )

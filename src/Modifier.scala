@@ -20,7 +20,6 @@ object Modifier {
 import org.scalajs.dom
 
 class Event[E <: js.Any](name: String) {
-  inline def -->(v: Callback): Modifier = PropModifier(name, v.toJs)
   inline def -->(f: E => Unit): Modifier = PropModifier(name, Callback(f).toJs)
 }
 

@@ -10,6 +10,7 @@ import myapp.tags.span
 import myapp.Callback
 import myapp.onMouseEnter
 import myapp.onClick
+import myapp.MouseEventHandler
 import org.scalajs.dom
 
 case class Counter(initialCount: Int) {
@@ -24,25 +25,25 @@ object Counter {
     val decrease = Callback(() => setCount(count - 1))
     val reset = Callback(() => setCount(p.initialCount))
 
+    val handleMouseEnter: MouseEventHandler[dom.Element] = e => {
+      org.scalajs.dom.console.log(e._reactName)
+      org.scalajs.dom.console.log(e.`type`)
+      org.scalajs.dom.console.log(e)
+    }
+
     div(
-      onMouseEnter --> { e =>
-        org.scalajs.dom.console.log(e._reactName)
-        org.scalajs.dom.console.log(e.`type`)
-        org.scalajs.dom.console.log(e)
-      },
+      onMouseEnter --> handleMouseEnter,
       button(
         onClick --> { e =>
           org.scalajs.dom.console.log(e)
           setCount(count + 1)
         },
-        "+"
+        "+1"
       ),
       button(
-        onClick --> decrease,
         "-"
       ),
       button(
-        onClick --> reset,
         "reset"
       ),
       div(s"Count: $count")
