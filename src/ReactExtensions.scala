@@ -27,12 +27,12 @@ object Callback {
 }
 
 @js.native
-trait SyntheticBaseEvent[+E <: dom.MouseEvent] extends js.Object {
+trait SyntheticEventExtras extends js.Object {
   val _reactName: String = js.native
   val `type`: String = js.native
-  val clientX: Double = js.native
-  val clientY: Double = js.native
 }
+
+type SyntheticBaseEvent[E <: dom.Event] = E & SyntheticEventExtras
 
 @js.native
 trait PropsWithChildren extends js.Object {

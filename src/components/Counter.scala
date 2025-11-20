@@ -29,11 +29,13 @@ object Counter {
       onMouseEnter --> { e =>
         org.scalajs.dom.console.log(e._reactName)
         org.scalajs.dom.console.log(e.`type`)
-        org.scalajs.dom.console.log(e.clientX)
-        org.scalajs.dom.console.log(e.clientY)
+        org.scalajs.dom.console.log(e)
       },
       button(
-        onClick --> increase,
+        onClick --> { e =>
+          org.scalajs.dom.console.log(e)
+          setCount(count + 1)
+        },
         "+"
       ),
       button(
