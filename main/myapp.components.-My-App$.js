@@ -1,15 +1,31 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
 import * as $j_myapp$002e$002dFunction$002dComponent from "./myapp.-Function-Component.js";
+import * as $j_myapp$002ecomponents$002e$002dButton from "./myapp.components.-Button.js";
+import * as $j_myapp$002ecomponents$002e$002dCounter from "./myapp.components.-Counter.js";
+import * as $j_myapp$002ecomponents$002e$002dCounter$0024 from "./myapp.components.-Counter$.js";
 import * as $j_myapp$002ecomponents$002e$002dGreeting from "./myapp.components.-Greeting.js";
 import * as $j_myapp$002ecomponents$002e$002dMy$002dApp from "./myapp.components.-My-App.js";
+import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
 /** @constructor */
 function $c_Lmyapp_components_MyApp$() {
   this.Lmyapp_components_MyApp$__f_component = null;
   $n_Lmyapp_components_MyApp$ = this;
   var render = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$1) => {
     $j_myapp$002ecomponents$002e$002dMy$002dApp.$as_Lmyapp_components_MyApp(_$1);
-    return ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello World")).apply__Lmyapp_ReactElement();
+    var $x_4 = $j_myapp$002etags$0024.$m_Lmyapp_tags$();
+    var $x_3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+    var $x_2 = ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello Worldddd")).apply__Lmyapp_ReactElement();
+    $j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$();
+    var this$4 = new $j_myapp$002ecomponents$002e$002dCounter.$c_Lmyapp_components_Counter(0);
+    var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$().Lmyapp_components_Counter$__f_component).apply__O__Lmyapp_ReactElement(this$4);
+    $j_myapp$002ecomponents$002e$002dButton.$m_Lmyapp_components_Button$();
+    var onClick = (() => {
+      var this$6 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_s_Console$();
+      var this$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this$6.out__Ljava_io_PrintStream());
+      this$7.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Button clicked!\n");
+    });
+    return $x_4.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $x_3.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_2, $x_1, new $j_myapp$002ecomponents$002e$002dButton.$c_Lmyapp_components_Button(onClick).apply__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Click me!"])))])));
   }));
   this.Lmyapp_components_MyApp$__f_component = new $j_myapp$002e$002dFunction$002dComponent.$c_Lmyapp_FunctionComponent("MyApp", render);
 }

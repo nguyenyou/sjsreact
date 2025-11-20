@@ -21,7 +21,12 @@ object MyApp {
   type Props = MyApp
 
   val component = FunctionComponent[Props]("MyApp") { _ =>
-    Greeting("Hello World")()
+    div(
+      null,
+      Greeting("Hello Worldddd")(),
+      Counter(0)(),
+      Button(() => println("Button clicked!"))("Click me!")
+    )
   }
 
 }

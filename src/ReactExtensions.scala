@@ -51,7 +51,7 @@ case class FunctionComponent[P](displayName: String)(
     React.createElement(component, Box(props))
 }
 
-class FunctionComponentWithChildren[P](displayName: String)(
+case class FunctionComponentWithChildren[P](displayName: String)(
     render: (P, js.Any) => ReactElement
 ) {
   private val component =

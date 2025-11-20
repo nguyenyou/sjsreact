@@ -12,11 +12,15 @@ import myapp.ReactElement
 import myapp.tags.button
 import scala.scalajs.js.annotation.JSExportTopLevel
 
+case class Button(onClick: js.Function0[Unit]) {
+  def apply(children: js.Any*): ReactElement = Button.component(this)(children*)
+}
+
 object Button {
-  case class Props(onClick: js.Function0[Unit])
+  type Props = Button
 
   private val component =
-    new FunctionComponentWithChildren[Props]("Button")((p, children) =>
+    FunctionComponentWithChildren[Props]("Button")((p, children) =>
       button(
         js.Dynamic.literal(onClick =
           if (!js.isUndefined(p.onClick)) p.onClick
@@ -26,6 +30,4 @@ object Button {
       )
     )
 
-  def apply(onClick: js.Function0[Unit])(children: js.Any*): ReactElement =
-    component(Props(onClick))(children*)
 }

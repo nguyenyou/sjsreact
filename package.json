@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build:dev": "scala-cli --power package --js --js-mode=dev src -f  -o main",
+    "build:dev": "rm -rf main && scala-cli --power package --js --js-mode=dev src -f  -o main",
     "build:prod": "scala-cli --power package --js --js-mode=full src -f  -o main"
   },
   "dependencies": {
