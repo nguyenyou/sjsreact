@@ -20,13 +20,10 @@ case class Counter(initialCount: Int) {
 
 object Counter {
   type Props = Counter
+
   val component = FunctionComponent[Props](getClass.getSimpleName)(p => {
     val (count, setCount) = React.useState(p.initialCount)
     val (anotherCount, setAnotherCount) = React.useState(p.initialCount)
-
-    val increase = Callback(() => setCount(count + 1))
-    val decrease = Callback(() => setCount(count - 1))
-    val reset = Callback(() => setCount(p.initialCount))
 
     val handleMouseEnter: EventHandler[MouseEvent[dom.Element, dom.MouseEvent]] = e => {
       org.scalajs.dom.console.log(e._reactName)

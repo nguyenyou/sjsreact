@@ -106,7 +106,7 @@ inline def scalaFunctionComponent[P](
 inline def FunctionComponent[P](displayName: String)(
     inline render: P => ReactElement
 ) = {
-  val component = scalaFunctionComponent[P](displayName)(render)
+  val component: js.Function1[Box[P], ReactElement] = scalaFunctionComponent[P](displayName)(render)
 
   val renderFunc: js.Function1[P, ReactElement] = (props: P) => {
     React.createElement(
