@@ -11,7 +11,7 @@ import myapp.tags.span
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 object TextInput {
-  private val component = new FunctionComponent[Unit]("TextInput")(_ => {
+  private val component = FunctionComponent[Unit]("TextInput")(_ => {
     val (text, setText) = React.useState("")
 
     div(

@@ -25,15 +25,6 @@ object Callback {
   ): js.Function2[A, B, Unit] = f
 }
 
-def scalaFunctionComponent[P](
-    displayName: String
-)(render: P => ReactElement): js.Function1[Box[P], ReactElement] = {
-  val f: js.Function1[Box[P], ReactElement] = (box: Box[P]) => render(box.unbox)
-  val component = f
-  component.asInstanceOf[js.Dynamic].displayName = displayName
-  component
-}
-
 @js.native
 trait PropsWithChildren extends js.Object {
   val children: js.Any
@@ -51,12 +42,28 @@ def scalaFunctionComponentWithChildren[P](
   component
 }
 
-case class FunctionComponent[P](displayName: String)(
-    render: P => ReactElement
-) {
-  private val component = scalaFunctionComponent[P](displayName)(render)
-  def apply(props: P): ReactElement =
-    React.createElement(component, Box(props))
+inline def scalaFunctionComponent[P](
+    displayName: String
+)(inline render: P => ReactElement): js.Function1[Box[P], ReactElement] = {
+  val f: js.Function1[Box[P], ReactElement] = (box: Box[P]) => render(box.unbox)
+  val component = f
+  component.asInstanceOf[js.Dynamic].displayName = displayName
+  component
+}
+
+inline def FunctionComponent[P](displayName: String)(
+    inline render: P => ReactElement
+) = {
+  val component = scalaFunctionComponent[P](displayName)(render)
+
+  val renderFunc: js.Function1[P, ReactElement] = (props: P) => {
+    React.createElement(
+      scalaFunctionComponent[P](displayName)(render),
+      Box(props)
+    )
+  }
+
+  renderFunc
 }
 
 case class FunctionComponentWithChildren[P](displayName: String)(

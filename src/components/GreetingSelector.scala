@@ -14,7 +14,7 @@ object GreetingSelector {
   case class Props(value: String, onChange: String => Unit)
 
   private val component =
-    new FunctionComponent[Props]("GreetingSelector")(p => {
+    FunctionComponent[Props]("GreetingSelector")(p => {
       fragment(
         label(
           null,

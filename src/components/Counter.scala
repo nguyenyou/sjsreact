@@ -11,7 +11,7 @@ import myapp.tags.span
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 case class Counter(initialCount: Int) {
-  def apply() = Counter.component(this)
+  inline def apply() = Counter.component(this)
 }
 
 object Counter {

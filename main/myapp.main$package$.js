@@ -24,8 +24,8 @@ $c_Lmyapp_main$package$.prototype.renderApp__Lmyapp_ReactRoot__V = (function(roo
   var $x_2 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().StrictMode__sjs_js_Any();
   var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
   $j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$();
-  var this$2 = new $j_myapp$002ecomponents$002e$002dCounter.$c_Lmyapp_components_Counter(1);
-  root.render($x_3.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_2, null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$().Lmyapp_components_Counter$__f_component).apply__O__Lmyapp_ReactElement(this$2)]))));
+  var Counter_this = new $j_myapp$002ecomponents$002e$002dCounter.$c_Lmyapp_components_Counter(1);
+  root.render($x_3.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_2, null, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([(0, $j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$().Lmyapp_components_Counter$__f_component)(Counter_this)]))));
 });
 $c_Lmyapp_main$package$.prototype.run__V = (function() {
   var root = $m_Lmyapp_main$package$().createRoot__T__Lmyapp_ReactRoot("app");
