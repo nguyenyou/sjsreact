@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.components.Greeting
 import myapp.components.TextInput
 import myapp.components.MyApp
+import myapp.components.Counter
 
 @js.native
 @JSImport("react", JSImport.Namespace)
@@ -109,7 +110,7 @@ def renderApp(root: ReactRoot): Unit = {
     React.createElement(
       React.StrictMode,
       null,
-      MyApp()()
+      Counter(1)()
     )
   )
 }
