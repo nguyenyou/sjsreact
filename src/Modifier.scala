@@ -23,7 +23,7 @@ class Event[E <: js.Any](name: String) {
   inline def -->(f: E => Unit): Modifier = PropModifier(name, Callback(f).toJs)
 }
 
-lazy val onClick = new Event[MouseEvent[dom.Element, dom.MouseEvent]]("onClick")
+lazy val onClick = new Event[MouseEvent[dom.Element, dom.PointerEvent]]("onClick")
 lazy val onMouseEnter =
   new Event[MouseEvent[dom.Element, dom.MouseEvent]]("onMouseEnter")
 
