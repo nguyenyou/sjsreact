@@ -11,12 +11,17 @@ import myapp.components.ThemeContext
 import myapp.components.Greeting
 import myapp.components.Counter
 import scala.scalajs.js.annotation.JSExportTopLevel
+import myapp.FunctionComponent
+
+case class MyApp() {
+  def apply(): ReactElement = MyApp.component(this)
+}
 
 object MyApp {
+  type Props = MyApp
 
-  val component = functionComponent("MyApp") { _ =>
+  val component = FunctionComponent[Props]("MyApp") { _ =>
     Greeting("Hello World")()
   }
 
-  def apply(): ReactElement = React.createElement(component, null)
 }

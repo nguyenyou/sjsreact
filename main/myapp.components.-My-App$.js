@@ -1,13 +1,17 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
-import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
+import * as $j_myapp$002e$002dFunction$002dComponent from "./myapp.-Function-Component.js";
 import * as $j_myapp$002ecomponents$002e$002dGreeting from "./myapp.components.-Greeting.js";
-import * as $j_myapp$002efunction$002dComponent$0024package$0024 from "./myapp.function-Component$package$.js";
+import * as $j_myapp$002ecomponents$002e$002dMy$002dApp from "./myapp.components.-My-App.js";
 /** @constructor */
 function $c_Lmyapp_components_MyApp$() {
   this.Lmyapp_components_MyApp$__f_component = null;
   $n_Lmyapp_components_MyApp$ = this;
-  this.Lmyapp_components_MyApp$__f_component = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$1) => ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello World")).apply__Lmyapp_ReactElement()));
+  var render = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$1) => {
+    $j_myapp$002ecomponents$002e$002dMy$002dApp.$as_Lmyapp_components_MyApp(_$1);
+    return ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello World")).apply__Lmyapp_ReactElement();
+  }));
+  this.Lmyapp_components_MyApp$__f_component = new $j_myapp$002e$002dFunction$002dComponent.$c_Lmyapp_FunctionComponent("MyApp", render);
 }
 export { $c_Lmyapp_components_MyApp$ as $c_Lmyapp_components_MyApp$ };
 $c_Lmyapp_components_MyApp$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();
@@ -17,11 +21,10 @@ function $h_Lmyapp_components_MyApp$() {
 }
 export { $h_Lmyapp_components_MyApp$ as $h_Lmyapp_components_MyApp$ };
 $h_Lmyapp_components_MyApp$.prototype = $c_Lmyapp_components_MyApp$.prototype;
-$c_Lmyapp_components_MyApp$.prototype.apply__Lmyapp_ReactElement = (function() {
-  return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(this.Lmyapp_components_MyApp$__f_component, null, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
-});
 var $d_Lmyapp_components_MyApp$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_components_MyApp$, "myapp.components.MyApp$", ({
-  Lmyapp_components_MyApp$: 1
+  Lmyapp_components_MyApp$: 1,
+  s_deriving_Mirror: 1,
+  s_deriving_Mirror$Product: 1
 }));
 export { $d_Lmyapp_components_MyApp$ as $d_Lmyapp_components_MyApp$ };
 var $n_Lmyapp_components_MyApp$;
