@@ -16,11 +16,6 @@ $c_Lmyapp_ReactExtensions$package$.prototype.scalaFunctionComponent__T__F1__sjs_
   f.displayName = displayName;
   return f;
 });
-$c_Lmyapp_ReactExtensions$package$.prototype.scalaFunctionComponentWithChildren__T__F2__sjs_js_Function1 = (function(displayName, render) {
-  var f = ((props) => $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(render).apply__O__O__O(props.a, props.children));
-  f.displayName = displayName;
-  return f;
-});
 var $d_Lmyapp_ReactExtensions$package$ = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$TypeData().initClass($c_Lmyapp_ReactExtensions$package$, "myapp.ReactExtensions$package$", ({
   Lmyapp_ReactExtensions$package$: 1
 }));

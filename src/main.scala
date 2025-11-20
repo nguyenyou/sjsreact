@@ -42,11 +42,26 @@ object React {
 }
 
 object html {
-  def div(children: ReactElement*) = {
-    React.createElement("div", null, children*)
-  }
-  def div(props: js.Object, children: ReactElement*) = {
-    React.createElement("div", props, children*)
+  def div(modifiers: Modifier*): ReactElement = {
+    val props = js.Dynamic.literal()
+    val style = js.Dynamic.literal()
+    val children = js.Array[ReactElement]()
+
+    modifiers.foreach {
+      case StyleModifier(name, value) =>
+        style.updateDynamic(name)(value)
+      case PropModifier(name, value) =>
+        props.updateDynamic(name)(value)
+      case ChildModifier(child) =>
+        children.push(child)
+    }
+
+    // Only attach style if it has properties
+    if (js.Object.keys(style).length > 0) {
+      props.updateDynamic("style")(style)
+    }
+
+    React.createElement("div", props, children.toSeq*)
   }
 }
 

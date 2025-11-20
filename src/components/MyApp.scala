@@ -14,6 +14,12 @@ import myapp.components.Counter
 import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.FunctionComponent
 import myapp.Callback
+import myapp.onClick
+import myapp.marginLeft
+import myapp.background
+import myapp.color
+import myapp.height
+import myapp.border
 
 case class MyApp() {
   def apply(): ReactElement = MyApp.component(this)
@@ -32,14 +38,13 @@ object MyApp {
 
   val component = FunctionComponent[Props]("MyApp") { _ =>
     html.div(
-      js.Dynamic.literal(
-        onClick = handleClickContainer,
-        style = js.Dynamic.literal(
-          marginLeft = "20px",
-          background = "#fff",
-          color = "#000"
-        )
-      )
+      onClick := handleClickContainer,
+      marginLeft := "20px",
+      background := "#fff",
+      color := "#000",
+      height := "200px",
+      border := "1px solid #000",
+      html.div()
     )
   }
 
