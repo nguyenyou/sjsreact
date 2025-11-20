@@ -14,12 +14,14 @@ function $c_Lmyapp_components_MyApp$() {
   this.Lmyapp_components_MyApp$__f_handleClickContainer = null;
   this.Lmyapp_components_MyApp$__f_component = null;
   $n_Lmyapp_components_MyApp$ = this;
-  this.Lmyapp_components_MyApp$__f_handleClick = ((x) => {
+  var f$proxy1 = ((x) => {
     console.log(x);
   });
-  this.Lmyapp_components_MyApp$__f_handleClickContainer = (() => {
+  this.Lmyapp_components_MyApp$__f_handleClick = f$proxy1;
+  var f$proxy2 = (() => {
     console.log("Clickkkkkk");
   });
+  this.Lmyapp_components_MyApp$__f_handleClickContainer = f$proxy2;
   var render = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$1) => {
     $j_myapp$002ecomponents$002e$002dMy$002dApp.$as_Lmyapp_components_MyApp(_$1);
     var $x_7 = $j_myapp$002ehtml$0024.$m_Lmyapp_html$();

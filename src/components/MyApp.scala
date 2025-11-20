@@ -13,6 +13,7 @@ import myapp.components.Greeting
 import myapp.components.Counter
 import scala.scalajs.js.annotation.JSExportTopLevel
 import myapp.FunctionComponent
+import myapp.Callback
 
 case class MyApp() {
   def apply(): ReactElement = MyApp.component(this)
@@ -21,13 +22,13 @@ case class MyApp() {
 object MyApp {
   type Props = MyApp
 
-  val handleClick: js.Function1[js.Any, Unit] = (x: js.Any) => {
+  val handleClick = Callback((x: js.Any) => {
     org.scalajs.dom.console.log(x)
-  }
+  })
 
-  val handleClickContainer: js.Function0[Unit] = () => {
+  val handleClickContainer = Callback(() => {
     org.scalajs.dom.console.log("Clickkkkkk")
-  }
+  })
 
   val component = FunctionComponent[Props]("MyApp") { _ =>
     html.div(

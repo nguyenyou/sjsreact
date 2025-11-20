@@ -17,6 +17,14 @@ object Box {
     Box(())
 }
 
+object Callback {
+  inline def apply(f: js.Function0[Unit]): js.Function0[Unit] = f
+  inline def apply[A](f: js.Function1[A, Unit]): js.Function1[A, Unit] = f
+  inline def apply[A, B](
+      f: js.Function2[A, B, Unit]
+  ): js.Function2[A, B, Unit] = f
+}
+
 def scalaFunctionComponent[P](
     displayName: String
 )(render: P => ReactElement): js.Function1[Box[P], ReactElement] = {
