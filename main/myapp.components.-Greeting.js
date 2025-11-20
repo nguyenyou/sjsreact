@@ -1,6 +1,6 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
-import * as $j_myapp$002e$002dFunctional$002dComponent from "./myapp.-Functional-Component.js";
+import * as $j_myapp$002e$002dFunction$002dComponent from "./myapp.-Function-Component.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
 import * as $j_myapp$002ecomponents$002e$002dTheme$002dContext$0024 from "./myapp.components.-Theme-Context$.js";
 import * as $j_myapp$002etags$0024 from "./myapp.tags$.js";
@@ -18,7 +18,7 @@ function $c_Lmyapp_components_Greeting$() {
     var s = (("Hellooooooo, " + $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p$1).Lmyapp_components_Greeting__f_name) + "!");
     return $x_3.h3__sjs_js_Object__sci_Seq__Lmyapp_ReactElement($x_2, $x_1.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([s])));
   }));
-  this.Lmyapp_components_Greeting$__f_myapp$components$Greeting$$$component = new $j_myapp$002e$002dFunctional$002dComponent.$c_Lmyapp_FunctionalComponent("Greeting", render);
+  this.Lmyapp_components_Greeting$__f_myapp$components$Greeting$$$component = new $j_myapp$002e$002dFunction$002dComponent.$c_Lmyapp_FunctionComponent("Greeting", render);
 }
 export { $c_Lmyapp_components_Greeting$ as $c_Lmyapp_components_Greeting$ };
 $c_Lmyapp_components_Greeting$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();

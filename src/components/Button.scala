@@ -5,7 +5,7 @@ import myapp.functionComponent
 import myapp.{
   Box,
   scalaFunctionComponentWithChildren,
-  FunctionalComponentWithChildren
+  FunctionComponentWithChildren
 }
 import myapp.React
 import myapp.ReactElement
@@ -16,7 +16,7 @@ object Button {
   case class Props(onClick: js.Function0[Unit])
 
   private val component =
-    new FunctionalComponentWithChildren[Props]("Button")((p, children) =>
+    new FunctionComponentWithChildren[Props]("Button")((p, children) =>
       button(
         js.Dynamic.literal(onClick =
           if (!js.isUndefined(p.onClick)) p.onClick

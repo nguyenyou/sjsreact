@@ -2,7 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
-import myapp.{Box, scalaFunctionComponent, FunctionalComponent}
+import myapp.{Box, scalaFunctionComponent, FunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.h3
@@ -14,7 +14,7 @@ case class Greeting(name: String) {
 }
 
 object Greeting {
-  private val component = FunctionalComponent[Greeting]("Greeting")(p => {
+  private val component = FunctionComponent[Greeting]("Greeting")(p => {
     val theme = React.useContext(ThemeContext.Context)
 
     h3(

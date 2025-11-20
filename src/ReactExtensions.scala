@@ -43,7 +43,7 @@ def scalaFunctionComponentWithChildren[P](
   component
 }
 
-case class FunctionalComponent[P](displayName: String)(
+case class FunctionComponent[P](displayName: String)(
     render: P => ReactElement
 ) {
   private val component = scalaFunctionComponent[P](displayName)(render)
@@ -51,7 +51,7 @@ case class FunctionalComponent[P](displayName: String)(
     React.createElement(component, Box(props))
 }
 
-class FunctionalComponentWithChildren[P](displayName: String)(
+class FunctionComponentWithChildren[P](displayName: String)(
     render: (P, js.Any) => ReactElement
 ) {
   private val component =

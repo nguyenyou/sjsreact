@@ -2,7 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
-import myapp.{Box, scalaFunctionComponent, FunctionalComponent}
+import myapp.{Box, scalaFunctionComponent, FunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.div
@@ -11,7 +11,7 @@ import myapp.tags.span
 import scala.scalajs.js.annotation.JSExportTopLevel
 
 object TextInput {
-  private val component = new FunctionalComponent[Unit]("TextInput")(_ => {
+  private val component = new FunctionComponent[Unit]("TextInput")(_ => {
     val (text, setText) = React.useState("")
 
     div(

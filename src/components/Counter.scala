@@ -2,7 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
-import myapp.{Box, scalaFunctionComponent, FunctionalComponent}
+import myapp.{Box, scalaFunctionComponent, FunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.div
@@ -17,7 +17,7 @@ case class Counter(initialCount: Int) {
 object Counter {
   type Props = Counter
 
-  val component = FunctionalComponent[Props]("Counter")(p => {
+  val component = FunctionComponent[Props]("Counter")(p => {
     val (count, setCount) = React.useState(p.initialCount)
 
     div(

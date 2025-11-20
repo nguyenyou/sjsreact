@@ -2,7 +2,7 @@ package myapp.components
 
 import scala.scalajs.js
 import myapp.functionComponent
-import myapp.{Box, scalaFunctionComponent, FunctionalComponent}
+import myapp.{Box, scalaFunctionComponent, FunctionComponent}
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.label
@@ -14,7 +14,7 @@ object GreetingSelector {
   case class Props(value: String, onChange: String => Unit)
 
   private val component =
-    new FunctionalComponent[Props]("GreetingSelector")(p => {
+    new FunctionComponent[Props]("GreetingSelector")(p => {
       fragment(
         label(
           null,
