@@ -27,12 +27,13 @@ object Callback {
 }
 
 @js.native
-trait SyntheticEventExtras extends js.Object {
+trait SyntheticEventExtras[+E <: dom.Event] extends js.Object {
   val _reactName: String = js.native
   val `type`: String = js.native
+  val nativeEvent: E = js.native
 }
 
-type SyntheticBaseEvent[E <: dom.Event] = E & SyntheticEventExtras
+type SyntheticBaseEvent[E <: dom.Event] = SyntheticEventExtras[E]
 
 @js.native
 trait PropsWithChildren extends js.Object {
