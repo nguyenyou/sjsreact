@@ -9,10 +9,12 @@ import myapp.tags.h3
 import myapp.components.ThemeContext
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-case class Greeting(name: String)
+case class Greeting(name: String) {
+  def apply(): ReactElement = Greeting.component(this)
+}
 
 object Greeting {
-  private val component = new FunctionalComponent[Greeting]("Greeting")(p => {
+  private val component = FunctionalComponent[Greeting]("Greeting")(p => {
     val theme = React.useContext(ThemeContext.Context)
 
     h3(
@@ -20,6 +22,4 @@ object Greeting {
       s"Hellooooooo, ${p.name}!"
     )
   })
-
-  def apply(name: String): ReactElement = component(new Greeting(name))
 }

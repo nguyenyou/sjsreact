@@ -1,13 +1,13 @@
 'use strict';
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
-import * as $j_myapp$002ecomponents$002e$002dGreeting$0024 from "./myapp.components.-Greeting$.js";
+import * as $j_myapp$002ecomponents$002e$002dGreeting from "./myapp.components.-Greeting.js";
 import * as $j_myapp$002efunction$002dComponent$0024package$0024 from "./myapp.function-Component$package$.js";
 /** @constructor */
 function $c_Lmyapp_components_MyApp$() {
   this.Lmyapp_components_MyApp$__f_component = null;
   $n_Lmyapp_components_MyApp$ = this;
-  this.Lmyapp_components_MyApp$__f_component = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$1) => $j_myapp$002ecomponents$002e$002dGreeting$0024.$m_Lmyapp_components_Greeting$().apply__T__Lmyapp_ReactElement("Helloooo")));
+  this.Lmyapp_components_MyApp$__f_component = $j_myapp$002efunction$002dComponent$0024package$0024.$m_Lmyapp_functionComponent$package$().functionComponent__T__sjs_js_Function1__sjs_js_Any("MyApp", ((_$1) => ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello World")).apply__Lmyapp_ReactElement()));
 }
 export { $c_Lmyapp_components_MyApp$ as $c_Lmyapp_components_MyApp$ };
 $c_Lmyapp_components_MyApp$.prototype = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$h_O();

@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 object MyApp {
 
   val component = functionComponent("MyApp") { _ =>
-    Greeting("Helloooo")
+    Greeting("Hello World")()
   }
 
   def apply(): ReactElement = React.createElement(component, null)
