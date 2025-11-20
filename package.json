@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "scala-cli --power package src -f -o main"
+    "build:dev": "scala-cli --power package --js --js-mode=dev src -f  -o main",
+    "build:prod": "scala-cli --power package --js --js-mode=full src -f  -o main"
   },
   "dependencies": {
     "@awesome.me/webawesome": "3.0.0",
