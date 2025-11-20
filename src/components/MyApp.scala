@@ -27,6 +27,9 @@ object MyApp {
 
   val component = FunctionComponent[Props]("MyApp") { _ =>
     html.div(
+      js.Dynamic.literal(
+        onClick = () => org.scalajs.dom.console.log("Clickkkkkk")
+      ),
       Greeting("Hello")(),
       Counter(0)(),
       Button(onClick = handleClick)("Click me!")
