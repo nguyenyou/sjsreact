@@ -7,6 +7,7 @@ import myapp.ReactElement
 import myapp.tags.button
 import myapp.tags.h3
 import myapp.tags.div
+import myapp.html
 import myapp.components.ThemeContext
 import myapp.components.Greeting
 import myapp.components.Counter
@@ -25,9 +26,8 @@ object MyApp {
   }
 
   val component = FunctionComponent[Props]("MyApp") { _ =>
-    div(
-      null,
-      Greeting("Hello Worldddd")(),
+    html.div(
+      Greeting("Hello")(),
       Counter(0)(),
       Button(onClick = handleClick)("Click me!")
     )

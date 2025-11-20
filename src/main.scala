@@ -41,6 +41,12 @@ object React {
   }
 }
 
+object html {
+  def div(children: ReactElement*) = {
+    React.createElement("div", null, children*)
+  }
+}
+
 object tags {
   def div(props: js.Object | Null, children: js.Any*): ReactElement =
     React.createElement("div", props, children*)
