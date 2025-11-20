@@ -293,3 +293,4 @@ val myObject = new js.Object {
   val bar = "foobar"
 }
 ```
+
