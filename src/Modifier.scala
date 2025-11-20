@@ -17,10 +17,12 @@ object Modifier {
   )
 }
 
-object onClick {
-  def :=(v: js.Function0[Unit]): Modifier = PropModifier("onClick", v)
-  def :=(v: js.Function1[js.Any, Unit]): Modifier = PropModifier("onClick", v)
+class Event(name: String) {
+  def :=(v: Callback): Modifier = PropModifier(name, v.toJs)
 }
+
+val onClick = new Event("onClick")
+val onMouseEnter = new Event("onMouseEnter")
 
 object marginLeft {
   def :=(v: String): Modifier = StyleModifier("marginLeft", v)

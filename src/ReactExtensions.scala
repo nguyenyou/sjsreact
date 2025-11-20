@@ -17,12 +17,12 @@ object Box {
     Box(())
 }
 
+class Callback(val toJs: js.Function)
+
 object Callback {
-  inline def apply(f: js.Function0[Unit]): js.Function0[Unit] = f
-  inline def apply[A](f: js.Function1[A, Unit]): js.Function1[A, Unit] = f
-  inline def apply[A, B](
-      f: js.Function2[A, B, Unit]
-  ): js.Function2[A, B, Unit] = f
+  def apply(f: js.Function0[Unit]): Callback = new Callback(f)
+  def apply[A](f: js.Function1[A, Unit]): Callback = new Callback(f)
+  def apply[A, B](f: js.Function2[A, B, Unit]): Callback = new Callback(f)
 }
 
 @js.native

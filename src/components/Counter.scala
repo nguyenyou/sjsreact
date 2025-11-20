@@ -8,8 +8,8 @@ import myapp.ReactElement
 import myapp.html.{div, button}
 import myapp.tags.span
 import myapp.Callback
+import myapp.onMouseEnter
 import myapp.onClick
-import scala.scalajs.js.annotation.JSExportTopLevel
 
 case class Counter(initialCount: Int) {
   inline def apply(): ReactElement = Counter.component(this)
@@ -22,8 +22,10 @@ object Counter {
     val increase = Callback(() => setCount(count + 1))
     val decrease = Callback(() => setCount(count - 1))
     val reset = Callback(() => setCount(p.initialCount))
+    val logEnter = Callback(() => org.scalajs.dom.console.log("Mouse entered!"))
 
     div(
+      onMouseEnter := logEnter,
       button(
         onClick := increase,
         "+"

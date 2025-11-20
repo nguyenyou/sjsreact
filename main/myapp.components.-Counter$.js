@@ -1,9 +1,11 @@
 'use strict';
 import * as $i_react from "react";
 import * as $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6 from "./internal-3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.js";
+import * as $j_myapp$002e$002dCallback from "./myapp.-Callback.js";
 import * as $j_myapp$002e$002dChild$002dModifier from "./myapp.-Child-Modifier.js";
 import * as $j_myapp$002e$002dModifier from "./myapp.-Modifier.js";
 import * as $j_myapp$002e$002dModifier$0024 from "./myapp.-Modifier$.js";
+import * as $j_myapp$002e$002dModifier$0024package$0024 from "./myapp.-Modifier$package$.js";
 import * as $j_myapp$002e$002dProp$002dModifier from "./myapp.-Prop-Modifier.js";
 import * as $j_myapp$002e$002dReact$0024 from "./myapp.-React$.js";
 import * as $j_myapp$002e$002dStyle$002dModifier from "./myapp.-Style-Modifier.js";
@@ -12,7 +14,7 @@ import * as $j_myapp$002ecomponents$002e$002dCounter from "./myapp.components.-C
 function $c_Lmyapp_components_Counter$() {
   this.Lmyapp_components_Counter$__f_component = null;
   $n_Lmyapp_components_Counter$ = this;
-  var f = ((box) => {
+  var f$4 = ((box) => {
     var p = $j_myapp$002ecomponents$002e$002dCounter.$as_Lmyapp_components_Counter(box.a);
     var res = $i_react.useState($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p).Lmyapp_components_Counter__f_initialCount);
     var _1 = res[0];
@@ -21,24 +23,32 @@ function $c_Lmyapp_components_Counter$() {
     var \u03b42$___2 = _2;
     var count = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(\u03b42$___1);
     var setCount = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1(\u03b42$___2);
-    var f$proxy1 = (() => {
+    var f = (() => {
       $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O(((1 + count) | 0));
     });
-    var f$proxy2 = (() => {
+    var increase = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f);
+    var f$1 = (() => {
       $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O((((-1) + count) | 0));
     });
-    var f$proxy3 = (() => {
+    var decrease = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$1);
+    var f$2 = (() => {
       $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p).Lmyapp_components_Counter__f_initialCount);
     });
-    var $x_4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-    var modifiers$proxy1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
+    var reset = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$2);
+    var f$3 = (() => {
+      console.log("Mouse entered!");
+    });
+    var logEnter = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$3);
+    var $x_5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+    var $x_4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onMouseEnter).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(logEnter);
+    var modifiers$proxy1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(increase), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
     var fields = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var props = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields);
     var fields$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var style = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$1);
     var children = [];
-    var this$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy1);
-    var it = this$7.iterator__sc_Iterator();
+    var this$9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy1);
+    var it = this$9.iterator__sc_Iterator();
     while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it).hasNext__Z()) {
       var x0 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it).next__O();
       var x$1 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0);
@@ -52,17 +62,17 @@ function $c_Lmyapp_components_Counter$() {
         }
         if ((x$1 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
           var x12 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1);
-          var this$11 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x12);
-          var x14 = this$11.Lmyapp_PropModifier__f_name;
-          var this$12 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x12);
-          var x15 = this$12.Lmyapp_PropModifier__f_value;
+          var this$13 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x12);
+          var x14 = this$13.Lmyapp_PropModifier__f_name;
+          var this$14 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x12);
+          var x15 = this$14.Lmyapp_PropModifier__f_value;
           props[x14] = x15;
           break matchResult5;
         }
         if ((x$1 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
           var x9 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1);
-          var this$14 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x9);
-          var x11 = this$14.Lmyapp_ChildModifier__f_child;
+          var this$16 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x9);
+          var x11 = this$16.Lmyapp_ChildModifier__f_child;
           $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children.push(x11));
           break matchResult5;
         }
@@ -74,7 +84,7 @@ function $c_Lmyapp_components_Counter$() {
     }
     var element = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children)));
     var $x_3 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element);
-    var modifiers$proxy2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy2), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
+    var modifiers$proxy2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(decrease), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
     var fields$2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var props$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$2);
     var fields$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
@@ -117,14 +127,14 @@ function $c_Lmyapp_components_Counter$() {
     }
     var element$1 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$3, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$3)));
     var $x_2 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$1);
-    var modifiers$proxy3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy3), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));
+    var modifiers$proxy3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(reset), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));
     var fields$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var props$5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$4);
     var fields$5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var style$5 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$5);
     var children$5 = [];
-    var this$45 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy3);
-    var it$2 = this$45.iterator__sc_Iterator();
+    var this$43 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy3);
+    var it$2 = this$43.iterator__sc_Iterator();
     while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$2).hasNext__Z()) {
       var x0$2 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$2).next__O();
       var x$1$2 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$2);
@@ -138,17 +148,17 @@ function $c_Lmyapp_components_Counter$() {
         }
         if ((x$1$2 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
           var x36 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$2);
-          var this$49 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x36);
-          var x38 = this$49.Lmyapp_PropModifier__f_name;
-          var this$50 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x36);
-          var x39 = this$50.Lmyapp_PropModifier__f_value;
+          var this$47 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x36);
+          var x38 = this$47.Lmyapp_PropModifier__f_name;
+          var this$48 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x36);
+          var x39 = this$48.Lmyapp_PropModifier__f_value;
           props$5[x38] = x39;
           break matchResult7;
         }
         if ((x$1$2 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
           var x33 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$2);
-          var this$52 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x33);
-          var x35 = this$52.Lmyapp_ChildModifier__f_child;
+          var this$50 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x33);
+          var x35 = this$50.Lmyapp_ChildModifier__f_child;
           $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$5.push(x35));
           break matchResult7;
         }
@@ -166,8 +176,8 @@ function $c_Lmyapp_components_Counter$() {
     var fields$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var style$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$7);
     var children$7 = [];
-    var this$62 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy4);
-    var it$3 = this$62.iterator__sc_Iterator();
+    var this$60 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy4);
+    var it$3 = this$60.iterator__sc_Iterator();
     while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$3).hasNext__Z()) {
       var x0$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$3).next__O();
       var x$1$3 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$3);
@@ -181,17 +191,17 @@ function $c_Lmyapp_components_Counter$() {
         }
         if ((x$1$3 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
           var x48 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$3);
-          var this$66 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x48);
-          var x50 = this$66.Lmyapp_PropModifier__f_name;
-          var this$67 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x48);
-          var x51 = this$67.Lmyapp_PropModifier__f_value;
+          var this$64 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x48);
+          var x50 = this$64.Lmyapp_PropModifier__f_name;
+          var this$65 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x48);
+          var x51 = this$65.Lmyapp_PropModifier__f_value;
           props$7[x50] = x51;
           break matchResult8;
         }
         if ((x$1$3 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
           var x45 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$3);
-          var this$69 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x45);
-          var x47 = this$69.Lmyapp_ChildModifier__f_child;
+          var this$67 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x45);
+          var x47 = this$67.Lmyapp_ChildModifier__f_child;
           $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$7.push(x47));
           break matchResult8;
         }
@@ -202,14 +212,14 @@ function $c_Lmyapp_components_Counter$() {
       props$7.style = style$7;
     }
     var element$3 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$7, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$7)));
-    var modifiers$proxy5 = $x_4.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$x_3, $x_2, $x_1, new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$3)]));
+    var modifiers$proxy5 = $x_5.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$x_4, $x_3, $x_2, $x_1, new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$3)]));
     var fields$8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var props$9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$8);
     var fields$9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
     var style$9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$9);
     var children$9 = [];
-    var this$79 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy5);
-    var it$4 = this$79.iterator__sc_Iterator();
+    var this$77 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy5);
+    var it$4 = this$77.iterator__sc_Iterator();
     while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$4).hasNext__Z()) {
       var x0$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$4).next__O();
       var x$1$4 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$4);
@@ -223,17 +233,17 @@ function $c_Lmyapp_components_Counter$() {
         }
         if ((x$1$4 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
           var x60 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$4);
-          var this$83 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x60);
-          var x62 = this$83.Lmyapp_PropModifier__f_name;
-          var this$84 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x60);
-          var x63 = this$84.Lmyapp_PropModifier__f_value;
+          var this$81 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x60);
+          var x62 = this$81.Lmyapp_PropModifier__f_name;
+          var this$82 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x60);
+          var x63 = this$82.Lmyapp_PropModifier__f_value;
           props$9[x62] = x63;
           break matchResult9;
         }
         if ((x$1$4 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
           var x57 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$4);
-          var this$86 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x57);
-          var x59 = this$86.Lmyapp_ChildModifier__f_child;
+          var this$84 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x57);
+          var x59 = this$84.Lmyapp_ChildModifier__f_child;
           $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$9.push(x59));
           break matchResult9;
         }
@@ -245,11 +255,11 @@ function $c_Lmyapp_components_Counter$() {
     }
     return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$9, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$9)));
   });
-  f.displayName = "Counter";
+  f$4.displayName = "Counter";
   var renderFunc = ((props$1) => {
     var props$2 = $j_myapp$002ecomponents$002e$002dCounter.$as_Lmyapp_components_Counter(props$1);
-    var $x_9 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$();
-    var f$1 = ((box$1) => {
+    var $x_11 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$();
+    var f$9 = ((box$1) => {
       var p$1 = $j_myapp$002ecomponents$002e$002dCounter.$as_Lmyapp_components_Counter(box$1.a);
       var res$1 = $i_react.useState($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p$1).Lmyapp_components_Counter__f_initialCount);
       var _1$1 = res$1[0];
@@ -258,17 +268,25 @@ function $c_Lmyapp_components_Counter$() {
       var \u03b42$$1___2 = _2$1;
       var count$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(\u03b42$$1___1);
       var setCount$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$as_F1(\u03b42$$1___2);
-      var f$proxy1$1 = (() => {
+      var f$5 = (() => {
         $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount$1).apply__O__O(((1 + count$1) | 0));
       });
-      var f$proxy2$1 = (() => {
+      var increase$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$5);
+      var f$6 = (() => {
         $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount$1).apply__O__O((((-1) + count$1) | 0));
       });
-      var f$proxy3$1 = (() => {
+      var decrease$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$6);
+      var f$7 = (() => {
         $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(setCount$1).apply__O__O($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(p$1).Lmyapp_components_Counter__f_initialCount);
       });
-      var $x_8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
-      var modifiers$proxy1$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy1$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
+      var reset$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$7);
+      var f$8 = (() => {
+        console.log("Mouse entered!");
+      });
+      var logEnter$1 = new $j_myapp$002e$002dCallback.$c_Lmyapp_Callback(f$8);
+      var $x_10 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
+      var $x_9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onMouseEnter).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(logEnter$1);
+      var modifiers$proxy1$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(increase$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("+")]));
       var fields$10 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var props$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$10);
       var fields$11 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
@@ -310,15 +328,15 @@ function $c_Lmyapp_components_Counter$() {
         props$4.style = style$1;
       }
       var element$4 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$4, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$1)));
-      var $x_7 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$4);
-      var modifiers$proxy2$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy2$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
+      var $x_8 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$4);
+      var modifiers$proxy2$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(decrease$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("-")]));
       var fields$12 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var props$3$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$12);
       var fields$13 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var style$3$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$13);
       var children$3$1 = [];
-      var this$117 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy2$1);
-      var it$6 = this$117.iterator__sc_Iterator();
+      var this$115 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy2$1);
+      var it$6 = this$115.iterator__sc_Iterator();
       while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$6).hasNext__Z()) {
         var x0$6 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$6).next__O();
         var x$1$6 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$6);
@@ -332,17 +350,17 @@ function $c_Lmyapp_components_Counter$() {
           }
           if ((x$1$6 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
             var x87 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$6);
-            var this$121 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x87);
-            var x89 = this$121.Lmyapp_PropModifier__f_name;
-            var this$122 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x87);
-            var x90 = this$122.Lmyapp_PropModifier__f_value;
+            var this$119 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x87);
+            var x89 = this$119.Lmyapp_PropModifier__f_name;
+            var this$120 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x87);
+            var x90 = this$120.Lmyapp_PropModifier__f_value;
             props$3$1[x89] = x90;
             break matchResult12;
           }
           if ((x$1$6 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
             var x84 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$6);
-            var this$124 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x84);
-            var x86 = this$124.Lmyapp_ChildModifier__f_child;
+            var this$122 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x84);
+            var x86 = this$122.Lmyapp_ChildModifier__f_child;
             $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$3$1.push(x86));
             break matchResult12;
           }
@@ -353,15 +371,15 @@ function $c_Lmyapp_components_Counter$() {
         props$3$1.style = style$3$1;
       }
       var element$5 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$3$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$3$1)));
-      var $x_6 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$5);
-      var modifiers$proxy3$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([new $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier("onClick", f$proxy3$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));
+      var $x_7 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$5);
+      var modifiers$proxy3$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002e$002dModifier$0024package$0024.$m_Lmyapp_Modifier$package$().Lmyapp_Modifier$package$__f_onClick).$colon$eq__Lmyapp_Callback__Lmyapp_Modifier(reset$1), $j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier("reset")]));
       var fields$14 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var props$5$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$14);
       var fields$15 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var style$5$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$15);
       var children$5$1 = [];
-      var this$136 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy3$1);
-      var it$7 = this$136.iterator__sc_Iterator();
+      var this$132 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy3$1);
+      var it$7 = this$132.iterator__sc_Iterator();
       while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$7).hasNext__Z()) {
         var x0$7 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$7).next__O();
         var x$1$7 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$7);
@@ -375,17 +393,17 @@ function $c_Lmyapp_components_Counter$() {
           }
           if ((x$1$7 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
             var x99 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$7);
-            var this$140 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x99);
-            var x101 = this$140.Lmyapp_PropModifier__f_name;
-            var this$141 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x99);
-            var x102 = this$141.Lmyapp_PropModifier__f_value;
+            var this$136 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x99);
+            var x101 = this$136.Lmyapp_PropModifier__f_name;
+            var this$137 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x99);
+            var x102 = this$137.Lmyapp_PropModifier__f_value;
             props$5$1[x101] = x102;
             break matchResult13;
           }
           if ((x$1$7 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
             var x96 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$7);
-            var this$143 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x96);
-            var x98 = this$143.Lmyapp_ChildModifier__f_child;
+            var this$139 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x96);
+            var x98 = this$139.Lmyapp_ChildModifier__f_child;
             $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$5$1.push(x98));
             break matchResult13;
           }
@@ -396,15 +414,15 @@ function $c_Lmyapp_components_Counter$() {
         props$5$1.style = style$5$1;
       }
       var element$6 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("button", props$5$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$5$1)));
-      var $x_5 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$6);
+      var $x_6 = new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$6);
       var modifiers$proxy4$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$j_myapp$002e$002dModifier$0024.$m_Lmyapp_Modifier$().stringToModifier__T__Lmyapp_Modifier(("Count: " + count$1))]));
       var fields$16 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var props$7$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$16);
       var fields$17 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var style$7$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$17);
       var children$7$1 = [];
-      var this$153 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy4$1);
-      var it$8 = this$153.iterator__sc_Iterator();
+      var this$149 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy4$1);
+      var it$8 = this$149.iterator__sc_Iterator();
       while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$8).hasNext__Z()) {
         var x0$8 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$8).next__O();
         var x$1$8 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$8);
@@ -418,17 +436,17 @@ function $c_Lmyapp_components_Counter$() {
           }
           if ((x$1$8 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
             var x111 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$8);
-            var this$157 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x111);
-            var x113 = this$157.Lmyapp_PropModifier__f_name;
-            var this$158 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x111);
-            var x114 = this$158.Lmyapp_PropModifier__f_value;
+            var this$153 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x111);
+            var x113 = this$153.Lmyapp_PropModifier__f_name;
+            var this$154 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x111);
+            var x114 = this$154.Lmyapp_PropModifier__f_value;
             props$7$1[x113] = x114;
             break matchResult14;
           }
           if ((x$1$8 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
             var x108 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$8);
-            var this$160 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x108);
-            var x110 = this$160.Lmyapp_ChildModifier__f_child;
+            var this$156 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x108);
+            var x110 = this$156.Lmyapp_ChildModifier__f_child;
             $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$7$1.push(x110));
             break matchResult14;
           }
@@ -439,14 +457,14 @@ function $c_Lmyapp_components_Counter$() {
         props$7$1.style = style$7$1;
       }
       var element$7 = $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$7$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$7$1)));
-      var modifiers$proxy5$1 = $x_8.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$x_7, $x_6, $x_5, new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$7)]));
+      var modifiers$proxy5$1 = $x_10.wrapRefArray__AO__sci_ArraySeq(new ($j_myapp$002e$002dModifier.$d_Lmyapp_Modifier.getArrayOf().constr)([$x_9, $x_8, $x_7, $x_6, new $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier(element$7)]));
       var fields$18 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var props$9$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$18);
       var fields$19 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([]));
       var style$9$1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$19);
       var children$9$1 = [];
-      var this$170 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy5$1);
-      var it$9 = this$170.iterator__sc_Iterator();
+      var this$166 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(modifiers$proxy5$1);
+      var it$9 = this$166.iterator__sc_Iterator();
       while ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$9).hasNext__Z()) {
         var x0$9 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(it$9).next__O();
         var x$1$9 = $j_myapp$002e$002dModifier.$as_Lmyapp_Modifier(x0$9);
@@ -460,17 +478,17 @@ function $c_Lmyapp_components_Counter$() {
           }
           if ((x$1$9 instanceof $j_myapp$002e$002dProp$002dModifier.$c_Lmyapp_PropModifier)) {
             var x123 = $j_myapp$002e$002dProp$002dModifier.$as_Lmyapp_PropModifier(x$1$9);
-            var this$174 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x123);
-            var x125 = this$174.Lmyapp_PropModifier__f_name;
-            var this$175 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x123);
-            var x126 = this$175.Lmyapp_PropModifier__f_value;
+            var this$170 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x123);
+            var x125 = this$170.Lmyapp_PropModifier__f_name;
+            var this$171 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x123);
+            var x126 = this$171.Lmyapp_PropModifier__f_value;
             props$9$1[x125] = x126;
             break matchResult15;
           }
           if ((x$1$9 instanceof $j_myapp$002e$002dChild$002dModifier.$c_Lmyapp_ChildModifier)) {
             var x120 = $j_myapp$002e$002dChild$002dModifier.$as_Lmyapp_ChildModifier(x$1$9);
-            var this$177 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x120);
-            var x122 = this$177.Lmyapp_ChildModifier__f_child;
+            var this$173 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(x120);
+            var x122 = this$173.Lmyapp_ChildModifier__f_child;
             $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$uI(children$9$1.push(x122));
             break matchResult15;
           }
@@ -482,9 +500,9 @@ function $c_Lmyapp_components_Counter$() {
       }
       return $j_myapp$002e$002dReact$0024.$m_Lmyapp_React$().createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement("div", props$9$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sci_IndexedSeq$().from__sc_IterableOnce__sci_IndexedSeq($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$ct_sjs_js_WrappedArray__sjs_js_Array__(new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sjs_js_WrappedArray(), children$9$1)));
     });
-    f$1.displayName = "Counter";
+    f$9.displayName = "Counter";
     var fields$20 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_T2.getArrayOf().constr)([new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_T2("a", props$2)]));
-    return $x_9.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(f$1, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$20), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
+    return $x_11.createElement__sjs_js_Any__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(f$9, $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sjs_js_special_package$().objectLiteral__sci_Seq__sjs_js_Object(fields$20), $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([])));
   });
   this.Lmyapp_components_Counter$__f_component = renderFunc;
 }
