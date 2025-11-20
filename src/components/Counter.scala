@@ -10,7 +10,6 @@ import myapp.tags.span
 import myapp.Callback
 import myapp.onMouseEnter
 import myapp.onClick
-import myapp.SyntheticBaseEvent
 import org.scalajs.dom
 
 case class Counter(initialCount: Int) {
@@ -50,3 +49,4 @@ object Counter {
     )
   })
 }
+

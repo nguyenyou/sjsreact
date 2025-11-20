@@ -10,9 +10,11 @@ import myapp.{
 import myapp.React
 import myapp.ReactElement
 import myapp.tags.button
+import myapp.MouseEventHandler
+import org.scalajs.dom
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-case class Button(onClick: js.Function1[js.Any, Unit]) {
+case class Button(onClick: MouseEventHandler[dom.Element]) {
   def apply(children: js.Any*): ReactElement = Button.component(this)(children*)
 }
 

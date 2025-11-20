@@ -21,7 +21,6 @@ import myapp.background
 import myapp.color
 import myapp.height
 import myapp.border
-import myapp.SyntheticBaseEvent
 import org.scalajs.dom
 
 case class MyApp() {
