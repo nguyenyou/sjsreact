@@ -20,8 +20,8 @@ case class MyApp() {
 object MyApp {
   type Props = MyApp
 
-  val handleClick: js.Function0[Unit] = () => {
-    println("Clickedddd")
+  val handleClick: js.Function1[js.Any, Unit] = (x: js.Any) => {
+    org.scalajs.dom.console.log(x)
   }
 
   val component = FunctionComponent[Props]("MyApp") { _ =>

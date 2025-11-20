@@ -12,10 +12,8 @@ function $c_Lmyapp_components_MyApp$() {
   this.Lmyapp_components_MyApp$__f_handleClick = null;
   this.Lmyapp_components_MyApp$__f_component = null;
   $n_Lmyapp_components_MyApp$ = this;
-  this.Lmyapp_components_MyApp$__f_handleClick = (() => {
-    var this$3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_s_Console$();
-    var this$4 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n(this$3.out__Ljava_io_PrintStream());
-    this$4.java$lang$JSConsoleBasedPrintStream$$printString__T__V("Clickedddd\n");
+  this.Lmyapp_components_MyApp$__f_handleClick = ((x) => {
+    console.log(x);
   });
   var render = new $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$c_sr_AbstractFunction1_$$Lambda$70e1780b84463d18653aacefee3ab989ac625f28(((_$1) => {
     $j_myapp$002ecomponents$002e$002dMy$002dApp.$as_Lmyapp_components_MyApp(_$1);
@@ -23,8 +21,8 @@ function $c_Lmyapp_components_MyApp$() {
     var $x_3 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$();
     var $x_2 = ($j_myapp$002ecomponents$002e$002dGreeting.$m_Lmyapp_components_Greeting$(), new $j_myapp$002ecomponents$002e$002dGreeting.$c_Lmyapp_components_Greeting("Hello Worldddd")).apply__Lmyapp_ReactElement();
     $j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$();
-    var this$7 = new $j_myapp$002ecomponents$002e$002dCounter.$c_Lmyapp_components_Counter(0);
-    var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$().Lmyapp_components_Counter$__f_component).apply__O__Lmyapp_ReactElement(this$7);
+    var this$5 = new $j_myapp$002ecomponents$002e$002dCounter.$c_Lmyapp_components_Counter(0);
+    var $x_1 = $j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$n($j_myapp$002ecomponents$002e$002dCounter$0024.$m_Lmyapp_components_Counter$().Lmyapp_components_Counter$__f_component).apply__O__Lmyapp_ReactElement(this$5);
     $j_myapp$002ecomponents$002e$002dButton.$m_Lmyapp_components_Button$();
     var onClick = this.Lmyapp_components_MyApp$__f_handleClick;
     return $x_4.div__sjs_js_Object__sci_Seq__Lmyapp_ReactElement(null, $x_3.wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)([$x_2, $x_1, new $j_myapp$002ecomponents$002e$002dButton.$c_Lmyapp_components_Button(onClick).apply__sci_Seq__Lmyapp_ReactElement($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($j_internal$002d3ebfae0cba70adf981029a0da5b1e4b5ab5d02c6.$d_sjs_js_Any.getArrayOf().constr)(["Click me!"])))])));

@@ -12,7 +12,7 @@ import myapp.ReactElement
 import myapp.tags.button
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-case class Button(onClick: js.Function0[Unit]) {
+case class Button(onClick: js.Function1[js.Any, Unit]) {
   def apply(children: js.Any*): ReactElement = Button.component(this)(children*)
 }
 
