@@ -25,10 +25,14 @@ object MyApp {
     org.scalajs.dom.console.log(x)
   }
 
+  val handleClickContainer: js.Function0[Unit] = () => {
+    org.scalajs.dom.console.log("Clickkkkkk")
+  }
+
   val component = FunctionComponent[Props]("MyApp") { _ =>
     html.div(
       js.Dynamic.literal(
-        onClick = () => org.scalajs.dom.console.log("Clickkkkkk")
+        onClick = handleClickContainer
       ),
       Greeting("Hello")(),
       Counter(0)(),
